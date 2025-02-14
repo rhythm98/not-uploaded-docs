@@ -1,0 +1,158 @@
+.scope {
+  margin: 0;
+  padding: 8px;
+  font-size: large;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: auto;
+}
+.scope header {
+  width: calc(100% - 3rem);
+  padding: 1rem 0.75rem;
+  margin: 0.25rem 0.75rem;
+}
+.scope header * {
+  text-align: center;
+}
+.scope header h1, .scope header h2, .scope header h3, .scope header h4 {
+  color: #2f438d;
+}
+.scope main h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.scope main hr {
+  max-width: 640px;
+  margin: 0.5rem auto;
+}
+.scope main ::-webkit-scrollbar {
+  width: 0.25rem;
+}
+.scope main ::-webkit-scrollbar-track {
+  background: grey;
+}
+.scope main ::-webkit-scrollbar-thumb {
+  background: white;
+  width: 0.25rem;
+}
+.scope main .example {
+  background-color: bisque;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  margin: 1em 0;
+  overflow-x: scroll;
+}
+.scope main .example h3 {
+  color: black;
+}
+.scope main .box {
+  min-width: 40vw;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid black;
+  font-size: small;
+}
+.scope footer {
+  width: 100%;
+}
+.scope ul.dashed > li::marker {
+  content: "- ";
+}
+.scope ol.alpha,
+.scope ol.roman,
+.scope ol.numeric {
+  counter-set: counter;
+  list-style: none;
+}
+.scope ol.alpha > li,
+.scope ol.roman > li,
+.scope ol.numeric > li {
+  counter-increment: counter;
+}
+.scope ol.alpha > li::marker {
+  content: "(" counter(counter, lower-alpha) ") ";
+}
+.scope ol.roman > li::marker {
+  content: "(" counter(counter, lower-roman) ") ";
+}
+.scope ol.numeric > li::marker {
+  content: "(" counter(counter) ") ";
+}
+.scope table {
+  width: 100%;
+  margin: 0.25rem auto;
+  overflow-x: auto;
+}
+.scope table,
+.scope td,
+.scope th {
+  border: 1px black solid;
+  border-collapse: collapse;
+  padding: 0.5rem 0.75rem;
+}
+.scope table.list {
+  border: 0;
+  width: calc(100% - 2rem);
+  margin: 0.25rem auto;
+  padding: 0.25rem;
+  table-layout: fixed;
+}
+.scope table.list * {
+  border: 0;
+}
+.scope table.list td:first-child {
+  vertical-align: top;
+  width: 2.5rem;
+}
+.scope table.list tr:not(:first-child) {
+  width: auto;
+}
+.scope .fraction {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+.scope .fraction > span {
+  display: block;
+  padding: 0 0.2em;
+}
+.scope .fraction .numerator {
+  border-bottom: 1px solid #000;
+}
+.scope .fraction .denominator {
+  margin-top: -0.1em;
+}
+.scope h3 {
+  color: #2f438d;
+  text-align: center;
+  margin: 0.2rem;
+}
+.scope #linktogtl, .scope #linktogtl *, .scope #gtlnotes h3 {
+  color: #43af76;
+}
+.scope .repeal, .scope .repeal *, .scope .attention {
+  color: #c00000;
+}
+.scope p {
+  padding: 0.25rem 0;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.5rem;
+  text-align: justify;
+}
+.scope a {
+  color: #5948ca;
+  text-decoration: none;
+  font-weight: 600;
+}
+.scope a:hover {
+  text-decoration: underline;
+}
+
+.scope main article {
+  background-color: #f8f8f8;
+  width: calc(100% - 2rem);
+  min-width: 360px;
+  margin: 0.5rem 0.75rem;
+  padding: 0.5rem;
+}
+
+/*# sourceMappingURL=dtaa.css.map */
