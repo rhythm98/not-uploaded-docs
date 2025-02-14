@@ -3,7 +3,205 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="lv" lang="lv">
 
 <body>
-    <style> .scope { margin: 0; padding: 8px; font-size: large; font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; overflow-x: auto; } .scope header { width: calc(100% - 3rem); padding: 1rem 0.75rem; margin: 0.25rem 0.75rem; } .scope header * { text-align: center; } .scope header h1, .scope header h2, .scope header h3, .scope header h4 { color: #2f438d; } .scope main h3 { font-size: 1.2rem; font-weight: bold; } .scope main hr { max-width: 640px; margin: 0.5rem auto; } .scope main ::-webkit-scrollbar { width: 0.25rem; } .scope main ::-webkit-scrollbar-track { background: grey; } .scope main ::-webkit-scrollbar-thumb { background: white; width: 0.25rem; } .scope main .example { background-color: bisque; padding: 0.25rem 0.75rem; border-radius: 0.25rem; margin: 1em 0; overflow-x: scroll; } .scope main .example h3 { color: black; } .scope main .box { min-width: 40vw; padding: 0.25rem 0.75rem; border: 1px solid black; font-size: small; } .scope footer { width: 100%; } .scope ul.dashed>li::marker { content: "- "; } .scope ol.alpha, .scope ol.roman, .scope ol.numeric { counter-set: counter; list-style: none; } .scope ol.alpha>li, .scope ol.roman>li, .scope ol.numeric>li { counter-increment: counter; } .scope ol.alpha>li::marker { content: "(" counter(counter, lower-alpha) ") "; } .scope ol.roman>li::marker { content: "(" counter(counter, lower-roman) ") "; } .scope ol.numeric>li::marker { content: "(" counter(counter) ") "; } .scope table { width: 100%; margin: 0.25rem auto; overflow-x: auto; } .scope table, .scope td, .scope th { border: 1px black solid; border-collapse: collapse; padding: 0.5rem 0.75rem; } .scope table.list { border: 0; width: calc(100% - 2rem); margin: 0.25rem auto; padding: 0.25rem; table-layout: fixed; } .scope table.list * { border: 0; } .scope table.list td:first-child { vertical-align: top; width: 2.5rem; } .scope table.list tr:not(:first-child) { width: auto; } .scope .fraction { display: inline-block; vertical-align: middle; text-align: center; } .scope .fraction>span { display: block; padding: 0 0.2em; } .scope .fraction .numerator { border-bottom: 1px solid #000; } .scope .fraction .denominator { margin-top: -0.1em; } .scope h3 { color: #2f438d; text-align: center; margin: 0.2rem; } .scope #linktogtl, .scope #linktogtl *, .scope #gtlnotes h3 { color: #43af76; } .scope .repeal, .scope .repeal *, .scope .attention { color: #c00000; } .scope p { padding: 0.25rem 0; margin-top: 0.25rem; margin-bottom: 0.25rem; line-height: 1.5rem; text-align: justify; } .scope a { color: #5948ca; text-decoration: none; font-weight: 600; } .scope a:hover { text-decoration: underline; } .scope main article { background-color: #f8f8f8; width: calc(100% - 2rem); min-width: 360px; margin: 0.5rem 0.75rem; padding: 0.5rem; } </style>
+    <style>
+        .scope {
+            margin: 0;
+            padding: 8px;
+            font-size: large;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: auto;
+        }
+
+        .scope header {
+            width: calc(100% - 3rem);
+            padding: 1rem 0.75rem;
+            margin: 0.25rem 0.75rem;
+        }
+
+        .scope header * {
+            text-align: center;
+        }
+
+        .scope header h1,
+        .scope header h2,
+        .scope header h3,
+        .scope header h4 {
+            color: #2f438d;
+        }
+
+        .scope main h3 {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .scope main hr {
+            max-width: 640px;
+            margin: 0.5rem auto;
+        }
+
+        .scope main ::-webkit-scrollbar {
+            width: 0.25rem;
+        }
+
+        .scope main ::-webkit-scrollbar-track {
+            background: grey;
+        }
+
+        .scope main ::-webkit-scrollbar-thumb {
+            background: white;
+            width: 0.25rem;
+        }
+
+        .scope main .example {
+            background-color: bisque;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.25rem;
+            margin: 1em 0;
+            overflow-x: scroll;
+        }
+
+        .scope main .example h3 {
+            color: black;
+        }
+
+        .scope main .box {
+            min-width: 40vw;
+            padding: 0.25rem 0.75rem;
+            border: 1px solid black;
+            font-size: small;
+        }
+
+        .scope footer {
+            width: 100%;
+        }
+
+        .scope ul.dashed>li::marker {
+            content: "- ";
+        }
+
+        .scope ol.alpha,
+        .scope ol.roman,
+        .scope ol.numeric {
+            counter-set: counter;
+            list-style: none;
+        }
+
+        .scope ol.alpha>li,
+        .scope ol.roman>li,
+        .scope ol.numeric>li {
+            counter-increment: counter;
+        }
+
+        .scope ol.alpha>li::marker {
+            content: "(" counter(counter, lower-alpha) ") ";
+        }
+
+        .scope ol.roman>li::marker {
+            content: "(" counter(counter, lower-roman) ") ";
+        }
+
+        .scope ol.numeric>li::marker {
+            content: "(" counter(counter) ") ";
+        }
+
+        .scope table {
+            width: 100%;
+            margin: 0.25rem auto;
+            overflow-x: auto;
+        }
+
+        .scope table,
+        .scope td,
+        .scope th {
+            border: 1px black solid;
+            border-collapse: collapse;
+            padding: 0.5rem 0.75rem;
+        }
+
+        .scope table.list {
+            border: 0;
+            width: calc(100% - 2rem);
+            margin: 0.25rem auto;
+            padding: 0.25rem;
+            table-layout: fixed;
+        }
+
+        .scope table.list * {
+            border: 0;
+        }
+
+        .scope table.list td:first-child {
+            vertical-align: top;
+            width: 2.5rem;
+        }
+
+        .scope table.list tr:not(:first-child) {
+            width: auto;
+        }
+
+        .scope .fraction {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .scope .fraction>span {
+            display: block;
+            padding: 0 0.2em;
+        }
+
+        .scope .fraction .numerator {
+            border-bottom: 1px solid #000;
+        }
+
+        .scope .fraction .denominator {
+            margin-top: -0.1em;
+        }
+
+        .scope h3 {
+            color: #2f438d;
+            text-align: center;
+            margin: 0.2rem;
+        }
+
+        .scope #linktogtl,
+        .scope #linktogtl *,
+        .scope #gtlnotes h3 {
+            color: #43af76;
+        }
+
+        .scope .repeal,
+        .scope .repeal *,
+        .scope .attention {
+            color: #c00000;
+        }
+
+        .scope p {
+            padding: 0.25rem 0;
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+            line-height: 1.5rem;
+            text-align: justify;
+        }
+
+        .scope a {
+            color: #5948ca;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .scope a:hover {
+            text-decoration: underline;
+        }
+
+        .scope main article {
+            background-color: #f8f8f8;
+            width: calc(100% - 2rem);
+            min-width: 360px;
+            margin: 0.5rem 0.75rem;
+            padding: 0.5rem;
+        }
+    </style>
     <div class="scope">
         <h3>CONVENTION BETWEEN THE GOVERNMENT OF THE REPUBLIC OF LATVIA AND</h3>
         <h3>THE GOVERNMENT OF THE UNITED ARAB EMIRATES FOR THE AVOIDANCE OF DOUBLE TAXATION AND THE PREVENTION OF FISCAL
@@ -565,7 +763,7 @@
                         which is a resident of a Contracting State shall be taxable only in the other Contracting State
                         if the beneficial owner of the dividends is that other State itself, a local government, local
                         authority, or the Central Bank thereof, or any governmental institution of the other State as
-                        defined in subparagraph c) of paragraph 2 of Article 4.</p>
+                        defined in subparagraph c) of paragraph 2 of <a href='#a4'>Article 4</a>.</p>
                 </li>
                 <li>
                     <p>The term "dividends" as used in this Article means income from shares or other rights, not being
@@ -613,7 +811,8 @@
                         Contracting State shall be taxable only in the other Contracting State if the beneficial owner
                         of the interest is that other State itself, a local government, a local authority, or the
                         Central Bank thereof, or any governmental institution of the other Contracting State as defined
-                        in subparagraph c) of paragraph 2 of Article 4, or interest arising in a Contracting State on
+                        in subparagraph c) of paragraph 2 of <a href='#a4'>Article 4</a>, or interest arising in a
+                        Contracting State on
                         any loan of whatever kind granted by a bank which is a resident of that other State, shall be
                         exempt from tax in the first-mentioned State.</p>
                 </li>
@@ -623,7 +822,8 @@
                         profits, and in particular, income from government securities and income from bonds or
                         debentures, including premiums and prizes attaching to such securities, bonds or debentures. The
                         term "interest" shall not include any income which is treated as a dividend under the provisions
-                        of Article 10. Penalty charges for late payment shall not be regarded as interest for the
+                        of <a href='#a10'>Article 10</a>. Penalty charges for late payment shall not be regarded as
+                        interest for the
                         purpose of this Article.</p>
                 </li>
                 <li>
@@ -632,7 +832,8 @@
                         which the interest arises, through a permanent establishment situated therein, or performs in
                         that other State independent personal services from a fixed base situated therein, and the
                         debt-claim in respect of which the interest is paid is effectively connected with such permanent
-                        establishment or fixed base. In such case the provisions of Article 7 or Article 14, as the case
+                        establishment or fixed base. In such case the provisions of <a href='#a7'>Article 7</a> or <a
+                            href='#a14'>Article 14</a>, as the case
                         may be, shall apply.</p>
                 </li>
                 <li>
@@ -693,7 +894,8 @@
                         independent personal services from a fixed base situated therein and the right or property in
                         respect of which the royalties are paid is effectively connected with such permanent
                         establishment
-                        or fixed base. In such case the provisions of Article 7 or Article 14, as the case may be, shall
+                        or fixed base. In such case the provisions of <a href='#a7'>Article 7</a> or <a
+                            href='#a14'>Article 14</a>, as the case may be, shall
                         apply.</p>
                 </li>
                 <li>
@@ -901,14 +1103,16 @@
             <h3>PENSIONS</h3>
             <ol id="l90">
                 <li>
-                    <p>Subject to the provisions of paragraph 2 of Article 19, pensions and other similar remuneration
+                    <p>Subject to the provisions of paragraph 2 of <a href='#a19'>Article 19</a>, pensions and other
+                        similar remuneration
                         paid
                         to a resident of a Contracting State in consideration of past employment shall be taxable only
                         in
                         that State.</p>
                 </li>
                 <li>
-                    <p>Notwithstanding the provisions of paragraph 1 of this Article and paragraph 2 of Article 19,
+                    <p>Notwithstanding the provisions of paragraph 1 of this Article and paragraph 2 of <a
+                            href='#a19'>Article 19</a>,
                         pensions
                         and other similar remuneration paid under the social security system of a Contracting State
                         shall be
@@ -1009,14 +1213,16 @@
                 <li>
                     <p>The provisions of paragraph 1 shall not apply to income, other than income from immovable
                         property as
-                        defined in paragraph 2 of Article 6, if the recipient of such income, being a resident of a
+                        defined in paragraph 2 of <a href='#a6'>Article 6</a>, if the recipient of such income, being a
+                        resident of a
                         Contracting State, carries on business in the other Contracting State through a permanent
                         establishment situated therein, or performs in that other State independent personal services
                         from a
                         fixed base situated therein, and the right or property in respect of which the income is paid is
                         effectively connected with such permanent establishment or fixed base. In such case the
                         provisions
-                        of Article 7 or Article 14, as the case may be, shall apply.</p>
+                        of <a href='#a7'>Article 7</a> or <a href='#a14'>Article 14</a>, as the case may be, shall
+                        apply.</p>
                 </li>
             </ol>
         </article>
@@ -1082,9 +1288,12 @@
                 <li>
                     <p>Notwithstanding any other provision of this Convention, a company mentioned in subparagraph b)
                         (ii)
-                        of paragraph 1 of Article 4, shall be entitled to the benefits of Articles 7, 8, 10 to 15, 22
+                        of paragraph 1 of <a href='#a4'>Article 4</a>, shall be entitled to the benefits of Articles
+                        <a href='#a7'>7</a>, <a href='#a8'>8</a>, <a href='#a10'>10</a> to <a href='#a15'>15</a>, <a
+                            href='#a22'>22</a>
                         and
-                        25, only if such company can prove that:</p>
+                        <a href='#a25'>25</a>, only if such company can prove that:
+                    </p>
                     <ol id="l98">
                         <li>
                             <p>a) all of the shares of the company are beneficially owned by residents of the United
@@ -1112,7 +1321,7 @@
                 </li>
                 <li>
                     <p>The provisions of paragraphs 1 and 2 shall not apply to companies covered by subparagraph c) of
-                        paragraph 2 of Article 4.</p>
+                        paragraph 2 of <a href='#a4'>Article 4</a>.</p>
                 </li>
             </ol>
         </article>
@@ -1193,7 +1402,8 @@
                         and connected requirements to which nationals of that other State in the same circumstances, in
                         particular with respect to residence, are or may be subjected. This provision shall,
                         notwithstanding
-                        the provisions of Article 1, also apply to persons who are not residents of one or both of the
+                        the provisions of <a href='#a1'>Article 1</a>, also apply to persons who are not residents of
+                        one or both of the
                         Contracting States.</p>
                 </li>
                 <li>
@@ -1215,9 +1425,11 @@
                         family responsibilities which it grants to its own residents.</p>
                 </li>
                 <li>
-                    <p>Except where the provisions of paragraph 1 of Article 9, paragraph 7 of Article 11, or paragraph
+                    <p>Except where the provisions of paragraph 1 of <a href='#a9'>Article 9</a>, paragraph 7 of <a
+                            href='#a11'>Article 11</a>, or paragraph
                         6 of
-                        Article 12, apply, interest, royalties and other disbursements paid by an enterprise of a
+                        <a href='#a12'>Article 12</a>, apply, interest, royalties and other disbursements paid by an
+                        enterprise of a
                         Contracting State to a resident of the other Contracting State shall, for the purpose of
                         determining
                         the taxable profits of such enterprise, be deductible under the same conditions as if they had
@@ -1227,7 +1439,8 @@
                         determining
                         the taxable capital of such enterprise, be deductible under the same conditions as if they had
                         been
-                        contracted to a resident of the first-mentioned State.</p>
+                        contracted to a resident of the first-mentioned State.
+                    </p>
                 </li>
                 <li>
                     <p>Nothing in this Article shall be construed as imposing a legal obligation on a Contracting State
@@ -1249,7 +1462,8 @@
                         enterprises of the first-mentioned State are or may be subjected.</p>
                 </li>
                 <li>
-                    <p>The provisions of this Article shall, notwithstanding the provisions of Article 2, apply to taxes
+                    <p>The provisions of this Article shall, notwithstanding the provisions of <a href='#a2'>Article
+                            2</a>, apply to taxes
                         of
                         every kind and description, except taxes that may be levied in accordance with Article 23.</p>
                 </li>
@@ -1266,7 +1480,8 @@
                         the
                         competent authority of the Contracting State of which he is a resident or, if his case comes
                         under
-                        paragraph 1 of Article 28, to that of the Contracting State of which he is a national. The case
+                        paragraph 1 of <a href='#a28'>Article 28</a>, to that of the Contracting State of which he is a
+                        national. The case
                         must
                         be presented within three years from the first notification of the action resulting in taxation
                         not
@@ -1445,7 +1660,7 @@
                 upon the following provisions which form an integral part of the Convention.</p>
             <ol>
                 <li>
-                    <p>With reference to paragraph 1 of Article 2.</p>
+                    <p>With reference to paragraph 1 of <a href='#a2'>Article 2</a>.</p>
                     <p>It is understood that the United Arab Emirates consists of:</p>
                     <ul>
                         <li>
@@ -1463,10 +1678,11 @@
                     </ul>
                 </li>
                 <li>
-                    <p>With reference to subparagraph c) of paragraph 2 of Article 4.</p>
+                    <p>With reference to subparagraph c) of paragraph 2 of <a href='#a4'>Article 4</a>.</p>
                     <p>It is understood that in the case of the United Arab Emirates a governmental institution defined
                         in
-                        subparagraph c) of paragraph 2 of Article 4 shall include the Abu Dhabi Investment Authority,
+                        subparagraph c) of paragraph 2 of <a href='#a4'>Article 4</a> shall include the Abu Dhabi
+                        Investment Authority,
                         the
                         Abu Dhabi Investment Council, Mubadala Development Company (Mubadala), Dubai World, Dubai
                         Investments Company (DIC), UAE Investment Authority and International Petroleum Investment
@@ -1474,15 +1690,15 @@
                         (IPIC).</p>
                 </li>
                 <li>
-                    <p>With reference to paragraph 3 of Article 7:</p>
+                    <p>With reference to paragraph 3 of <a href='#a7'>Article 7</a>:</p>
                     <p>It is understood that conditions for the deductibility of expenses are a matter to be determined
                         by
                         the domestic law of the Contracting State in which the permanent establishment is situated,
                         subject
-                        to the provisions of Article 28, in particular, paragraphs 3 and 4.</p>
+                        to the provisions of <a href='#a28'>Article 28</a>, in particular, paragraphs 3 and 4.</p>
                 </li>
                 <li>
-                    <p>With reference to paragraph 1 of Article 8:</p>
+                    <p>With reference to paragraph 1 of <a href='#a8'>Article 8</a>:</p>
                     <p>It is understood that the term "profits" includes:</p>
                     <ul>
                         <li>
@@ -1506,7 +1722,7 @@
                     </ul>
                 </li>
                 <li>
-                    <p>With reference to paragraph 3 of Article 11:</p>
+                    <p>With reference to paragraph 3 of <a href='#a11'>Article 11</a>:</p>
                     <p>If the Government of a Contracting State participates in a loan indirectly through an agent or
                         otherwise, the exemption provided for in paragraph 3 shall apply proportionally to the
                         participation
@@ -1524,18 +1740,23 @@
                 </li>
                 <li>
                     <p>With reference to Article 30:</p>
-            <p>If information is requested by a Contracting State in accordance with this Article, the other Contracting
-                State shall obtain the information to which the request relates, including information held by a bank,
-                other
-                financial institution, nominee or person acting in an agency or a fiduciary capacity, in the same manner
-                and
-                to the same extent as if the tax of the first-mentioned State were the tax of that other State and were
-                being imposed by that other State, even though that other State may not need such information for its
-                own
-                tax purposes.</p>
+                    <p>If information is requested by a Contracting State in accordance with this Article, the other
+                        Contracting
+                        State shall obtain the information to which the request relates, including information held by a
+                        bank,
+                        other
+                        financial institution, nominee or person acting in an agency or a fiduciary capacity, in the
+                        same manner
+                        and
+                        to the same extent as if the tax of the first-mentioned State were the tax of that other State
+                        and were
+                        being imposed by that other State, even though that other State may not need such information
+                        for its
+                        own
+                        tax purposes.</p>
                 </li>
             </ol>
-                </article>
+        </article>
     </div>
 </body>
 
