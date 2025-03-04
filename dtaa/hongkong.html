@@ -4,245 +4,303 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hong Kong DTAA</title>
+  <title>Hong Kong</title>
 </head>
 
 
 <body>
   <style>
-  .scope {
-    margin: 0;
-    padding: 8px;
-    font-size: large;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    overflow-x: auto;
-  }
+    .scope {
+        margin: 0;
+        padding: 8px;
+        font-size: large;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        overflow-x: hidden;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
 
-  .scope header {
-    width: calc(100% - 3rem);
-    padding: 1rem 0.75rem;
-    margin: 0.25rem 0.75rem;
-  }
+    .scope header {
+        padding: 1rem 1.25rem;
+        margin: 0.25rem 0.75rem;
+    }
 
-  .scope header * {
-    text-align: center;
-  }
+    .scope header * {
+        text-align: center;
+    }
 
-  .scope header h1,
-  .scope header h2,
-  .scope header h3,
-  .scope header h4 {
-    color: #2f438d;
-  }
+    .scope header h1,
+    .scope header h2,
+    .scope header h3,
+    .scope header h4 {
+        color: #2f438d;
+    }
 
-  .scope main h3 {
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
+    .scope main h3 {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
 
-  .scope main hr {
-    max-width: 640px;
-    margin: 0.5rem auto;
-  }
+    .scope main hr {
+        max-width: 640px;
+        margin: 0.5rem auto;
+    }
 
-  .scope main ::-webkit-scrollbar {
-    width: 0.25rem;
-  }
+    .scope main ::-webkit-scrollbar {
+        width: 0.25rem;
+    }
 
-  .scope main ::-webkit-scrollbar-track {
-    background: grey;
-  }
+    .scope main ::-webkit-scrollbar-track {
+        background: grey;
+    }
 
-  .scope main ::-webkit-scrollbar-thumb {
-    background: white;
-    width: 0.25rem;
-  }
+    .scope main ::-webkit-scrollbar-thumb {
+        background: white;
+        width: 0.25rem;
+    }
 
-  .scope main .example {
-    background-color: bisque;
-    padding: 0.25rem 0.75rem;
-    border-radius: 0.25rem;
-    margin: 1em 0;
-    overflow-x: scroll;
-  }
+    .scope main .example {
+        background-color: bisque;
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.25rem;
+        margin: 1em 0;
+        overflow-x: scroll;
+    }
 
-  .scope main .example h3 {
-    color: black;
-  }
+    .scope main .example h3 {
+        color: black;
+    }
 
-  .scope main .box {
-    min-width: 40vw;
-    padding: 0.25rem 0.75rem;
-    border: 1px solid black;
-    font-size: small;
-  }
+    .scope main .box {
+        min-width: 40vw;
+        padding: 0.25rem 0.75rem;
+        border: 1px solid black;
+        font-size: small;
+    }
 
-  .scope footer {
-    width: 100%;
-  }
+    .scope footer p * {
+        font-style: italic;
+    }
 
-  .scope ul.dashed>li::marker {
-    content: "- ";
-  }
+    .scope ul.dashed>li::marker {
+        content: "- ";
+    }
 
-  .scope ol.alpha {
-    counter-reset: alpha-counter;
-    list-style: none;
-  }
+    .scope table {
+        width: 100%;
+        margin: 0.25rem auto;
+        overflow-x: auto;
+    }
 
-  .scope ol li {
-    margin-top: 0.5rem;
-  }
+    .scope table,
+    .scope td,
+    .scope th {
+        border: 1px black solid;
+        border-collapse: collapse;
+        padding: 0.5rem 0.75rem;
+    }
 
-  .scope ol.alpha>li {
-    counter-increment: alpha-counter;
-    margin-top: 0.5rem;
-  }
+    .scope table.list {
+        border: 0;
+        width: calc(100% - 2rem);
+        margin: 0.25rem auto;
+        padding: 0.25rem;
+        table-layout: fixed;
+    }
 
-  .scope ol.roman {
-    counter-reset: roman-counter;
-    list-style: none;
-    margin-top: 0.5rem;
-  }
+    .scope table.list * {
+        border: 0;
+    }
 
-  .scope ol.roman>li {
-    counter-increment: roman-counter;
-    margin-top: 0.5rem;
-  }
+    .scope table.list td:first-child {
+        vertical-align: top;
+        width: 2.5rem;
+    }
 
-  .scope ol.numeric {
-    counter-reset: numeric-counter;
-    list-style: none;
-  }
+    .scope table.list tr:not(:first-child) {
+        width: auto;
+    }
 
-  .scope ol.numeric>li {
-    counter-increment: numeric-counter;
-    margin-top: 0.5rem;
-  }
+    .scope .fraction {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+    }
 
-  .scope ol.alpha>li::marker {
-    content: "(" counter(alpha-counter, lower-alpha) ") ";
-  }
+    .scope .fraction>span {
+        display: block;
+        padding: 0 0.2em;
+    }
 
-  .scope ol.roman>li::marker {
-    content: "(" counter(roman-counter, lower-roman) ") ";
-  }
+    .scope .fraction .numerator {
+        border-bottom: 1px solid #000;
+    }
 
-  .scope ol.numeric>li::marker {
-    content: "(" counter(numeric-counter) ") ";
-  }
+    .scope .fraction .denominator {
+        margin-top: -0.1em;
+    }
 
-  .scope table {
-    width: 100%;
-    margin: 0.25rem auto;
-    overflow-x: auto;
-  }
+    .scope h3 {
+        color: #2f438d;
+    }
 
-  .scope table,
-  .scope td,
-  .scope th {
-    border: 1px black solid;
-    border-collapse: collapse;
-    padding: 0.5rem 0.75rem;
-  }
+    .scope #linktogtl,
+    .scope #linktogtl *,
+    .scope #gtlnotes h3 {
+        color: #43af76;
+    }
 
-  .scope table.list {
-    border: 0;
-    width: calc(100% - 2rem);
-    margin: 0.25rem auto;
-    padding: 0.25rem;
-    table-layout: fixed;
-  }
+    .scope .repeal,
+    .scope .repeal *,
+    .scope .attention {
+        color: #c00000;
+    }
 
-  .scope table.list * {
-    border: 0;
-  }
+    .scope p {
+        padding: 0.25rem 0;
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
+        line-height: 1.5rem;
+        text-align: justify;
+    }
 
-  .scope table.list td:first-child {
-    vertical-align: top;
-    width: 2.5rem;
-  }
+    .scope a {
+        color: #5948ca;
+        text-decoration: none;
+        font-weight: 600;
+    }
 
-  .scope table.list tr:not(:first-child) {
-    width: auto;
-  }
+    .scope a:hover {
+        text-decoration: underline;
+    }
 
-  .scope .fraction {
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-  }
+    .scope main article {
+        background-color: #f8f8f8;
+        width: calc(100% - 2rem);
+        margin: 0.5rem 0.75rem;
+        padding: 0.5rem;
+    }
 
-  .scope .fraction>span {
-    display: block;
-    padding: 0 0.2em;
-  }
+    .scope main article>*:nth-child(1),
+    .scope main article>*:nth-child(2) {
+        text-align: center;
+    }
 
-  .scope .fraction .numerator {
-    border-bottom: 1px solid #000;
-  }
+    /* Media Queries for Responsive Design */
+    @media only screen and (max-width: 1200px) {
+        .scope {
+            font-size: medium;
+        }
 
-  .scope .fraction .denominator {
-    margin-top: -0.1em;
-  }
+        .scope main article {
+            width: calc(100% - 1rem);
+            margin: 0.5rem 0.5rem;
+        }
+    }
 
-  .scope h3 {
-    color: #2f438d;
-    text-align: center;
-    margin: 0.2rem;
-  }
+    @media only screen and (max-width: 768px) {
+        .scope {
+            font-size: small;
+            padding: 5px;
+        }
 
-  .scope #linktogtl,
-  .scope #linktogtl *,
-  .scope #gtlnotes h3 {
-    color: #43af76;
-  }
+        .scope header {
+            padding: 0.75rem 0.5rem;
+            margin: 0.25rem 0.5rem;
+        }
 
-  .scope .repeal,
-  .scope .repeal *,
-  .scope .attention {
-    color: #c00000;
-  }
+        .scope main article {
+            width: calc(100% - 1rem);
+            margin: 0.5rem 0.25rem;
+            padding: 0.25rem;
+        }
 
-  .scope p {
-    padding: 0.25rem 0;
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
-    line-height: 1.5rem;
-    text-align: justify;
-  }
+        .scope table {
+            display: block;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
 
-  .scope a {
-    color: #5948ca;
-    text-decoration: none;
-    font-weight: 600;
-  }
+        .scope header h1 {
+            font-size: 1.5rem;
+        }
 
-  .scope a:hover {
-    text-decoration: underline;
-  }
+        .scope header h2,
+        .scope header h3,
+        .scope header h4 {
+            font-size: 1.3rem;
+        }
 
-  .scope main article {
-    background-color: #f8f8f8;
-    width: calc(100% - 2rem);
-    min-width: 360px;
-    margin: 0.5rem 0.75rem;
-    padding: 0.5rem;
-  }
+        .scope main h3 {
+            font-size: 1rem;
+        }
+    }
 
-  /*# sourceMappingURL=dtaa.css.map */
+    @media only screen and (max-width: 480px) {
+        .scope {
+            font-size: x-small;
+            padding: 2px;
+        }
+
+        .scope header {
+            padding: 0.5rem 0.25rem;
+            margin: 0.25rem;
+        }
+
+        .scope header h1 {
+            font-size: 1.2rem;
+        }
+
+        .scope header h2,
+        .scope header h3,
+        .scope header h4 {
+            font-size: 1.1rem;
+        }
+
+        .scope main h3 {
+            font-size: 0.9rem;
+        }
+
+        .scope p {
+            line-height: 1.3rem;
+        }
+
+        .scope main article {
+            width: calc(100% - 0.5rem);
+            margin: 0.25rem;
+            padding: 0.25rem 0.125rem;
+        }
+
+        .scope table.list td:first-child {
+            width: 1.5rem;
+        }
+
+        .scope ol {
+            padding-left: 1.5rem;
+        }
+
+        .scope a {
+            word-break: break-word;
+        }
+    }
 </style>
- <div
-      style="
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 100px;
-        width: 800px;
-      "
-    >
-      <a href="./index.html">HOME</a>
-    </div>
-  <div class="scope">
+<div style="
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+">
+    <a href="./index.html" style="
+      color: #5948ca;
+      text-decoration: none;
+      font-weight: 600;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: large;
+    ">HOME</a>
+</div>
+<div class="scope">
     <header>
       <h2>
         Agreement between the Government of the Hong Kong Special
