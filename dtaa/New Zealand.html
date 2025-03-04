@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New-Zealand-DTAA</title>
+</head>
+
+<body>
+    <style>
+        .scope {
+            margin: 0;
+            padding: 8px;
+            font-size: large;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .scope header {
+            padding: 1rem 1.25rem;
+            margin: 0.25rem 0.75rem;
+        }
+
+        .scope header * {
+            text-align: center;
+        }
+
+        .scope header h1,
+        .scope header h2,
+        .scope header h3,
+        .scope header h4 {
+            color: #2f438d;
+        }
+
+        .scope main h3 {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .scope main hr {
+            max-width: 640px;
+            margin: 0.5rem auto;
+        }
+
+        .scope main ::-webkit-scrollbar {
+            width: 0.25rem;
+        }
+
+        .scope main ::-webkit-scrollbar-track {
+            background: grey;
+        }
+
+        .scope main ::-webkit-scrollbar-thumb {
+            background: white;
+            width: 0.25rem;
+        }
+
+        .scope main .example {
+            background-color: bisque;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.25rem;
+            margin: 1em 0;
+            overflow-x: scroll;
+        }
+
+        .scope main .example h3 {
+            color: black;
+        }
+
+        .scope main .box {
+            min-width: 40vw;
+            padding: 0.25rem 0.75rem;
+            border: 1px solid black;
+            font-size: small;
+        }
+
+        .scope footer p * {
+            font-style: italic;
+        }
+
+        .scope ul.dashed>li::marker {
+            content: "- ";
+        }
+
+        .scope table {
+            width: 100%;
+            margin: 0.25rem auto;
+            overflow-x: auto;
+        }
+
+        .scope table,
+        .scope td,
+        .scope th {
+            border: 1px black solid;
+            border-collapse: collapse;
+            padding: 0.5rem 0.75rem;
+        }
+
+        .scope table.list {
+            border: 0;
+            width: calc(100% - 2rem);
+            margin: 0.25rem auto;
+            padding: 0.25rem;
+            table-layout: fixed;
+        }
+
+        .scope table.list * {
+            border: 0;
+        }
+
+        .scope table.list td:first-child {
+            vertical-align: top;
+            width: 2.5rem;
+        }
+
+        .scope table.list tr:not(:first-child) {
+            width: auto;
+        }
+
+        .scope .fraction {
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .scope .fraction>span {
+            display: block;
+            padding: 0 0.2em;
+        }
+
+        .scope .fraction .numerator {
+            border-bottom: 1px solid #000;
+        }
+
+        .scope .fraction .denominator {
+            margin-top: -0.1em;
+        }
+
+        .scope h3 {
+            color: #2f438d;
+        }
+
+        .scope #linktogtl,
+        .scope #linktogtl *,
+        .scope #gtlnotes h3 {
+            color: #43af76;
+        }
+
+        .scope .repeal,
+        .scope .repeal *,
+        .scope .attention {
+            color: #c00000;
+        }
+
+        .scope p {
+            padding: 0.25rem 0;
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+            line-height: 1.5rem;
+            text-align: justify;
+        }
+
+        .scope a {
+            color: #5948ca;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .scope a:hover {
+            text-decoration: underline;
+        }
+
+        .scope main article {
+            background-color: #f8f8f8;
+            width: calc(100% - 2rem);
+            margin: 0.5rem 0.75rem;
+            padding: 0.5rem;
+        }
+
+        .scope main article>*:nth-child(1),
+        .scope main article>*:nth-child(2) {
+            text-align: center;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media only screen and (max-width: 1200px) {
+            .scope {
+                font-size: medium;
+            }
+
+            .scope main article {
+                width: calc(100% - 1rem);
+                margin: 0.5rem 0.5rem;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .scope {
+                font-size: small;
+                padding: 5px;
+            }
+
+            .scope header {
+                padding: 0.75rem 0.5rem;
+                margin: 0.25rem 0.5rem;
+            }
+
+            .scope main article {
+                width: calc(100% - 1rem);
+                margin: 0.5rem 0.25rem;
+                padding: 0.25rem;
+            }
+
+            .scope table {
+                display: block;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .scope header h1 {
+                font-size: 1.5rem;
+            }
+
+            .scope header h2,
+            .scope header h3,
+            .scope header h4 {
+                font-size: 1.3rem;
+            }
+
+            .scope main h3 {
+                font-size: 1rem;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .scope {
+                font-size: x-small;
+                padding: 2px;
+            }
+
+            .scope header {
+                padding: 0.5rem 0.25rem;
+                margin: 0.25rem;
+            }
+
+            .scope header h1 {
+                font-size: 1.2rem;
+            }
+
+            .scope header h2,
+            .scope header h3,
+            .scope header h4 {
+                font-size: 1.1rem;
+            }
+
+            .scope main h3 {
+                font-size: 0.9rem;
+            }
+
+            .scope p {
+                line-height: 1.3rem;
+            }
+
+            .scope main article {
+                width: calc(100% - 0.5rem);
+                margin: 0.25rem;
+                padding: 0.25rem 0.125rem;
+            }
+
+            .scope table.list td:first-child {
+                width: 1.5rem;
+            }
+
+            .scope ol {
+                padding-left: 1.5rem;
+            }
+
+            .scope a {
+                word-break: break-word;
+            }
+        }
+    </style>
+    <div style="
+      margin: 0.5rem auto;
+      padding: 0.5rem;
+      text-align: center;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    ">
+        <a href="./index.html" style="
+          color: #5948ca;
+          text-decoration: none;
+          font-weight: 600;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: large;
+        ">HOME</a>
+    </div>
+    <div class="scope">
+        <header>
+
+            <h2>Agreement between the Government of New Zealand and the Government of the United Arab Emirates for the
+                avoidance of double taxation and the prevention</h2>
+            <h2>of fiscal evasion with respect to taxes on income</h2>
+            <p>The Government of New Zealand and the Government of the United Arab Emirates,</p>
+            <p>Desiring to conclude an Agreement for the avoidance of double taxation and the prevention of fiscal
+                evasion with respect to taxes on income,</p>
+            <p>Have agreed as follows:</p>
+        </header>
+        <main>
+            <article id="a1">
+                <h3>Article 1</h3>
+                <h3>Persons Covered</h3>
+                <p>This Agreement shall apply to persons who are residents of one or both of the Contracting States.</p>
+            </article>
+
+            <article id="a2">
+                <h3>Article 2</h3>
+                <h3>Taxes Covered</h3>
+                <ol type="1">
+                    <li>
+                        <p>The existing taxes to which this Agreement shall apply are:</p>
+                        <ol type="a">
+                            <li>
+                                <p>In the United Arab Emirates: the income tax and the corporation tax; (hereinafter
+                                    referred to as "United Arab Emirates Taxes");</p>
+                            </li>
+                            <li>
+                                <p>In New Zealand: the income tax; (hereinafter referred to as "New Zealand Taxes").</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>The Agreement shall apply also to any identical or substantially similar taxes that are
+                            imposed after the date of signature of the Agreement in addition to, or in place of, the
+                            existing taxes. The competent authorities of the Contracting States shall notify each other
+                            within a reasonable period of time of any significant changes that have been made in their
+                            taxation laws.</p>
+                    </li>
+                    <li>
+                        <p>Notwithstanding the provisions of paragraphs 1 and 2, the taxes covered by the Agreement do
+                            not include any amount which represents a penalty or interest imposed under the laws of
+                            either Contracting State.</p>
+                    </li>
+                </ol>
+            </article>
+
+            <article id="a3">
+                <h3>Article 3</h3>
+                <h3>Income from Hydrocarbons</h3>
+                <p>Nothing in this Agreement shall affect the right of the United Arab Emirates, or any of its local
+                    governments or local authorities thereof, to apply its domestic laws and regulations related to the
+                    taxation of income and profits derived from hydrocarbons and its associated activities situated in
+                    the territory of the United Arab Emirates.</p>
+            </article>
+
+            <article id="a4">
+                <h3>Article 4</h3>
+                <h3>General Definitions</h3>
+                <ol type="1">
+                    <li>
+                        <p>For the purposes of this Agreement, unless the context otherwise requires:</p>
+                        <ol type="a">
+                            <li>
+                                <p>
+                                <ol type="i">
+                                    <li>
+                                        <p>the term "United Arab Emirates" means the United Arab Emirates and when used
+                                            in a geographical sense, means the area in which the territory is under
+                                            sovereignty as well as the territorial sea, airspace and submarine areas
+                                            over which the United Arab Emirates exercises, in conformity with
+                                            international law and the law of United Arab Emirates sovereign rights,
+                                            including the mainland and islands under its jurisdiction in respect of any
+                                            activity carried on in connection with the exploration for or the
+                                            exploitation of natural resources;</p>
+                                    </li>
+                                    <li>
+                                        <p>the term "New Zealand" means the territory of New Zealand but does not
+                                            include Tokelau or the Associated Self Governing States of the Cook Islands
+                                            and Niue; it also includes any area beyond the territorial sea which by New
+                                            Zealand legislation and in accordance with international law has been, or
+                                            may hereafter be, designated as an area in which the rights of New Zealand
+                                            with respect to natural resources may be exercised;</p>
+                                    </li>
+                                </ol>
+                                </p>
+                            </li>
+                            <li>
+                                <p>the term "company" means any body corporate or any entity that is treated as a body
+                                    corporate for tax purposes;</p>
+                            </li>
+                            <li>
+                                <p>the term "competent authority" means:</p>
+                                <ol type="i">
+                                    <li>
+                                        <p>in the case of the United Arab Emirates, the Minister of Finance and Industry
+                                            or an authorised representative;</p>
+                                    </li>
+                                    <li>
+                                        <p>in the case of New Zealand, the Commissioner of Inland Revenue or an
+                                            authorised representative of the Commissioner;</p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>the terms "a Contracting State" and "the other Contracting State" mean the United
+                                    Arab Emirates or New Zealand as the context requires;</p>
+                            </li>
+                            <li>
+                                <p>the terms "enterprise of a Contracting State" and "enterprise of the other
+                                    Contracting State" mean respectively an enterprise carried on by a resident of a
+                                    Contracting State and an enterprise carried on by a resident of the other
+                                    Contracting State;</p>
+                            </li>
+                            <li>
+                                <p>the term "international traffic" means any transport by a ship or aircraft operated
+                                    by an enterprise of a Contracting State, except when the ship or aircraft is
+                                    operated solely from a place or between places in the other Contracting State;</p>
+                            </li>
+                            <li>
+                                <p>the term "person" includes an individual, a company and any other body of persons.
+                                </p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>As regards the application of the Agreement at any time by a Contracting State, any term not
+                            defined therein shall, unless the context otherwise requires, have the meaning that it has
+                            at that time, under the laws of that State for the purposes of the taxes to which the
+                            Agreement applies.</p>
+                    </li>
+                </ol>
+            </article>
+
+            <article id="a5">
+                <h3>Article 5</h3>
+                <h3>Residence</h3>
+                <ol type="1">
+                    <li>
+                        <p>For the purposes of this Agreement, a person is a resident of a Contracting State:</p>
+                        <ol type="a">
+                            <li>
+                                <p>in the case of the United Arab Emirates:</p>
+                                <ol type="i">
+                                    <li>
+                                        <p>if, in the case of an individual, the individual, under the laws of the
+                                            United Arab Emirates, is considered a resident thereof by reason of that
+                                            individual's domicile, residence or any other criterion of a similar nature;
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>if, in the case of a company or other legal entity, the company or other
+                                            legal entity, is incorporated or created under the laws of the United Arab
+                                            Emirates by reason of its residence, domicile, place of management or any
+                                            other criterion of a similar nature, and also includes that State itself and
+                                            any political subdivision, local authority, local government or governmental
+                                            institution thereof;</p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>in the case of New Zealand, if the person is resident in New Zealand for the purposes
+                                    of New Zealand tax.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Where by reason of paragraph 1 an individual is a resident of both Contracting States, then
+                            their status shall be determined as follows:</p>
+                        <ol type="a">
+                            <li>
+                                <p>the individual shall be deemed to be a resident only of the State in which a
+                                    permanent home is available to the individual; if a permanent home is available to
+                                    the individual in both States or a permanent home is not available in either State,
+                                    the individual shall be deemed to be a resident only of the State with which the
+                                    individual's personal and economic relations are closer;</p>
+                            </li>
+                            <li>
+                                <p>if sole residence cannot be determined under the provisions of subparagraph (a), the
+                                    individual shall be deemed to be a resident only of the State in which the
+                                    individual has an habitual abode;</p>
+                            </li>
+                            <li>
+                                <p>if the individual has an habitual abode in both States or in neither of them, the
+                                    individual shall be deemed to be a resident only of the State of which the
+                                    individual is a citizen;</p>
+                            </li>
+                            <li>
+                                <p>if the individual is a citizen of both States or of neither of them, the competent
+                                    authorities of the Contracting States shall settle the question by mutual agreement.
+                                </p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Where by reason of paragraph 1 a person other than an individual is a resident of both
+                            Contracting States then it shall be deemed to be a resident only of the State in which its
+                            place of effective management is situated.</p>
+                    </li>
+                </ol>
+            </article>
+            <article id="a6">
+                <h3>Article 6</h3>
+                <h3>Permanent Establishment</h3>
+                <ol type="1">
+                    <li>
+                        <p>For the purposes of this Agreement, the term "permanent establishment" means a fixed place of
+                            business through which the business of an enterprise is wholly or partly carried on.</p>
+                    </li>
+                    <li>
+                        <p>The term "permanent establishment" includes especially:</p>
+                        <ol type="a">
+                            <li>
+                                <p>a place of management;</p>
+                            </li>
+                            <li>
+                                <p>a branch;</p>
+                            </li>
+                            <li>
+                                <p>an office;</p>
+                            </li>
+                            <li>
+                                <p>a factory;</p>
+                            </li>
+                            <li>
+                                <p>a workshop; and</p>
+                            </li>
+                            <li>
+                                <p>a mine, an oil or gas well, a quarry or any other place of extraction of natural
+                                    resources.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>A building site, or a construction, installation or assembly project, or supervisory
+                            activities in connection with that building site or construction, installation or assembly
+                            project, constitutes a permanent establishment if it lasts for more than six months.</p>
+                    </li>
+                    <li>
+                        <p>An enterprise shall be deemed to have a permanent establishment in a Contracting State and to
+                            carry on business through that permanent establishment if for more than six months it
+                            carries on activities which consist of, or which are connected with, the exploration or
+                            exploitation of natural resources, including standing timber, situated in that State.</p>
+                    </li>
+                    <li>
+                        <p>An enterprise shall not be deemed to have a "permanent establishment" merely by reason of:
+                        </p>
+                        <ol type="a">
+                            <li>
+                                <p>the use of facilities solely for the purpose of storage, display or delivery of goods
+                                    or merchandise belonging to the enterprise; or</p>
+                            </li>
+                            <li>
+                                <p>the maintenance of a stock of goods or merchandise belonging to the enterprise solely
+                                    for the purpose of storage, display or delivery; or</p>
+                            </li>
+                            <li>
+                                <p>the maintenance of a stock of goods or merchandise belonging to the enterprise solely
+                                    for the purpose of processing by another enterprise; or</p>
+                            </li>
+                            <li>
+                                <p>the maintenance of a fixed place of business solely for the purpose of purchasing
+                                    goods or merchandise or of collecting information, for the enterprise; or</p>
+                            </li>
+                            <li>
+                                <p>the maintenance of a fixed place of business solely for the purpose of carrying on,
+                                    for the enterprise, any other activity of a preparatory or auxiliary character, such
+                                    as advertising or scientific research.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Notwithstanding the provisions of paragraphs 1 and 2, where a person – other than an agent of
+                            an independent status to whom paragraph 7 applies – is acting on behalf of an enterprise and
+                            has, and habitually exercises, in a Contracting State an authority to conclude contracts in
+                            the name of the enterprise, that enterprise shall be deemed to have a permanent
+                            establishment in that State in respect of any activities which that person undertakes for
+                            the enterprise, unless the activities of such person are limited to those mentioned in
+                            paragraph 5 which, if exercised through a fixed place of business, would not make this fixed
+                            place of business a permanent establishment under the provisions of that paragraph.</p>
+                    </li>
+                    <li>
+                        <p>An enterprise shall not be deemed to have a permanent establishment in a Contracting State
+                            merely because it carries on business in that State through a broker, general commission
+                            agent or any other agent of an independent status, providing that such persons are acting in
+                            the ordinary course of their business.</p>
+                    </li>
+                    <li>
+                        <p>The fact that a company which is a resident of a Contracting State controls or is controlled
+                            by a company which is a resident of the other Contracting State, or which carries on
+                            business in that other State (whether through a permanent establishment or otherwise), shall
+                            not of itself constitute either company a permanent establishment of the other.</p>
+                    </li>
+                </ol>
+            </article>
+
+            <article id="a7">
+                <h3>Article 7</h3>
+                <h3>Income from Immovable Property</h3>
+                <ol type="1">
+                    <li>
+                        <p>Income derived by a resident of a Contracting State from immovable property (including income
+                            from agriculture, forestry or fishing) situated in the other Contracting State may be taxed
+                            in that other State.</p>
+                    </li>
+                    <li>
+                        <p>The term "immovable property" shall have the meaning which it has under the laws of the
+                            Contracting State in which the property in question is situated. The term shall in any case
+                            include any natural resources, property accessory to immovable property, livestock and
+                            equipment used in agriculture and forestry, rights to which the provisions of general law
+                            respecting immovable property apply, usufruct of immovable property, rights to explore for
+                            or exploit natural resources or standing timber, and rights to variable or fixed payments
+                            either as consideration for or in respect of the exploitation of, or the right to explore
+                            for or exploit natural resources or standing timber; ships, boats and aircraft shall not be
+                            regarded as immovable property.</p>
+                    </li>
+                    <li>
+                        <p>The provisions of paragraph 1 shall apply to income derived from the direct use, letting, or
+                            use in any other form of immovable property.</p>
+                    </li>
+                    <li>
+                        <p>The provisions of paragraphs 1 and 3 shall also apply to income from immovable property of an
+                            enterprise and to income from immovable property used for the performance of independent
+                            personal services.</p>
+                    </li>
+                </ol>
+            </article>
+
+            <article id="a8">
+                <h3>Article 8</h3>
+                <h3>Business Profits</h3>
+                <ol type="1">
+                    <li>
+                        <p>The profits of an enterprise of a Contracting State shall be taxable only in that State
+                            unless the enterprise carries on business in the other Contracting State through a permanent
+                            establishment situated therein. If the enterprise carries on business as aforesaid, the
+                            profits of the enterprise may be taxed in the other State but only so much of them as is
+                            attributable to that permanent establishment.</p>
+                    </li>
+                    <li>
+                        <p>Subject to the provisions of paragraph 3, where an enterprise of a Contracting State carries
+                            on business in the other Contracting State through a permanent establishment situated
+                            therein, there shall in each Contracting State be attributed to that permanent establishment
+                            the profits which it might be expected to make if it were a distinct and separate enterprise
+                            engaged in the same or similar activities under the same or similar conditions and dealing
+                            wholly independently with the enterprise of which it is a permanent establishment.</p>
+                    </li>
+                    <li>
+                        <p>In determining the profits of a permanent establishment, there shall be allowed as deductions
+                            expenses which are incurred for the purposes of the permanent establishment (including
+                            executive and general administrative expenses so incurred), whether in the State in which
+                            the permanent establishment is situated or elsewhere. However, no deduction is allowable in
+                            respect of expenses which are not deductible under the laws of the Contracting State in
+                            which the permanent establishment is situated.</p>
+                    </li>
+                    <li>
+                        <p>No profits shall be attributed to a permanent establishment by reason of the mere purchase by
+                            that permanent establishment of goods or merchandise for the enterprise.</p>
+                    </li>
+                    <li>
+                        <p>For the purposes of the preceding paragraphs, the profits to be attributed to the permanent
+                            establishment shall be determined by the same method year by year unless there is good and
+                            sufficient reason to the contrary.</p>
+                    </li>
+                    <li>
+                        <p>Where profits include items of income or gains which are dealt with separately in other
+                            Articles of this Agreement, then the provisions of those Articles shall not be affected by
+                            the provisions of this Article.</p>
+                    </li>
+                    <li>
+                        <p>Nothing in this Article shall affect any provisions of the laws of New Zealand at any time in
+                            force as they affect the right to tax any income or profits from any form of insurance
+                            derived from New Zealand.</p>
+                    </li>
+                </ol>
+            </article>
+
+            <article id="a9">
+                <h3>Article 9</h3>
+                <h3>Ship and Aircraft Operations</h3>
+                <ol type="1">
+                    <li>
+                        <p>Notwithstanding the provisions of <a href="#a8">Article 8</a>, profits derived by a resident
+                            of a Contracting State from the operation of ships or aircraft in international traffic
+                            shall be taxable only in that State.</p>
+                    </li>
+                    <li>
+                        <p>Notwithstanding the provisions of paragraph 1, such profits may be taxed in the other
+                            Contracting State where they are profits from ship operations confined solely to places in
+                            that other State.</p>
+                    </li>
+                    <li>
+                        <p>The provisions of paragraphs 1 and 2 of this Article shall also apply to profits referred to
+                            in this Article derived by a resident of a Contracting State from their participation in a
+                            pool, a joint business or an international operating agency.</p>
+                    </li>
+                    <li>
+                        <p>In this Article:</p>
+                        <ol type="a">
+                            <li>
+                                <p>the term "profits" includes:</p>
+                                <ol type="i">
+                                    <li>
+                                        <p>profits, net profits, gross receipts and revenues derived directly from the
+                                            operation of ships or aircraft in international traffic;</p>
+                                    </li>
+                                    <li>
+                                        <p>interest on sums generated directly from the operation of ships or aircraft
+                                            in international traffic which is incidental to such operation;</p>
+                                    </li>
+                                    <li>
+                                        <p>income from the sale of tickets on behalf of an aircraft enterprise;</p>
+                                    </li>
+                                    <li>
+                                        <p>income from selling of engineering services to a third party and any other
+                                            income arising from other technical services which are incidental to the
+                                            operation of an aircraft enterprise; and</p>
+                                    </li>
+                                    <li>
+                                        <p>income from air and shipping operations arising from their investment in
+                                            bonds, shares and securities or any other form of investment which is
+                                            incidental to these operations.</p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>The term "operation of ships or aircraft" includes:</p>
+                                <ol type="i">
+                                    <li>
+                                        <p>the charter or rent of ships or aircraft;</p>
+                                    </li>
+                                    <li>
+                                        <p>the rent of containers and related equipment; and</p>
+                                    </li>
+                                    <li>
+                                        <p>the alienation of ships or aircraft, containers and related equipment,
+                                            provided that such charter, rent or alienation is incidental to the
+                                            operation of ships or aircraft in international traffic.</p>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>For the purposes of paragraph 2, profits derived from the carriage by ship, of passengers,
+                            livestock, mail, goods or merchandise which are shipped in a Contracting State for discharge
+                            at a place in that State shall be treated as profits from ship operations confined solely to
+                            places in that State.</p>
+                    </li>
+                </ol>
+            </article>
+            <article id="a10">
+                <h3>Article 10</h3>
+                <h3>Associated Enterprises</h3>
+                <ol>
+                    <li>
+                        <ol type="a">
+                            <li>
+                                <p>an enterprise of a Contracting State participates directly or indirectly in the
+                                    management, control or capital of an enterprise of the other Contracting State; or
+                                </p>
+                            </li>
+                            <li>
+                                <p>the same persons participate directly or indirectly in the management, control or
+                                    capital of an enterprise of a Contracting State and an enterprise of the other
+                                    Contracting State,</p>
+                                <p>and in either case conditions are made or imposed between the two enterprises in
+                                    their commercial or financial relations which differ from those which would be made
+                                    between independent enterprises, then any profits which would, but for those
+                                    conditions, have accrued to one of the enterprises, but, by reason of those
+                                    conditions, have not so accrued, may be included in the profits of that enterprise
+                                    and taxed accordingly.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Where a Contracting State includes in the profits of an enterprise of that State – and taxes
+                            accordingly – profits on which an enterprise of the other Contracting State has been charged
+                            to tax in that other State and the profits so included are profits which might have been
+                            expected to have accrued to the enterprise of the first-mentioned State if the conditions
+                            made between the two enterprises had been those which might have been expected to have been
+                            made between independent enterprises dealing wholly independently with one another, then
+                            that other State shall make an appropriate adjustment to the amount of the tax charged
+                            therein in those profits. In determining such adjustment, due regard shall be had to the
+                            other provisions of this Agreement and the competent authorities of the Contracting States
+                            shall if necessary consult each other.</p>
+                    </li>
+                </ol>
+            </article>
+
+            <article id="a11">
+                <h3>Article 11</h3>
+                <h3>Dividends</h3>
+                <ol type="1">
+                    <li>
+                        <p>Dividends paid by a company which is a resident of a Contracting State for the purposes of
+                            its tax, being dividends which are beneficially owned by a resident of the other Contracting
+                            State, may be taxed in that other State.</p>
+                    </li>
+                    <li>
+                        <p>However, such dividends may also be taxed in the Contracting State of which the company
+                            paying the dividends is a resident for the purposes of its tax, and according to the laws of
+                            that State, but the tax so charged shall not exceed 15 per cent of the gross amount of the
+                            dividends.</p>
+                    </li>
+                    <li>
+                        <p>The term "dividends" in this Article means income from shares and other income treated as
+                            income from shares by the laws, relating to tax, of the Contracting State of which the
+                            company making the payment is a resident for the purposes of its tax.</p>
+                    </li>
+                    <li>
+                        <p>The provisions of paragraphs 1 and 2 shall not apply if the beneficial owner of the
+                            dividends, being a resident of a Contracting State, carries on business in the other
+                            Contracting State of which the company paying the dividends is a resident, through a
+                            permanent establishment situated therein or performs in that other State independent
+                            services from a fixed base situated therein and the holding in respect of which the
+                            dividends are paid is effectively connected which such permanent establishment or fixed
+                            base. In such case the provisions of <a href="#a8">Article 8</a> or <a href="#a15">Article
+                                15</a>, as the case may be, shall apply.</p>
+                    </li>
+                    <li>
+                        <p>Where a company which is a resident of a Contracting State derives profits or income from the
+                            other Contracting State, that other State may not impose any tax on the dividends paid by
+                            the Company, except insofar as such dividends are paid to a resident of that other State or
+                            insofar as the holding in respect of which the dividends are paid is effectively connected
+                            with a permanent establishment or fixed base situated in that other State, nor subject the
+                            company's undistributed profits to a tax on the company's undistributed profits, even if the
+                            dividends paid or the undistributed profits consist wholly or partly of profits or income
+                            arising in such other State.</p>
+                    </li>
+                </ol>
+            </article>
+
+            <article id="a12">
+                <h3>Article 12</h3>
+                <h3>Interest</h3>
+                <ol type="1">
+                    <li>
+                        <p>Interest arising in a Contracting State, being interest which is beneficially owned by a
+                            resident of the other Contracting State, may be taxed in that other State.</p>
+                    </li>
+                    <li>
+                        <p>However, such interest may also be taxed in the Contracting State in which it arises, and
+                            according to the laws of that State, but the tax so charged shall not exceed 10 per cent of
+                            the gross amount of the interest.</p>
+                    </li>
+                    <li>
+                        <p>Notwithstanding the provisions of paragraph 2, interest arising in a Contracting State and
+                            paid to:</p>
+                        <ol type="a">
+                            <li>
+                                <p>the Government of the other Contracting State, or a political subdivision, local
+                                    government or local authority thereof;</p>
+                            </li>
+                            <li>
+                                <p>the Central Bank, an authority, a corporation, a foundation, a development fund or
+                                    any other financial institution that is wholly-owned by the Government referred to
+                                    in subparagraph (a); or</p>
+                            </li>
+                            <li>
+                                <p>any other similar entity as may be agreed upon from time to time between the
+                                    competent authorities of the Contracting States,</p>
+                                <p>shall be taxable only in that other Contracting State.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>If the Government of a Contracting State participates in a loan through an agent,
+                            partnership, fund or otherwise, the provisions of paragraph 3 shall apply proportionally to
+                            the participation of that Government in such loan. The participation shall be evidenced by a
+                            certificate to this effect by the competent authority of the Contracting State.</p>
+                    </li>
+                    <li>
+                        <p>The term "interest" in this Article means income from debt-claims of every kind, whether or
+                            not secured by mortgage and whether or not carrying a right to participate in profits, and
+                            in particular, income from government securities and income from bonds or debentures,
+                            including premiums and prizes attaching to such securities, bonds or debentures, as well as
+                            all other income treated as income from money lent by the laws, relating to tax, of the
+                            Contracting State in which the income arises, but does not include any income which is
+                            treated as a dividend under <a href="#a11">Article 11</a>.</p>
+                    </li>
+                    <li>
+                        <p>The provisions of paragraphs 1, 2, 3 and 4 shall not apply if the beneficial owner of the
+                            interest, being a resident of a Contracting State, carries on business in the other
+                            Contracting State in which the interest arises through a permanent establishment situated
+                            therein, or performs in that other State independent personal services from a fixed base
+                            situated therein, and the debt-claim in respect of which the interest is paid is effectively
+                            connected with such permanent establishment or fixed base. In such case the provisions of <a
+                                href="#a8">Article 8</a> or <a href="#a15">Article 15</a>, as the case may be, shall
+                            apply.</p>
+                    </li>
+                    <li>
+                        <p>Interest shall be deemed to arise in a Contracting State when the payer is that State itself,
+                            a political subdivision, a local authority or a resident of that State. Where, however, the
+                            person paying the interest, whether the person is a resident of a Contracting State or not,
+                            has in a Contracting State a permanent establishment or a fixed base in connection with
+                            which the debt-claim on which the interest is paid was incurred, and such interest is
+                            deductible in determining the income, profits or gains attributable to that permanent
+                            establishment or fixed base, then such interest shall be deemed to arise in the State in
+                            which the permanent establishment or fixed base is situated.</p>
+                    </li>
+                    <li>
+                        <p>Where, by reason of a special relationship between the payer and the beneficial owner, or
+                            between both of them and some other person, the amount of the interest, having regard to the
+                            debt-claim for which it is paid, exceeds the amount which would have been agreed upon by the
+                            payer and the beneficial owner in the absence of such relationship, the provisions of this
+                            Article shall apply only to the last-mentioned amount. In such case, the excess part of the
+                            payments shall remain taxable according to the laws of each Contracting State, due regard
+                            being had to the other provisions of this Agreement.</p>
+                    </li>
+                </ol>
+            </article>
+            <article id="a13">
+                <h3>Article 13</h3>
+                <h3>Royalties</h3>
+                <ol type="1">
+                    <li>
+                        <p>Royalties arising in a Contracting State and beneficially owned by a resident of the other
+                            Contracting State may be taxed in that other State.</p>
+                    </li>
+                    <li>
+                        <p>Those royalties may be taxed in the Contracting State in which they arise, and according to
+                            the laws of that State, but the tax so charged shall not exceed 10 per cent of the gross
+                            amount of the royalties.</p>
+                    </li>
+                    <li>
+                        <p>The term "royalties" as used in this Article means payments of any kind, whether periodical
+                            or not, and however described or computed, to the extent to which they are made as
+                            consideration for:</p>
+                        <ol type="a">
+                            <li>
+                                <p>the use of, or the right to use, any copyright (including the use of or the right to
+                                    use any literary, dramatic, musical, or artistic works, sound recordings, films,
+                                    broadcasts, cable programmes, or typographical arrangements of published editions),
+                                    patent, design or model, plan, secret for formula or process, trademark, or other
+                                    like property or right; or</p>
+                            </li>
+                            <li>
+                                <p>the use of, or the right to use, any industrial, scientific or commercial equipment;
+                                    or</p>
+                            </li>
+                            <li>
+                                <p>information concerning industrial, commercial or scientific experience; or</p>
+                            </li>
+                            <li>
+                                <p>any assistance that is ancillary and subsidiary to, and is furnished as a means of
+                                    enabling the application or enjoyment of, any such property or right as is mentioned
+                                    in subparagraph (a), any such equipment as is mentioned in subparagraph (b) or any
+                                    such information as is mentioned in subparagraph (c); or</p>
+                            </li>
+                            <li>
+                                <p>total or partial forbearance in respect of the use or supply of any property or right
+                                    referred to in this paragraph.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>The provisions of paragraphs 1 and 2 shall not apply if the beneficial owner of the
+                            royalties, being a resident of a Contracting State, carries on business in the other
+                            Contracting State in which the royalties arise through a permanent establishment situated
+                            therein, or performs in that other State independent personal services from a fixed based
+                            situated therein, and the right or property in respect of which the royalties are paid is
+                            effectively connected with such permanent establishment or fixed base. In such case the
+                            provisions of <a href="#a8">Article 8</a> or <a href="#a15">Article 15</a>, as the case may
+                            be, shall apply.</p>
+                    </li>
+                    <li>
+                        <p>Royalties shall be deemed to arise in a Contracting State when the payer is a person who is a
+                            resident of that State for the purposes of its tax. Where, however, the person paying the
+                            royalties, whether the person is a resident of a Contracting State or not, has in a
+                            Contracting State a permanent establishment or fixed base in connection with which the
+                            liability to pay the royalties was incurred, and the royalties are deductible in determining
+                            the income, profits or gains attributable to that permanent establishment or fixed base,
+                            then the royalties shall be deemed to arise in the State in which the permanent
+                            establishment or fixed base is situated.</p>
+                    </li>
+                    <li>
+                        <p>Where, by reason of a special relationship between the payer and the beneficial owner, or
+                            between both of them and some other person, the amount of the royalties, having regard to
+                            the use, right or information for which they are paid, exceeds the amount which would have
+                            been agreed upon by the payer and the beneficial owner in the absence of such relationship,
+                            the provisions of this Article shall apply only to the last-mentioned amount. In such case
+                            the excess part of the payments shall remain taxable according to the laws of each
+                            Contracting State, due regard being had to the other provisions of this Agreement.</p>
+                    </li>
+                </ol>
+            </article>
+
+            <article id="a14">
+                <h3>Article 14</h3>
+                <h3>Alienation of Property</h3>
+                <ol type="1">
+                    <li>
+                        <p>Income, profits or gains derived by a resident of a Contracting State from the alienation of
+                            immovable property (as defined in paragraph 2 of <a href="#a7">Article 7</a>) situated in
+                            the other Contracting State may be taxed in that other State except as provided to the
+                            contrary by the domestic laws of that other State.</p>
+                    </li>
+                    <li>
+                        <p>Income, profits or gains from the alienation of movable property forming part of the business
+                            property of a permanent establishment which an enterprise of a Contracting State has in the
+                            other Contracting State or of movable property pertaining to a fixed base available to a
+                            resident of a Contracting State in the other Contracting State for the purpose of performing
+                            independent personal services, including income, profits or gains from the alienation of
+                            such a permanent establishment (alone or with the whole enterprise) or of such fixed base,
+                            may be taxed in that other State except as provided to the contrary by the domestic laws of
+                            that other State.</p>
+                    </li>
+                    <li>
+                        <p>Income, profits or gains from the alienation of ships or aircraft operated in international
+                            traffic, or movable property pertaining to the operation of such ships or aircraft, shall be
+                            taxable only in the Contracting State in which the enterprise alienating such ships,
+                            aircraft or other property is a resident.</p>
+                    </li>
+                    <li>
+                        <p>Gains from the alienation of any property other than that referred to in paragraphs 1, 2 and
+                            3, shall be taxable only in the Contracting State of which the alienator is a resident.</p>
+                    </li>
+                </ol>
+            </article>
+
+            <article id="a15">
+                <h3>Article 15</h3>
+                <h3>Independent Personal Services</h3>
+                <ol type="1">
+                    <li>
+                        <p>Income derived by an individual who is a resident of a Contracting State in respect of
+                            professional services or other activities of an independent character shall be taxable only
+                            in that State unless such services are performed in the other Contracting State and:</p>
+                        <ol type="a">
+                            <li>
+                                <p>the individual is present in the other State for a period or periods exceeding in the
+                                    aggregate 183 days in any 12 month period commencing or ending in the year of income
+                                    concerned; or</p>
+                            </li>
+                            <li>
+                                <p>a fixed base is regularly available to the individual in the other State for the
+                                    purpose of performing the individual's activities.</p>
+                                <p>If the provisions of subparagraphs (a) or (b) are satisfied, the income may be taxed
+                                    in that other State but only so much of it as is attributable to activities
+                                    performed during such period or periods or from that fixed base.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>The term "professional services" includes especially independent scientific, literary,
+                            artistic, educational or teaching activities as well as the independent activities of
+                            physicians, lawyers, engineers, architects, dentists and accountants.</p>
+                    </li>
+                </ol>
+            </article>
+
+            <article id="a16">
+                <h3>Article 16</h3>
+                <h3>Income from Employment</h3>
+                <ol type="1">
+                    <li>
+                        <p>Subject to the provisions of <a href="#a17">Articles 17</a>, <a href="#a19">19</a> and <a
+                                href="#a20">20</a>, salaries, wages and other similar remuneration derived by a resident
+                            of a Contracting State in respect of an employment shall be taxable only in that State
+                            unless the employment is exercised in the other Contracting State. If the employment is so
+                            exercised, such remuneration as is derived therefrom may be taxed in that other State.</p>
+                    </li>
+                    <li>
+                        <p>Notwithstanding the provisions of paragraph 1, remuneration derived by a resident of a
+                            Contracting State in respect of an employment exercised in the other Contracting State shall
+                            be taxable only in the first-mentioned State if:</p>
+                        <ol type="a">
+                            <li>
+                                <p>the recipient is present in the other State for a period or periods not exceeding in
+                                    the aggregate 183 days in any 12 month period commencing or ending in the year of
+                                    income concerned; and</p>
+                            </li>
+                            <li>
+                                <p>the remuneration is paid by, or on behalf of, an employer who is not a resident of
+                                    the other State; and</p>
+                            </li>
+                            <li>
+                                <p>the remuneration is not deductible in determining the taxable profits of a permanent
+                                    establishment or a fixed base which the employer has in the other State.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Notwithstanding the preceding provisions of this Article, remuneration derived in respect of
+                            an employment exercised in relation only to a ship or aircraft operated in international
+                            traffic by a resident of a Contracting State shall be taxable only in that State. This
+                            paragraph shall not apply if the employee is a resident of the other Contracting State.</p>
+                    </li>
+                </ol>
+            </article>
+
+            <article id="a17">
+                <h3>Article 17</h3>
+                <h3>Directors' Fees</h3>
+                <p>Directors' fees and other similar payments derived by a resident of a Contracting State in that
+                    person's capacity as a member of the board of directors of a company which is a resident of the
+                    other Contracting State may be taxed in that other State.</p>
+            </article>
+
+            <article id="a18">
+                <h3>Article 18</h3>
+                <h3>Entertainers and Sportspersons</h3>
+                <ol type="1">
+                    <li>
+                        <p>Notwithstanding the provisions of <a href="#a15">Articles 15</a> and <a href="#a16">16</a>,
+                            income derived by a resident of a Contracting State as an entertainer, such as a theatre,
+                            motion picture, radio or television artiste, or a musician, or as a sportsperson, from that
+                            person's personal activities as such exercised in the other Contracting State, may be taxed
+                            in that other State.</p>
+                    </li>
+                    <li>
+                        <p>Where income in respect of personal activities exercised by an entertainer or a sportsperson
+                            in that person's capacity as such accrues not to the entertainer or sportsperson but to
+                            another person, that income may, notwithstanding the provisions of <a href="#a15">Articles
+                                15</a> and <a href="#a16">16</a>, be taxed in the Contracting State in which the
+                            activities of the entertainer or sportsperson are exercised.</p>
+                    </li>
+                    <li>
+                        <p>The provisions of paragraphs 1 and 2 of this Article shall not apply to income derived by
+                            entertainers or sportspersons who are residents of a Contracting State and who are sponsored
+                            by that State from their personal activities as entertainers or sportspersons exercised in
+                            the other Contracting State if their visit to that other State is substantially supported
+                            from the public funds of the first-mentioned State. In such a case, the income shall be
+                            taxable only in the State of which the entertainer or sportsperson is a resident.</p>
+                    </li>
+                </ol>
+            </article>
+
+            <article id="a19">
+                <h3>Article 19</h3>
+                <h3>Pensions</h3>
+                <ol type="1">
+                    <li>
+                        <p>Subject to paragraph 2 of <a href="#a20">Article 20</a>, pensions, including government
+                            pensions and annuities, paid to a resident of a Contracting State shall be taxable only in
+                            that State.</p>
+                    </li>
+                    <li>
+                        <p>The term "annuity" means a stated sum payable periodically at stated times, during life or
+                            during a specified or ascertainable period of time, under an obligation to make the payments
+                            in return for adequate and full consideration in money or money's worth.</p>
+                    </li>
+                </ol>
+            </article>
+            <article id="a20">
+                <h3>Article 20</h3>
+                <h3>Government Service</h3>
+                <ol type="1">
+                    <li>
+                        <p>(a) Salaries, wages and other similar remuneration, other than a pension, paid by a
+                            Contracting State or a political subdivision, local government or a local authority thereof
+                            to an individual in respect of services rendered to that State or political subdivision,
+                            local government or a local authority thereof shall be taxable only in that State.</p>
+                        <ol type="a">
+                            <li>
+                                <p>However, such salaries, wages and other similar remuneration shall be taxable only in
+                                    the other Contracting State if the services are rendered in that State and the
+                                    individual is a resident of that State who:</p>
+                                <ol type="i">
+                                    <li>
+                                        <p>is a citizen of that State; or</p>
+                                    </li>
+                                    <li>
+                                        <p>did not become a resident of that State solely for the purpose of rendering
+                                            the services.</p>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>(a) Pensions paid by, or out of funds created by a Contracting State or a political
+                            subdivision, local government or a local authority thereof to an individual in respect of
+                            services rendered to that State or subdivision or authority shall be taxable in that State.
+                        </p>
+                        <ol type="a">
+                            <li>
+                                <p>Notwithstanding the provisions of subparagraph (a) of this paragraph, such pensions
+                                    shall be taxable only in the other Contracting State if the individual is a resident
+                                    of and a citizen of that State.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>The provisions of <a href="#a15">Articles 15</a>, <a href="#a16">16</a>, <a
+                                href="#a17">17</a> and <a href="#a19">19</a> of this Agreement shall apply to salaries,
+                            wages and other similar remuneration, and to pensions, in respect of services rendered in
+                            connection with a business carried on by a Contracting State or a political subdivision,
+                            local government or a local authority thereof.</p>
+                    </li>
+                </ol>
+            </article>
+
+            <article id="a21">
+                <h3>Article 21</h3>
+                <h3>Students</h3>
+                <ol type="1">
+                    <li>
+                        <p>A student or business apprentice who is or was immediately before visiting a Contracting
+                            State a resident of the other Contracting State and who is present in the first-mentioned
+                            State solely for the purpose of that person's education or training shall be exempt from tax
+                            in that first-mentioned State in respect of:</p>
+                        <ol type="a">
+                            <li>
+                                <p>payments from sources outside the first-mentioned Contracting State for the purpose
+                                    of that person's maintenance, education or training; or</p>
+                            </li>
+                            <li>
+                                <p>grants, allowances or awards from a government of a Contracting State or public
+                                    foundation for the purpose of that person's maintenance, education or training.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>In no case shall any person have the benefit of the provisions of paragraph 1 of this Article
+                            for more than five fiscal years.</p>
+                    </li>
+                </ol>
+            </article>
+
+            <article id="a22">
+                <h3>Article 22</h3>
+                <h3>Other Income</h3>
+                <p>Items of income of a resident of a Contracting State, wherever arising, not dealt with in the
+                    preceding Articles of this Agreement shall be taxable only in that State except that if such income
+                    is derived from sources within the other Contracting State, that income may also be taxed in that
+                    other State.</p>
+            </article>
+
+            <article id="a23">
+                <h3>Article 23</h3>
+                <h3>Elimination of Double Taxation</h3>
+                <ol type="1">
+                    <li>
+                        <p>Where a resident of the United Arab Emirates derives income which in accordance with the
+                            provisions of this Agreement may be taxed in New Zealand, the United Arab Emirates shall
+                            allow as a deduction from tax on income of that person an amount equal to the tax on income
+                            paid in New Zealand. Such deduction shall not, however, exceed that part of the income tax,
+                            as computed before the deduction is given, which is attributable to the income which may be
+                            taxed in New Zealand.</p>
+                    </li>
+                    <li>
+                        <p>Subject to the provisions of the laws of New Zealand from time to time in force which relate
+                            to the allowance of a credit against New Zealand income tax of tax paid in a country outside
+                            New Zealand (which shall not affect the general principle of this Article), United Arab
+                            Emirates tax paid under the laws of the United Arab Emirates and consistently with this
+                            Agreement, whether directly or by deduction, in respect of income derived by a resident of
+                            New Zealand from sources in the United Arab Emirates (excluding, in the case of a dividend,
+                            tax paid in respect of the profits out of which the dividend is paid) shall be allowed as a
+                            credit against New Zealand tax payable in respect of that income.</p>
+                    </li>
+                </ol>
+            </article>
+
+            <article id="a24">
+                <h3>Article 24</h3>
+                <h3>Mutual Agreement Procedure</h3>
+                <ol type="1">
+                    <li>
+                        <p>Where a person considers that the actions of one or both of the Contracting States result or
+                            will result for that person in taxation not in accordance with the provisions of this
+                            Agreement, that person may, irrespective of the remedies provided by the domestic laws of
+                            those States, present a case to the competent authority of the Contracting State of which
+                            the person is a resident. The case must be presented within three years from the first
+                            notification of the action resulting in taxation not in accordance with the provisions of
+                            the Agreement.</p>
+                    </li>
+                    <li>
+                        <p>The competent authority shall endeavour, if the objection appears to it to be justified and
+                            it is not itself able to arrive at a satisfactory solution, to resolve the case by mutual
+                            agreement with the competent authority of the other Contracting State, with a view to the
+                            avoidance of taxation which is not in accordance with the Agreement. Any agreement reached
+                            shall be implemented notwithstanding any time limits in the domestic law of the Contracting
+                            State.</p>
+                    </li>
+                    <li>
+                        <p>The competent authorities of the Contracting States shall endeavour to resolve by mutual
+                            agreement any difficulties or doubts arising as to the interpretation or application of the
+                            Agreement.</p>
+                    </li>
+                    <li>
+                        <p>The competent authorities of the Contracting States may communicate with each other directly
+                            for the purpose of giving effect to the provisions of the Agreement.</p>
+                    </li>
+                </ol>
+            </article>
+
+            <article id="a25">
+                <h3>Article 25</h3>
+                <h3>Exchange of Information</h3>
+                <ol type="1">
+                    <li>
+                        <p>The competent authorities of the Contracting States shall exchange such information as is
+                            necessary for carrying out the provisions of this Agreement or of the domestic laws
+                            concerning taxes of every kind and description imposed on behalf of the Contracting States
+                            insofar as the taxation thereunder is not contrary to the Agreement. The exchange of
+                            information is not restricted by <a href="#a1">Article 1</a> and <a href="#a2">Article
+                                2</a>. Any information received by a Contracting State shall be treated as secret in the
+                            same manner as information obtained under the domestic laws of that State and shall be
+                            disclosed only to persons or authorities, including courts and administrative bodies,
+                            concerned with the assessment or collection of, the enforcement or prosecution in respect
+                            of, or the determination of appeals in relation to, the taxes referred to in the first
+                            sentence. Such persons or authorities shall use the information only for such purposes.</p>
+                    </li>
+                    <li>
+                        <p>In no case shall the provisions of paragraph 1 be construed so as to impose on a Contracting
+                            State the obligation:</p>
+                        <ol type="a">
+                            <li>
+                                <p>to carry out administrative measures at variance with the laws and administrative
+                                    practice of that or of the other Contracting State;</p>
+                            </li>
+                            <li>
+                                <p>to supply information which is not obtainable under the laws or in the normal course
+                                    of the administration of that or of the other Contracting State; or</p>
+                            </li>
+                            <li>
+                                <p>to supply information which would disclose any trade, business, industrial,
+                                    commercial or professional secret or trade process, or information, the disclosure
+                                    of which would be contrary to public policy.</p>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </article>
+
+            <article id="a26">
+                <h3>Article 26</h3>
+                <h3>Members of Diplomatic Missions and Consular Posts</h3>
+                <p>Nothing in this Agreement shall affect the fiscal privileges of members of diplomatic missions or
+                    consular posts under the general rules of international law or under the provisions of special
+                    agreements.</p>
+            </article>
+
+            <article id="a27">
+                <h3>Article 27</h3>
+                <h3>Entry into Force</h3>
+                <p>This Agreement shall enter into force on the last date on which the Contracting States exchange notes
+                    through the diplomatic channel notifying each other that the last of such things has been done as is
+                    necessary to give the Agreement the force of law in the United Arab Emirates and in New Zealand, as
+                    the case may be, and, in that event, the Agreement shall have effect:</p>
+                <ol type="a">
+                    <li>
+                        <p>in the United Arab Emirates and New Zealand: in respect of withholding tax on income, profits
+                            or gains derived by a non-resident, for amounts paid or credited on or after the first day
+                            of the second month next following the date on which the Agreement enters into force;</p>
+                    </li>
+                    <li>
+                        <p>in the United Arab Emirates: in respect of United Arab Emirates tax other than withholding
+                            tax, for any year beginning on or after 1 January next following the date on which the
+                            Agreement enters into force; and</p>
+                    </li>
+                    <li>
+                        <p>in New Zealand: in respect of New Zealand tax other than withholding tax, for any income year
+                            beginning on or after 1 April next following the date on which the Agreement enters into
+                            force.</p>
+                    </li>
+                </ol>
+            </article>
+            <article id="a28">
+                <h3>Article 28</h3>
+                <h3>Termination</h3>
+                <p>This Agreement shall remain in force until terminated by a Contracting State. Either Contracting
+                    State may terminate the Agreement, through the diplomatic channel, by giving notice of termination
+                    on or before 30 June in any calendar year beginning after the expiration of 5 years from the date of
+                    its entry into force. In such event the Agreement shall cease to have effect:</p>
+                <ol type="a">
+                    <li>
+                        <p>in the United Arab Emirates and New Zealand:</p>
+                        <p>in respect of withholding tax on income, profits or gains derived by a non-resident, for
+                            amounts paid or credited on or after the first day of the second month next following that
+                            in which the notice of termination is given;</p>
+                    </li>
+                    <li>
+                        <p>in the United Arab Emirates:</p>
+                        <p>in respect of United Arab Emirates tax other than withholding tax, for any year beginning on
+                            or after 1 January next following that in which the notice of termination is given;</p>
+                    </li>
+                    <li>
+                        <p>in New Zealand:</p>
+                        <p>in respect of New Zealand tax other than withholding tax, for any income year beginning on or
+                            after 1 April next following that in which the notice of termination is given.</p>
+                    </li>
+                </ol>
+                <p>IN WITNESS WHEREOF the undersigned, duly authorised by their respective Governments, have signed this
+                    Agreement.</p>
+                <p>Done in duplicate at Dubai this 22nd day of September 2003 in the Arabic and English languages, all
+                    texts being equally authoritative, except in the case of doubt, then the English text shall prevail.
+                </p>
+                <p>For the Government of New Zealand</p>
+                <p>For the Government of United Arab Emirates</p>
+                <p>Hon Dr Michael Cullen Hamdan Bin Rashid Al Maktoum Deputy Prime Minister Deputy Ruler of Dubai</p>
+                <p>Minister of Revenue Minister of Finance and Industry</p>
+            </article>
+        </main>
+        <footer>
+            <section>
+                <h4>THE PROTOCOL</h4>
+                <p>TO THE AGREEMENT BETWEEN THE GOVERNMENT OF NEW ZEALAND AND THE GOVERNMENT OF THE UNITED ARAB EMIRATES
+                    FOR THE AVOIDANCE OF DOUBLE TAXATION WITH RESPECT TO TAXES ON INCOME AND PREVENTION OF FISCAL
+                    EVASION</p>
+
+                <p>At the signing of the Agreement concluded today between the Government of New Zealand and the
+                    Government of the United Arab Emirates for the avoidance of double taxation with respect to taxes on
+                    income and the prevention of fiscal evasion, the undersigned have agreed upon the following
+                    additional provisions which shall form an integral part of the said Agreement.</p>
+
+                <p>It is understood:</p>
+
+                <ol type="1">
+                    <li>With respect to paragraph 1 of <a href="#a5">Article 5</a>:
+                        <p>It is agreed that:</p>
+                        <ol type="a">
+                            <li>Any institution is a resident of a Contracting State if it was created by the Government
+                                of that State, a political subdivision, local government or local authority thereof, and
+                                is recognised as a government institution by mutual agreement of the competent
+                                authorities of the Contracting States.</li>
+                            <li>The Abu Dhabi Investment Authority is recognised as a government institution by the
+                                competent authorities of the Contracting States.</li>
+                            <li>The Dubai Development and Investment Authority is recognised as a government institution
+                                by the competent authorities of the Contracting States.</li>
+                        </ol>
+                    </li>
+
+                    <li>With respect to <a href="#a8">Article 8</a>:
+                        <p>Without prejudice to <a href="#a9">Article 9</a>, it is understood that paragraph 1 means
+                            that if an enterprise of a Contracting State carries on business in the other Contracting
+                            State, other than through a permanent establishment, profits or gains of this enterprise
+                            will be subject to tax only in the Contracting State of which the enterprise is resident.
+                        </p>
+                    </li>
+
+                    <li>With respect to <a href="#a7">Article 7</a> and <a href="#a9">Article 9</a>:
+                        <p>It is understood that any income derived from immovable property that is primarily used for
+                            the purpose of aircraft operations is governed by <a href="#a9">Article 9</a> of this
+                            Agreement.</p>
+                        <p>If the New Zealand aircraft operator is charged with any tax of the kind referred to in <a
+                                href="#a2">Article 2</a> in any State of which Gulf Air is the national carrier, the
+                            Contracting States shall open negotiations without delay with a view to adjusting the
+                            exemptions afforded by <a href="#a9">Article 9</a> of this Agreement only to the extent of
+                            the United Arab Emirates' share in the ownership of Gulf Air.</p>
+                    </li>
+
+                    <li>With respect to <a href="#a11">Article 11</a>, <a href="#a12">Article 12</a> and <a
+                            href="#a13">Article 13</a>:
+                        <p>It is understood that a trustee resident in New Zealand and subject to tax in New Zealand in
+                            respect of dividends, interest or royalties shall be entitled to relief under <a
+                                href="#a11">Article 11</a>, <a href="#a12">Article 12</a> and <a href="#a13">Article
+                                13</a> of this Agreement.</p>
+                    </li>
+
+                    <li>With respect to <a href="#a11">Article 11</a>:
+                        <p>It is understood that New Zealand's Foreign Investor Tax Credit rules contained in subpart LE
+                            of the Income Tax Act 1994 are designed to offset the 15% withholding tax that New Zealand
+                            may levy in accordance with paragraph 2 of <a href="#a11">Article 11</a>, by a payment of a
+                            special dividend by the New Zealand company of an amount equal to this 15% tax. This special
+                            dividend is paid to the shareholder at the same time as the principal dividend.</p>
+                    </li>
+
+                    <li>With respect to <a href="#a11">Article 11</a>:
+                        <p>It is understood in relation to paragraphs 4 and 5 of <a href="#a11">Article 11</a> that if a
+                            company resident in the United Arab Emirates operates as a branch that has no permanent
+                            establishment in New Zealand the profit of that branch will be subject to tax only in the
+                            United Arab Emirates.</p>
+                    </li>
+
+                    <li>With respect to <a href="#a12">Article 12</a>:
+                        <p>It is understood that no withholding tax is levied on interest on New Zealand Government
+                            bonds and other similarly registered widely held debt securities, under current New Zealand
+                            income tax law, if that interest income is paid to a non-resident not carrying on a business
+                            in New Zealand through a permanent establishment.</p>
+                    </li>
+
+                    <li>With respect to <a href="#a22">Article 22</a>:
+                        <p>It is agreed that if an item of income arises to be dealt with under this Article the
+                            competent authorities of the Contracting States shall negotiate to reach a satisfactory
+                            solution as to how the item should be taxed.</p>
+                    </li>
+
+                    <li>With respect to the entire Agreement:
+                        <p>It is agreed that:</p>
+                        <ol type="a">
+                            <li>Both Contracting States will recognise that sovereign immunity from income tax shall
+                                apply to income beneficially owned by:
+                                <ol type="i">
+                                    <li>the Government of the United Arab Emirates;</li>
+                                    <li>a local government of the United Arab Emirates (Abu Dhabi, Dubai, Sharjah, Ras
+                                        Al Khaimah, Fujairah, Umm al Qaiwain and Ajman); or</li>
+                                    <li>in the case of the United Arab Emirates only, an agency of the federal or local
+                                        government which forms an integral part of that government.</li>
+                                </ol>
+                            </li>
+                            <li>The Abu Dhabi Investment Authority and the Dubai Development and Investment Authority
+                                are recognised as being an integral part of the Government of the United Arab Emirates
+                                for the purposes of paragraph (a).</li>
+                            <li>Notwithstanding the provisions of <a href="#a11">Article 11</a>, <a href="#a12">Article
+                                    12</a> and <a href="#a13">Article 13</a>, sovereign immunity tax relief will be
+                                accorded to the Government of the United Arab Emirates, its local governments and their
+                                financial institutions on a case by case basis through consultation between the
+                                competent authorities.</li>
+                        </ol>
+                    </li>
+
+                    <li>With respect to the entire Agreement:
+                        <ol type="a">
+                            <li>Notwithstanding paragraph 5 of <a href="#a11">Article 11</a> no taxation relief shall be
+                                available with respect to taxation on dividends paid to a person who is resident of
+                                neither Contracting State. Prior to denying treaty relief under this paragraph, the
+                                competent authority of the relevant Contracting State shall discuss the matter with the
+                                competent authority of the other Contracting State.</li>
+                            <li>No benefits by way of relief from taxation shall arise under this Agreement where and to
+                                the extent to which such relief is contrary to the intent of this Agreement. The
+                                competent authorities of the Contracting States shall, under the Mutual Agreement
+                                Procedure of <a href="#a24">Article 24</a> recommend specific amendments to the
+                                Agreement. The Contracting States further agree that any such recommendation will be
+                                considered and discussed in an expeditious manner with a view to amending the Agreement,
+                                where necessary.</li>
+                        </ol>
+                    </li>
+
+                    <li>With respect to <a href="#a16">Article 16</a>:
+                        <p>Notwithstanding <a href="#a27">Article 27</a> it is agreed that the provisions of <a
+                                href="#a16">Article 16</a> shall apply from 27 October 2002.</p>
+                    </li>
+                </ol>
+
+
+            </section>
+        </footer>
+    </div>
+</body>
+
+</html>
