@@ -4,285 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dtaa.css">
     <title>Canada-DTAA</title>
 </head>
 
 <body>
-    <style>
-        .scope {
-            margin: 0;
-            padding: 8px;
-            font-size: large;
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            overflow-x: hidden;
-            max-width: 100%;
-            box-sizing: border-box;
-        }
-
-        .scope header {
-            padding: 1rem 1.25rem;
-            margin: 0.25rem 0.75rem;
-        }
-
-        .scope header * {
-            text-align: center;
-        }
-
-        .scope header h1,
-        .scope header h2,
-        .scope header h3,
-        .scope header h4 {
-            color: #2f438d;
-        }
-
-        .scope main h3 {
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        .scope main hr {
-            max-width: 640px;
-            margin: 0.5rem auto;
-        }
-
-        .scope main ::-webkit-scrollbar {
-            width: 0.25rem;
-        }
-
-        .scope main ::-webkit-scrollbar-track {
-            background: grey;
-        }
-
-        .scope main ::-webkit-scrollbar-thumb {
-            background: white;
-            width: 0.25rem;
-        }
-
-        .scope main .example {
-            background-color: bisque;
-            padding: 0.25rem 0.75rem;
-            border-radius: 0.25rem;
-            margin: 1em 0;
-            overflow-x: scroll;
-        }
-
-        .scope main .example h3 {
-            color: black;
-        }
-
-        .scope main .box {
-            min-width: 40vw;
-            padding: 0.25rem 0.75rem;
-            border: 1px solid black;
-            font-size: small;
-        }
-
-        .scope footer p * {
-            font-style: italic;
-        }
-
-        .scope ul.dashed>li::marker {
-            content: "- ";
-        }
-
-        .scope table {
-            width: 100%;
-            margin: 0.25rem auto;
-            overflow-x: auto;
-        }
-
-        .scope table,
-        .scope td,
-        .scope th {
-            border: 1px black solid;
-            border-collapse: collapse;
-            padding: 0.5rem 0.75rem;
-        }
-
-        .scope table.list {
-            border: 0;
-            width: calc(100% - 2rem);
-            margin: 0.25rem auto;
-            padding: 0.25rem;
-            table-layout: fixed;
-        }
-
-        .scope table.list * {
-            border: 0;
-        }
-
-        .scope table.list td:first-child {
-            vertical-align: top;
-            width: 2.5rem;
-        }
-
-        .scope table.list tr:not(:first-child) {
-            width: auto;
-        }
-
-        .scope .fraction {
-            display: inline-block;
-            vertical-align: middle;
-            text-align: center;
-        }
-
-        .scope .fraction>span {
-            display: block;
-            padding: 0 0.2em;
-        }
-
-        .scope .fraction .numerator {
-            border-bottom: 1px solid #000;
-        }
-
-        .scope .fraction .denominator {
-            margin-top: -0.1em;
-        }
-
-        .scope h3 {
-            color: #2f438d;
-        }
-
-        .scope #linktogtl,
-        .scope #linktogtl *,
-        .scope #gtlnotes h3 {
-            color: #43af76;
-        }
-
-        .scope .repeal,
-        .scope .repeal *,
-        .scope .attention {
-            color: #c00000;
-        }
-
-        .scope p {
-            padding: 0.25rem 0;
-            margin-top: 0.25rem;
-            margin-bottom: 0.25rem;
-            line-height: 1.5rem;
-            text-align: justify;
-        }
-
-        .scope a {
-            color: #5948ca;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .scope a:hover {
-            text-decoration: underline;
-        }
-
-        .scope main article {
-            background-color: #f8f8f8;
-            width: calc(100% - 2rem);
-            margin: 0.5rem 0.75rem;
-            padding: 0.5rem;
-        }
-
-        .scope main article>*:nth-child(1),
-        .scope main article>*:nth-child(2) {
-            text-align: center;
-        }
-
-        /* Media Queries for Responsive Design */
-        @media only screen and (max-width: 1200px) {
-            .scope {
-                font-size: medium;
-            }
-
-            .scope main article {
-                width: calc(100% - 1rem);
-                margin: 0.5rem 0.5rem;
-            }
-        }
-
-        @media only screen and (max-width: 768px) {
-            .scope {
-                font-size: small;
-                padding: 5px;
-            }
-
-            .scope header {
-                padding: 0.75rem 0.5rem;
-                margin: 0.25rem 0.5rem;
-            }
-
-            .scope main article {
-                width: calc(100% - 1rem);
-                margin: 0.5rem 0.25rem;
-                padding: 0.25rem;
-            }
-
-            .scope table {
-                display: block;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-
-            .scope header h1 {
-                font-size: 1.5rem;
-            }
-
-            .scope header h2,
-            .scope header h3,
-            .scope header h4 {
-                font-size: 1.3rem;
-            }
-
-            .scope main h3 {
-                font-size: 1rem;
-            }
-        }
-
-        @media only screen and (max-width: 480px) {
-            .scope {
-                font-size: x-small;
-                padding: 2px;
-            }
-
-            .scope header {
-                padding: 0.5rem 0.25rem;
-                margin: 0.25rem;
-            }
-
-            .scope header h1 {
-                font-size: 1.2rem;
-            }
-
-            .scope header h2,
-            .scope header h3,
-            .scope header h4 {
-                font-size: 1.1rem;
-            }
-
-            .scope main h3 {
-                font-size: 0.9rem;
-            }
-
-            .scope p {
-                line-height: 1.3rem;
-            }
-
-            .scope main article {
-                width: calc(100% - 0.5rem);
-                margin: 0.25rem;
-                padding: 0.25rem 0.125rem;
-            }
-
-            .scope table.list td:first-child {
-                width: 1.5rem;
-            }
-
-            .scope ol {
-                padding-left: 1.5rem;
-            }
-
-            .scope a {
-                word-break: break-word;
-            }
-        }
-    </style>
+  
      <div style="
      margin: 0.5rem auto;
      padding: 0.5rem;
@@ -291,7 +18,7 @@
      max-width: 100%;
      box-sizing: border-box;
    ">
-       <a href="./index.html" style="
+        <a href="./index.html" target="_blank" rel="noopener noreferrer" style="
          color: #5948ca;
          text-decoration: none;
          font-weight: 600;
@@ -759,7 +486,7 @@
                                     or aircraft in international traffic shall be taxable only in that State.</p>
                             </li>
                             <li>
-                                <p>Notwithstanding the provisions of <a href="#a7">Article 7</a>, profits derived by an
+                                <p>Notwithstanding the provisions of  <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a>, profits derived by an
                                     enterprise of a Contracting State from a voyage of a ship or aircraft where the
                                     principal purpose of the voyage is to transport passengers or property between
                                     places in the other Contracting State may be taxed in that other State.</p>
@@ -904,8 +631,8 @@
                                     permanent establishment situated therein, or performs in that other State
                                     independent personal services from a fixed base situated therein, and the holding in
                                     respect of which the dividends are paid is effectively connected with such permanent
-                                    establishment or fixed base. In such case the provisions of <a href="#a7">Article
-                                        7</a> or <a href="#a14">Article 14</a>, as the case may be, shall apply.</p>
+                                    establishment or fixed base. In such case the provisions of  <a href="#a7" target="_blank" rel="noopener noreferrer">Article
+                                        7</a> or  <a href="#a14" target="_blank" rel="noopener noreferrer">Article 14</a>, as the case may be, shall apply.</p>
                             </li>
                             <li>
                                 <p>Where a company which is a resident of a Contracting State derives profits or income
@@ -989,7 +716,7 @@
                                     attaching to such securities, bonds or debentures, as well as income which is
                                     subjected to the same taxation treatment as income from money lent by the laws of
                                     the State in which the income arises. However, the term "interest" does not include
-                                    income dealt with in <a href="#a8">Article 8</a> or <a href="#a10">Article 10</a>.
+                                    income dealt with in  <a href="#a8" target="_blank" rel="noopener noreferrer">Article 8</a> or  <a href="#a10" target="_blank" rel="noopener noreferrer">Article 10</a>.
                                 </p>
                             </li>
                             <li>
@@ -999,7 +726,7 @@
                                     situated therein, or performs in that other State independent personal services from
                                     a fixed base situated therein, and the debt-claim in respect of which the interest
                                     is paid is effectively connected with such permanent establishment or fixed base. In
-                                    such case the provisions of <a href="#a7">Article 7</a> or <a href="#a14">Article
+                                    such case the provisions of  <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a> or  <a href="#a14" target="_blank" rel="noopener noreferrer">Article
                                         14</a>, as the case may be, shall apply.</p>
                             </li>
                             <li>
@@ -1076,7 +803,7 @@
                                     situated therein, or performs in that other State independent personal services from
                                     a fixed base situated therein, and the right or property in respect of which the
                                     royalties are paid is effectively connected with such permanent establishment or
-                                    fixed base. In such case the provisions of <a href="#a7">Article 7</a> or <a
+                                    fixed base. In such case the provisions of  <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a> or <a
                                         href="#a14">Article 14</a>, as the case may be, shall apply.</p>
                             </li>
                             <li>
@@ -1320,15 +1047,15 @@
                         <h3>Article 21<br />Income of Government and Institutions</h3>
                         <ol type="1">
                             <li>
-                                <p>Notwithstanding the provisions of <a href="#a10">Article 10</a>, dividends paid by a
+                                <p>Notwithstanding the provisions of  <a href="#a10" target="_blank" rel="noopener noreferrer">Article 10</a>, dividends paid by a
                                     company that is a resident of a Contracting State to a resident of the other
-                                    Contracting State that is referred to in paragraph 2 of <a href="#a4">Article 4</a>
+                                    Contracting State that is referred to in paragraph 2 of  <a href="#a4" target="_blank" rel="noopener noreferrer">Article 4</a>
                                     and that is the beneficial owner of the dividends shall be taxable only in the other
                                     Contracting State provided that:</p>
                                 <ol type="a">
                                     <li>
                                         <p>the recipient, together with all other residents of the other Contracting
-                                            State that are referred to in paragraph 2 of <a href="#a4">Article 4</a>,
+                                            State that are referred to in paragraph 2 of  <a href="#a4" target="_blank" rel="noopener noreferrer">Article 4</a>,
                                             neither own or control shares of the company representing more than 25 per
                                             cent of the value of all of its issued and outstanding shares nor control
                                             directly or indirectly in any manner whatever more than 25 per cent of the
@@ -1343,7 +1070,7 @@
                                 </ol>
                             </li>
                             <li>
-                                <p>Notwithstanding the provisions of <a href="#a13">Article 13</a>, gains derived by a
+                                <p>Notwithstanding the provisions of  <a href="#a13" target="_blank" rel="noopener noreferrer">Article 13</a>, gains derived by a
                                     resident of a Contracting State that is referred to in paragraph 2 of <a
                                         href="#a4">Article 4</a> from the alienation of shares, the dividends on which
                                     would be exempt from taxation in the other Contracting State, shall be taxable only
@@ -1691,13 +1418,13 @@
                 
                 <ol type="1">
                     <li>
-                        <p>With reference to <a href="#a6">Articles 6</a> and <a href="#a13">13</a> of the Convention, in the case of Canada, income from the alienation of immovable property shall be subjected to taxation in accordance with the provisions of paragraph 1 of <a href="#a6">Article 6</a> of the Convention.</p>
+                        <p>With reference to  <a href="#a6" target="_blank" rel="noopener noreferrer">Articles 6</a> and  <a href="#a13" target="_blank" rel="noopener noreferrer">13</a> of the Convention, in the case of Canada, income from the alienation of immovable property shall be subjected to taxation in accordance with the provisions of paragraph 1 of  <a href="#a6" target="_blank" rel="noopener noreferrer">Article 6</a> of the Convention.</p>
                     </li>
                     <li>
-                        <p>With reference to <a href="#a8">Article 8</a> of the Convention, it is understood that:</p>
+                        <p>With reference to  <a href="#a8" target="_blank" rel="noopener noreferrer">Article 8</a> of the Convention, it is understood that:</p>
                         <ol type="1">
                             <li>
-                                <p>the provisions of paragraph 1 of that Article apply notwithstanding the provisions of <a href="#a7">Article 7</a> of the Convention; and</p>
+                                <p>the provisions of paragraph 1 of that Article apply notwithstanding the provisions of  <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a> of the Convention; and</p>
                             </li>
                             <li>
                                 <p>the provisions of that Article apply to the sale of passage tickets on behalf of other enterprises and to a hotel business, provided that the keeping of the hotel is for no other purpose than to provide transit passengers with night accommodation, the cost of such a service being included in the price of the passage ticket.</p>
@@ -1705,16 +1432,16 @@
                         </ol>
                     </li>
                     <li>
-                        <p>With reference to <a href="#a10">Article 10</a> of the Convention, it is understood that nothing contained therein affects the fiscal privileges available under the doctrine of sovereign immunity to the Government of a Contracting State or local Governments, and their agencies and institutions.</p>
+                        <p>With reference to  <a href="#a10" target="_blank" rel="noopener noreferrer">Article 10</a> of the Convention, it is understood that nothing contained therein affects the fiscal privileges available under the doctrine of sovereign immunity to the Government of a Contracting State or local Governments, and their agencies and institutions.</p>
                     </li>
                     <li>
-                        <p>With reference to <a href="#a12">Article 12</a> of the Convention, it is understood that the term "royalties" does not include payments in respect of the operation of mines or quarries or the exploitation of natural resources.</p>
+                        <p>With reference to  <a href="#a12" target="_blank" rel="noopener noreferrer">Article 12</a> of the Convention, it is understood that the term "royalties" does not include payments in respect of the operation of mines or quarries or the exploitation of natural resources.</p>
                     </li>
                     <li>
-                        <p>With reference to <a href="#a22">Article 22</a> of the Convention, it is understood that nothing contained therein affects the rights of the United Arab Emirates to tax income related to oil and natural resources situated in the United Arab Emirates in accordance with its tax laws.</p>
+                        <p>With reference to  <a href="#a22" target="_blank" rel="noopener noreferrer">Article 22</a> of the Convention, it is understood that nothing contained therein affects the rights of the United Arab Emirates to tax income related to oil and natural resources situated in the United Arab Emirates in accordance with its tax laws.</p>
                     </li>
                     <li>
-                        <p>A company which is a resident of a Contracting State and which has earnings in that State which may be taxed in a Contracting State in accordance with the provisions of <a href="#a6">Articles 6</a>, <a href="#a7">7</a> or <a href="#a13">13</a> of the Convention, remains subject to the branch tax on such earnings but the rate of such tax shall not exceed 5 per cent.</p>
+                        <p>A company which is a resident of a Contracting State and which has earnings in that State which may be taxed in a Contracting State in accordance with the provisions of  <a href="#a6" target="_blank" rel="noopener noreferrer">Articles 6</a>,  <a href="#a7" target="_blank" rel="noopener noreferrer">7</a> or  <a href="#a13" target="_blank" rel="noopener noreferrer">13</a> of the Convention, remains subject to the branch tax on such earnings but the rate of such tax shall not exceed 5 per cent.</p>
                     </li>
                     <li>
                         <p>For the purpose of paragraph 6, the term "earnings" means the profits in a year and previous years after deducting therefrom:</p>

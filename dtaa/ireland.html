@@ -4,285 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dtaa.css">
     <title>Ireland dtaa</title>
 </head>
 
 <body>
-    <style>
-        .scope {
-            margin: 0;
-            padding: 8px;
-            font-size: large;
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            overflow-x: hidden;
-            max-width: 100%;
-            box-sizing: border-box;
-        }
-
-        .scope header {
-            padding: 1rem 1.25rem;
-            margin: 0.25rem 0.75rem;
-        }
-
-        .scope header * {
-            text-align: center;
-        }
-
-        .scope header h1,
-        .scope header h2,
-        .scope header h3,
-        .scope header h4 {
-            color: #2f438d;
-        }
-
-        .scope main h3 {
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        .scope main hr {
-            max-width: 640px;
-            margin: 0.5rem auto;
-        }
-
-        .scope main ::-webkit-scrollbar {
-            width: 0.25rem;
-        }
-
-        .scope main ::-webkit-scrollbar-track {
-            background: grey;
-        }
-
-        .scope main ::-webkit-scrollbar-thumb {
-            background: white;
-            width: 0.25rem;
-        }
-
-        .scope main .example {
-            background-color: bisque;
-            padding: 0.25rem 0.75rem;
-            border-radius: 0.25rem;
-            margin: 1em 0;
-            overflow-x: scroll;
-        }
-
-        .scope main .example h3 {
-            color: black;
-        }
-
-        .scope main .box {
-            min-width: 40vw;
-            padding: 0.25rem 0.75rem;
-            border: 1px solid black;
-            font-size: small;
-        }
-
-        .scope footer p * {
-            font-style: italic;
-        }
-
-        .scope ul.dashed>li::marker {
-            content: "- ";
-        }
-
-        .scope table {
-            width: 100%;
-            margin: 0.25rem auto;
-            overflow-x: auto;
-        }
-
-        .scope table,
-        .scope td,
-        .scope th {
-            border: 1px black solid;
-            border-collapse: collapse;
-            padding: 0.5rem 0.75rem;
-        }
-
-        .scope table.list {
-            border: 0;
-            width: calc(100% - 2rem);
-            margin: 0.25rem auto;
-            padding: 0.25rem;
-            table-layout: fixed;
-        }
-
-        .scope table.list * {
-            border: 0;
-        }
-
-        .scope table.list td:first-child {
-            vertical-align: top;
-            width: 2.5rem;
-        }
-
-        .scope table.list tr:not(:first-child) {
-            width: auto;
-        }
-
-        .scope .fraction {
-            display: inline-block;
-            vertical-align: middle;
-            text-align: center;
-        }
-
-        .scope .fraction>span {
-            display: block;
-            padding: 0 0.2em;
-        }
-
-        .scope .fraction .numerator {
-            border-bottom: 1px solid #000;
-        }
-
-        .scope .fraction .denominator {
-            margin-top: -0.1em;
-        }
-
-        .scope h3 {
-            color: #2f438d;
-        }
-
-        .scope #linktogtl,
-        .scope #linktogtl *,
-        .scope #gtlnotes h3 {
-            color: #43af76;
-        }
-
-        .scope .repeal,
-        .scope .repeal *,
-        .scope .attention {
-            color: #c00000;
-        }
-
-        .scope p {
-            padding: 0.25rem 0;
-            margin-top: 0.25rem;
-            margin-bottom: 0.25rem;
-            line-height: 1.5rem;
-            text-align: justify;
-        }
-
-        .scope a {
-            color: #5948ca;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .scope a:hover {
-            text-decoration: underline;
-        }
-
-        .scope main article {
-            background-color: #f8f8f8;
-            width: calc(100% - 2rem);
-            margin: 0.5rem 0.75rem;
-            padding: 0.5rem;
-        }
-
-        .scope main article>*:nth-child(1),
-        .scope main article>*:nth-child(2) {
-            text-align: center;
-        }
-
-        /* Media Queries for Responsive Design */
-        @media only screen and (max-width: 1200px) {
-            .scope {
-                font-size: medium;
-            }
-
-            .scope main article {
-                width: calc(100% - 1rem);
-                margin: 0.5rem 0.5rem;
-            }
-        }
-
-        @media only screen and (max-width: 768px) {
-            .scope {
-                font-size: small;
-                padding: 5px;
-            }
-
-            .scope header {
-                padding: 0.75rem 0.5rem;
-                margin: 0.25rem 0.5rem;
-            }
-
-            .scope main article {
-                width: calc(100% - 1rem);
-                margin: 0.5rem 0.25rem;
-                padding: 0.25rem;
-            }
-
-            .scope table {
-                display: block;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-
-            .scope header h1 {
-                font-size: 1.5rem;
-            }
-
-            .scope header h2,
-            .scope header h3,
-            .scope header h4 {
-                font-size: 1.3rem;
-            }
-
-            .scope main h3 {
-                font-size: 1rem;
-            }
-        }
-
-        @media only screen and (max-width: 480px) {
-            .scope {
-                font-size: x-small;
-                padding: 2px;
-            }
-
-            .scope header {
-                padding: 0.5rem 0.25rem;
-                margin: 0.25rem;
-            }
-
-            .scope header h1 {
-                font-size: 1.2rem;
-            }
-
-            .scope header h2,
-            .scope header h3,
-            .scope header h4 {
-                font-size: 1.1rem;
-            }
-
-            .scope main h3 {
-                font-size: 0.9rem;
-            }
-
-            .scope p {
-                line-height: 1.3rem;
-            }
-
-            .scope main article {
-                width: calc(100% - 0.5rem);
-                margin: 0.25rem;
-                padding: 0.25rem 0.125rem;
-            }
-
-            .scope table.list td:first-child {
-                width: 1.5rem;
-            }
-
-            .scope ol {
-                padding-left: 1.5rem;
-            }
-
-            .scope a {
-                word-break: break-word;
-            }
-        }
-    </style>
+   
     <div style="
       margin: 0.5rem auto;
       padding: 0.5rem;
@@ -291,7 +18,7 @@
       max-width: 100%;
       box-sizing: border-box;
     ">
-        <a href="./index.html" style="
+         <a href="./index.html" target="_blank" rel="noopener noreferrer" style="
           color: #5948ca;
           text-decoration: none;
           font-weight: 600;
@@ -962,7 +689,7 @@
                             and
                             the holding in respect of which the dividends are paid is effectively connected with such
                             permanent
-                            establishment. In such case the provisions of <a href="#a8">Article 8</a> shall apply.</p>
+                            establishment. In such case the provisions of  <a href="#a8" target="_blank" rel="noopener noreferrer">Article 8</a> shall apply.</p>
                     </li>
                     <li>
                         <p>Where a company which is a resident of a Contracting State derives profits or income from the
@@ -1017,7 +744,7 @@
                             respect
                             of which the interest is paid is effectively connected with such permanent establishment. In
                             such
-                            case the provisions of <a href="#a8">Article 8</a> shall apply.</p>
+                            case the provisions of  <a href="#a8" target="_blank" rel="noopener noreferrer">Article 8</a> shall apply.</p>
                     </li>
                     <li>
                         <p>Where, by reason of a special relationship between the payer and the beneficial owner or
@@ -1064,7 +791,7 @@
                             royalties arise through a permanent establishment situated therein and the right or property
                             in
                             respect of which the royalties are paid is effectively connected with such permanent
-                            establishment. In such case the provisions of <a href="#a8">Article 8</a> shall apply.</p>
+                            establishment. In such case the provisions of  <a href="#a8" target="_blank" rel="noopener noreferrer">Article 8</a> shall apply.</p>
                     </li>
                     <li>
                         <p>Royalties shall be deemed to arise in a Contracting State where the payer is a resident of
@@ -1102,7 +829,7 @@
                 <ol type="1">
                     <li>
                         <p>Gains derived by a resident of a Contracting State from the alienation of immovable property
-                            referred to in <a href="#a7">Article 7</a> and situated in the other Contracting State may
+                            referred to in  <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a> and situated in the other Contracting State may
                             be
                             taxed in that other
                             State.</p>
@@ -1153,7 +880,7 @@
                 <h3>INCOME FROM EMPLOYMENT</h3>
                 <ol type="1">
                     <li>
-                        <p>Subject to the provisions of <a href="#a16">Articles 16</a>, <a href="#a18">18</a> and <a
+                        <p>Subject to the provisions of  <a href="#a16" target="_blank" rel="noopener noreferrer">Articles 16</a>,  <a href="#a18" target="_blank" rel="noopener noreferrer">18</a> and <a
                                 href="#a19">19</a>, salaries, wages and other similar
                             remuneration derived by a resident of a Contracting State in respect of an employment shall
                             be
@@ -1227,7 +954,7 @@
                 <h3>ARTISTES AND SPORTSPERSONS</h3>
                 <ol type="1">
                     <li>
-                        <p>Notwithstanding the provisions of <a href="#a8">Articles 8</a> and <a href="#a15">15</a>,
+                        <p>Notwithstanding the provisions of  <a href="#a8" target="_blank" rel="noopener noreferrer">Articles 8</a> and  <a href="#a15" target="_blank" rel="noopener noreferrer">15</a>,
                             income
                             derived by a resident of a
                             Contracting State as an entertainer, such as a theatre, motion picture, radio or television
@@ -1240,7 +967,7 @@
                             his
                             capacity as such accrues not to the entertainer or sportsman himself but to another person,
                             that
-                            income may, notwithstanding the provisions of <a href="#a8">Articles 8</a> and <a
+                            income may, notwithstanding the provisions of  <a href="#a8" target="_blank" rel="noopener noreferrer">Articles 8</a> and <a
                                 href="#a15">15</a>, be taxed in the Contracting
                             State in which the activities of the entertainer or sportsman are exercised.</p>
                     </li>
@@ -1262,7 +989,7 @@
                 <h3>PENSIONS AND ANNUITIES</h3>
                 <ol type="1">
                     <li>
-                        <p>Subject to the provisions of paragraph 2 of <a href="#a19">Article 19</a>, pensions and other
+                        <p>Subject to the provisions of paragraph 2 of  <a href="#a19" target="_blank" rel="noopener noreferrer">Article 19</a>, pensions and other
                             similar remuneration
                             paid to a resident of a Contracting State in consideration of past employment and any
                             annuity
@@ -1337,9 +1064,9 @@
                         </ol>
                     </li>
                     <li>
-                        <p>The provisions of <a href="#a15">Articles 15</a>, <a href="#a16">16</a>, <a
+                        <p>The provisions of  <a href="#a15" target="_blank" rel="noopener noreferrer">Articles 15</a>,  <a href="#a16" target="_blank" rel="noopener noreferrer">16</a>, <a
                                 href="#a17">17</a>
-                            and <a href="#a18">18</a> shall apply to salaries, wages, pensions and other
+                            and  <a href="#a18" target="_blank" rel="noopener noreferrer">18</a> shall apply to salaries, wages, pensions and other
                             similar remuneration in respect of services rendered in connection with a business carried
                             on by
                             a Contracting State or a political subdivision or a local authority thereof.</p>
@@ -1380,14 +1107,14 @@
                     </li>
                     <li>
                         <p>The provisions of paragraph 1 shall not apply to income, other than income from immovable
-                            property as defined in paragraph 2 of <a href="#a7">Article 7</a>, if the beneficial owner
+                            property as defined in paragraph 2 of  <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a>, if the beneficial owner
                             of
                             such income, being a resident of
                             a Contracting State, carries on business in the other Contracting State through a permanent
                             establishment situated therein and the right or property in respect of which the income is
                             paid
                             is effectively connected with such permanent establishment. In such case the provisions of
-                            <a href="#a8">Article 8</a>
+                             <a href="#a8" target="_blank" rel="noopener noreferrer">Article 8</a>
                             shall apply.
                         </p>
                     </li>
@@ -1535,7 +1262,7 @@
                             behalf of the Contracting States, or of their political subdivisions or local authorities,
                             insofar as the
                             taxation thereunder is not contrary to the Convention. The exchange of information is not
-                            restricted by <a href="#a1">Article 1</a> and <a href="#a2">Article 2</a>.</p>
+                            restricted by  <a href="#a1" target="_blank" rel="noopener noreferrer">Article 1</a> and  <a href="#a2" target="_blank" rel="noopener noreferrer">Article 2</a>.</p>
                     </li>
                     <li>
                         <p>Any information received under paragraph 1 by a Contracting State shall be treated as secret
@@ -1662,7 +1389,7 @@
                     </li>
                     <li>
                         <p>Notwithstanding paragraph 2, upon the entry into force of this Convention, the provisions of
-                            <a href="#a9">Article
+                             <a href="#a9" target="_blank" rel="noopener noreferrer">Article
                                 9</a> shall have effect as respects any Irish tax or United Arab Emirates tax falling
                             due on
                             or after the
@@ -1739,20 +1466,20 @@
 
                 <ol>
                     <li>
-                        <a href="#a3">With respect to Article 3:</a>
-                        <p>Notwithstanding the second sentence of <a href="#a3">Article 3</a> of this Convention, if any
+                         <a href="#a3" target="_blank" rel="noopener noreferrer">With respect to Article 3:</a>
+                        <p>Notwithstanding the second sentence of  <a href="#a3" target="_blank" rel="noopener noreferrer">Article 3</a> of this Convention, if any
                             convention for
                             the avoidance of double taxation, signed by the United Arab Emirates after the date of
                             signature of this Convention, affords more favourable treatment than is afforded under this
-                            Convention in relation to any such matter as is referred to in <a href="#a3">Article 3</a>
+                            Convention in relation to any such matter as is referred to in  <a href="#a3" target="_blank" rel="noopener noreferrer">Article 3</a>
                             of this Convention,
                             then a resident of Ireland shall thereupon automatically be entitled to that more favourable
                             treatment as if the provisions of this Convention afforded such treatment.</p>
                     </li>
 
                     <li>
-                        <a href="#a5">With respect to Article 5:</a>
-                        <p>Notwithstanding the provisions of paragraph 1 of <a href="#a5">Article 5</a>:</p>
+                         <a href="#a5" target="_blank" rel="noopener noreferrer">With respect to Article 5:</a>
+                        <p>Notwithstanding the provisions of paragraph 1 of  <a href="#a5" target="_blank" rel="noopener noreferrer">Article 5</a>:</p>
 
                         <ol type="a">
                             <li>it is the following persons that shall be regarded as a resident of the United Arab
@@ -1784,7 +1511,7 @@
                     </li>
 
                     <li>
-                        <a href="#a5">With respect to Article 5</a> and <a href="#a11">Article 11:</a>
+                         <a href="#a5" target="_blank" rel="noopener noreferrer">With respect to Article 5</a> and  <a href="#a11" target="_blank" rel="noopener noreferrer">Article 11:</a>
                         <p>It is understood that, in addition to paragraph 2 of this Protocol, a company which is
                             incorporated and has its place of effective management in the United Arab Emirates shall be
                             deemed resident for the purposes of tax in the United Arab Emirates, by virtue of the tax
@@ -1792,7 +1519,7 @@
                     </li>
 
                     <li>
-                        <a href="#a9">With respect to Article 9:</a>
+                         <a href="#a9" target="_blank" rel="noopener noreferrer">With respect to Article 9:</a>
                         <p>The provisions of paragraph 1 of this Article shall also apply to:</p>
                         <ol>
                             <li>profits derived from selling of tickets on behalf of another enterprise,</li>

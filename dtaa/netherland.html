@@ -4,285 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dtaa.css">
     <title>Netherland-DTAA</title>
 </head>
 
 <body>
-    <style>
-        .scope {
-            margin: 0;
-            padding: 8px;
-            font-size: large;
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            overflow-x: hidden;
-            max-width: 100%;
-            box-sizing: border-box;
-        }
-
-        .scope header {
-            padding: 1rem 1.25rem;
-            margin: 0.25rem 0.75rem;
-        }
-
-        .scope header * {
-            text-align: center;
-        }
-
-        .scope header h1,
-        .scope header h2,
-        .scope header h3,
-        .scope header h4 {
-            color: #2f438d;
-        }
-
-        .scope main h3 {
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        .scope main hr {
-            max-width: 640px;
-            margin: 0.5rem auto;
-        }
-
-        .scope main ::-webkit-scrollbar {
-            width: 0.25rem;
-        }
-
-        .scope main ::-webkit-scrollbar-track {
-            background: grey;
-        }
-
-        .scope main ::-webkit-scrollbar-thumb {
-            background: white;
-            width: 0.25rem;
-        }
-
-        .scope main .example {
-            background-color: bisque;
-            padding: 0.25rem 0.75rem;
-            border-radius: 0.25rem;
-            margin: 1em 0;
-            overflow-x: scroll;
-        }
-
-        .scope main .example h3 {
-            color: black;
-        }
-
-        .scope main .box {
-            min-width: 40vw;
-            padding: 0.25rem 0.75rem;
-            border: 1px solid black;
-            font-size: small;
-        }
-
-        .scope footer p * {
-            font-style: italic;
-        }
-
-        .scope ul.dashed>li::marker {
-            content: "- ";
-        }
-
-        .scope table {
-            width: 100%;
-            margin: 0.25rem auto;
-            overflow-x: auto;
-        }
-
-        .scope table,
-        .scope td,
-        .scope th {
-            border: 1px black solid;
-            border-collapse: collapse;
-            padding: 0.5rem 0.75rem;
-        }
-
-        .scope table.list {
-            border: 0;
-            width: calc(100% - 2rem);
-            margin: 0.25rem auto;
-            padding: 0.25rem;
-            table-layout: fixed;
-        }
-
-        .scope table.list * {
-            border: 0;
-        }
-
-        .scope table.list td:first-child {
-            vertical-align: top;
-            width: 2.5rem;
-        }
-
-        .scope table.list tr:not(:first-child) {
-            width: auto;
-        }
-
-        .scope .fraction {
-            display: inline-block;
-            vertical-align: middle;
-            text-align: center;
-        }
-
-        .scope .fraction>span {
-            display: block;
-            padding: 0 0.2em;
-        }
-
-        .scope .fraction .numerator {
-            border-bottom: 1px solid #000;
-        }
-
-        .scope .fraction .denominator {
-            margin-top: -0.1em;
-        }
-
-        .scope h3 {
-            color: #2f438d;
-        }
-
-        .scope #linktogtl,
-        .scope #linktogtl *,
-        .scope #gtlnotes h3 {
-            color: #43af76;
-        }
-
-        .scope .repeal,
-        .scope .repeal *,
-        .scope .attention {
-            color: #c00000;
-        }
-
-        .scope p {
-            padding: 0.25rem 0;
-            margin-top: 0.25rem;
-            margin-bottom: 0.25rem;
-            line-height: 1.5rem;
-            text-align: justify;
-        }
-
-        .scope a {
-            color: #5948ca;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .scope a:hover {
-            text-decoration: underline;
-        }
-
-        .scope main article {
-            background-color: #f8f8f8;
-            width: calc(100% - 2rem);
-            margin: 0.5rem 0.75rem;
-            padding: 0.5rem;
-        }
-
-        .scope main article>*:nth-child(1),
-        .scope main article>*:nth-child(2) {
-            text-align: center;
-        }
-
-        /* Media Queries for Responsive Design */
-        @media only screen and (max-width: 1200px) {
-            .scope {
-                font-size: medium;
-            }
-
-            .scope main article {
-                width: calc(100% - 1rem);
-                margin: 0.5rem 0.5rem;
-            }
-        }
-
-        @media only screen and (max-width: 768px) {
-            .scope {
-                font-size: small;
-                padding: 5px;
-            }
-
-            .scope header {
-                padding: 0.75rem 0.5rem;
-                margin: 0.25rem 0.5rem;
-            }
-
-            .scope main article {
-                width: calc(100% - 1rem);
-                margin: 0.5rem 0.25rem;
-                padding: 0.25rem;
-            }
-
-            .scope table {
-                display: block;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-
-            .scope header h1 {
-                font-size: 1.5rem;
-            }
-
-            .scope header h2,
-            .scope header h3,
-            .scope header h4 {
-                font-size: 1.3rem;
-            }
-
-            .scope main h3 {
-                font-size: 1rem;
-            }
-        }
-
-        @media only screen and (max-width: 480px) {
-            .scope {
-                font-size: x-small;
-                padding: 2px;
-            }
-
-            .scope header {
-                padding: 0.5rem 0.25rem;
-                margin: 0.25rem;
-            }
-
-            .scope header h1 {
-                font-size: 1.2rem;
-            }
-
-            .scope header h2,
-            .scope header h3,
-            .scope header h4 {
-                font-size: 1.1rem;
-            }
-
-            .scope main h3 {
-                font-size: 0.9rem;
-            }
-
-            .scope p {
-                line-height: 1.3rem;
-            }
-
-            .scope main article {
-                width: calc(100% - 0.5rem);
-                margin: 0.25rem;
-                padding: 0.25rem 0.125rem;
-            }
-
-            .scope table.list td:first-child {
-                width: 1.5rem;
-            }
-
-            .scope ol {
-                padding-left: 1.5rem;
-            }
-
-            .scope a {
-                word-break: break-word;
-            }
-        }
-    </style>
+  
     <div style="
       margin: 0.5rem auto;
       padding: 0.5rem;
@@ -898,7 +625,7 @@
                             Contracting State, of which the company paying the dividends is a resident, through a
                             permanent establishment situated therein and the holding in respect of which the dividends
                             are paid is effectively connected with such permanent establishment. In such case the
-                            provisions of <a href="#a7">Article 7</a> shall apply.</p>
+                            provisions of  <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a> shall apply.</p>
                     </li>
                     <li>
                         <p>Where a company which is a resident of a Contracting State derives profits or income from the
@@ -944,7 +671,7 @@
                             a resident of a Contracting State, carries on business in the other Contracting State in
                             which the interest arises, through a permanent establishment situated therein, and the
                             debt-claim in respect of which the interest is paid is effectively connected with such
-                            permanent establishment. In such case the provisions of <a href="#a7">Article 7</a> shall
+                            permanent establishment. In such case the provisions of  <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a> shall
                             apply.</p>
                     </li>
                     <li>
@@ -980,7 +707,7 @@
                             a resident of a Contracting State, carries on business in the other Contracting State in
                             which the royalties arise, through a permanent establishment situated therein and the right
                             or property in respect of which the royalties are paid is effectively connected with such
-                            permanent establishment. In such case the provisions of <a href="#a7">Article 7</a> shall
+                            permanent establishment. In such case the provisions of  <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a> shall
                             apply.</p>
                     </li>
                     <li>
@@ -1003,7 +730,7 @@
                 <ol type="1">
                     <li>
                         <p>Gains derived by a resident of a Contracting State from the alienation of immovable property
-                            referred to in <a href="#a6">Article 6</a> and situated in the other Contracting State may
+                            referred to in  <a href="#a6" target="_blank" rel="noopener noreferrer">Article 6</a> and situated in the other Contracting State may
                             be taxed in that other State.</p>
                     </li>
                     <li>
@@ -1030,8 +757,8 @@
 
                 <ol type="1">
                     <li>
-                        <p>Subject to the provisions of <a href="#a15">Article 15</a>, <a href="#a17">Article 17</a>, <a
-                                href="#a18">Article 18</a>, <a href="#a19">Article 19</a> and <a href="#a20">Article
+                        <p>Subject to the provisions of  <a href="#a15" target="_blank" rel="noopener noreferrer">Article 15</a>,  <a href="#a17" target="_blank" rel="noopener noreferrer">Article 17</a>, <a
+                                href="#a18">Article 18</a>,  <a href="#a19" target="_blank" rel="noopener noreferrer">Article 19</a> and  <a href="#a20" target="_blank" rel="noopener noreferrer">Article
                                 20</a>, salaries, wages and other similar remuneration derived by a resident of a
                             Contracting State in respect of an employment shall be taxable only in that State unless the
                             employment is exercised in the other Contracting State. If the employment is so exercised,
@@ -1092,7 +819,7 @@
 
                 <ol type="1">
                     <li>
-                        <p>Notwithstanding the provisions of <a href="#a7">Article 7</a> and <a href="#a14">Article
+                        <p>Notwithstanding the provisions of  <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a> and  <a href="#a14" target="_blank" rel="noopener noreferrer">Article
                                 14</a>, income derived by a resident of a Contracting State as an entertainer, such as a
                             theatre, motion picture, radio or television artiste, or a musician, or as a sportsperson,
                             from his personal activities as such exercised in the other Contracting State, may be taxed
@@ -1101,8 +828,8 @@
                     <li>
                         <p>Where income in respect of personal activities exercised by an entertainer or a sportsperson
                             in his capacity as such accrues not to the entertainer or sportsperson himself but to
-                            another person, that income may, notwithstanding the provisions of <a href="#a7">Article
-                                7</a> and <a href="#a14">Article 14</a>, be taxed in the Contracting State in which the
+                            another person, that income may, notwithstanding the provisions of  <a href="#a7" target="_blank" rel="noopener noreferrer">Article
+                                7</a> and  <a href="#a14" target="_blank" rel="noopener noreferrer">Article 14</a>, be taxed in the Contracting State in which the
                             activities of the entertainer or sportsperson are exercised.</p>
                     </li>
                     <li>
@@ -1122,7 +849,7 @@
 
                 <ol type="1">
                     <li>
-                        <p>Subject to the provisions of paragraph 2 of <a href="#a18">Article 18</a>, pensions and other
+                        <p>Subject to the provisions of paragraph 2 of  <a href="#a18" target="_blank" rel="noopener noreferrer">Article 18</a>, pensions and other
                             similar remuneration, including annuities and any lump-sum payments, derived from a
                             Contracting State and paid to a resident of the other Contracting State, may be taxed in the
                             first-mentioned State.</p>
@@ -1134,7 +861,7 @@
                     </li>
                     <li>
                         <p>Whether and to what extent a pension or similar remuneration falls under this Article or
-                            under <a href="#a18">Article 18</a>, is determined by the nature of the past employment or
+                            under  <a href="#a18" target="_blank" rel="noopener noreferrer">Article 18</a>, is determined by the nature of the past employment or
                             profession, as private or governmental, during which the entitlement to that part of the
                             pension or similar remuneration was built up.</p>
                     </li>
@@ -1187,8 +914,8 @@
                         </ol>
                     </li>
                     <li>
-                        <p>The provisions of <a href="#a14">Articles 14</a>, <a href="#a15">15</a>, <a
-                                href="#a16">16</a> and <a href="#a17">17</a> shall apply to salaries, wages, pensions
+                        <p>The provisions of  <a href="#a14" target="_blank" rel="noopener noreferrer">Articles 14</a>,  <a href="#a15" target="_blank" rel="noopener noreferrer">15</a>, <a
+                                href="#a16">16</a> and  <a href="#a17" target="_blank" rel="noopener noreferrer">17</a> shall apply to salaries, wages, pensions
                             and other similar remuneration in respect of services rendered in connection with a business
                             carried on by a Contracting State or a political subdivision, a local authority thereof.</p>
                     </li>
@@ -1237,11 +964,11 @@
                     </li>
                     <li>
                         <p>The provisions of paragraph 1 shall not apply to income, other than income from immovable
-                            property as defined in paragraph 2 of <a href="#a6">Article 6</a>, if the recipient of such
+                            property as defined in paragraph 2 of  <a href="#a6" target="_blank" rel="noopener noreferrer">Article 6</a>, if the recipient of such
                             income, being a resident of a Contracting State, carries on business in the other
                             Contracting State through a permanent establishment situated therein and the right or
                             property in respect of which the income is paid is effectively connected with such permanent
-                            establishment. In such case the provisions of <a href="#a7">Article 7</a> shall apply.</p>
+                            establishment. In such case the provisions of  <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a> shall apply.</p>
                     </li>
                 </ol>
             </article>
@@ -1261,11 +988,11 @@
                     </li>
                     <li>
                         <p>However, where a resident of the Netherlands derives items of income which according to <a
-                                href="#a6">Article 6</a>, <a href="#a7">Article 7</a>, paragraph 7 of <a
-                                href="#a10">Article 10</a>, paragraph 3 of <a href="#a11">Article 11</a>, paragraph 3 of
-                            <a href="#a12">Article 12</a>, paragraphs 1 and 2 of <a href="#a13">Article 13</a>,
-                            paragraph 1 of <a href="#a14">Article 14</a>, paragraphs 1 (subparagraph a) and 2
-                            (subparagraph a) of <a href="#a18">Article 18</a>, paragraph 2 of <a href="#a21">Article
+                                href="#a6">Article 6</a>,  <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a>, paragraph 7 of <a
+                                href="#a10">Article 10</a>, paragraph 3 of  <a href="#a11" target="_blank" rel="noopener noreferrer">Article 11</a>, paragraph 3 of
+                             <a href="#a12" target="_blank" rel="noopener noreferrer">Article 12</a>, paragraphs 1 and 2 of  <a href="#a13" target="_blank" rel="noopener noreferrer">Article 13</a>,
+                            paragraph 1 of  <a href="#a14" target="_blank" rel="noopener noreferrer">Article 14</a>, paragraphs 1 (subparagraph a) and 2
+                            (subparagraph a) of  <a href="#a18" target="_blank" rel="noopener noreferrer">Article 18</a>, paragraph 2 of  <a href="#a21" target="_blank" rel="noopener noreferrer">Article
                                 21</a> of this Convention may be taxed in the United Arab Emirates and are included in
                             the basis referred to in paragraph 1, the Netherlands shall exempt such items of income by
                             allowing a reduction of its tax. This reduction shall be computed in conformity with the
@@ -1276,9 +1003,9 @@
                     </li>
                     <li>
                         <p>Further, the Netherlands shall allow a deduction from the Netherlands tax so computed for the
-                            items of income which according to paragraph 2 of <a href="#a10">Article 10</a>, paragraph 1
-                            of <a href="#a15">Article 15</a>, paragraphs 1 and 2 of <a href="#a16">Article 16</a> and
-                            paragraphs 1 and 2 of <a href="#a17">Article 17</a> of this Convention may be taxed in the
+                            items of income which according to paragraph 2 of  <a href="#a10" target="_blank" rel="noopener noreferrer">Article 10</a>, paragraph 1
+                            of  <a href="#a15" target="_blank" rel="noopener noreferrer">Article 15</a>, paragraphs 1 and 2 of  <a href="#a16" target="_blank" rel="noopener noreferrer">Article 16</a> and
+                            paragraphs 1 and 2 of  <a href="#a17" target="_blank" rel="noopener noreferrer">Article 17</a> of this Convention may be taxed in the
                             United Arab Emirates to the extent that these items are included in the basis referred to in
                             paragraph 1. The amount of this deduction shall be equal to the tax paid in the United Arab
                             Emirates on these items of income, but shall, in case the provisions of the Netherlands law
@@ -1294,9 +1021,9 @@
                     <li>
                         <p>Notwithstanding the provisions of paragraph 2, the Netherlands shall allow a deduction from
                             the Netherlands tax for the tax paid in the United Arab Emirates on items of income which
-                            according to <a href="#a7">Article 7</a>, paragraph 7 of <a href="#a10">Article 10</a>,
-                            paragraph 3 of <a href="#a11">Article 11</a>, paragraph 3 of <a href="#a12">Article 12</a>
-                            and paragraph 2 of <a href="#a21">Article 21</a> of this Convention may be taxed in the
+                            according to  <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a>, paragraph 7 of  <a href="#a10" target="_blank" rel="noopener noreferrer">Article 10</a>,
+                            paragraph 3 of  <a href="#a11" target="_blank" rel="noopener noreferrer">Article 11</a>, paragraph 3 of  <a href="#a12" target="_blank" rel="noopener noreferrer">Article 12</a>
+                            and paragraph 2 of  <a href="#a21" target="_blank" rel="noopener noreferrer">Article 21</a> of this Convention may be taxed in the
                             United Arab Emirates to the extent that these items are included in the basis referred to in
                             paragraph 1, if and insofar as the Netherlands under the provisions of Netherlands law for
                             the avoidance of double taxation allows a deduction from the Netherlands tax of the tax
@@ -1344,8 +1071,8 @@
                             residents.</p>
                     </li>
                     <li>
-                        <p>Except where the provisions of paragraph 1 of <a href="#a9">Article 9</a>, paragraph 4 of <a
-                                href="#a11">Article 11</a>, or paragraph 4 of <a href="#a12">Article 12</a>, apply,
+                        <p>Except where the provisions of paragraph 1 of  <a href="#a9" target="_blank" rel="noopener noreferrer">Article 9</a>, paragraph 4 of <a
+                                href="#a11">Article 11</a>, or paragraph 4 of  <a href="#a12" target="_blank" rel="noopener noreferrer">Article 12</a>, apply,
                             interest, royalties and other disbursements paid by an enterprise of a Contracting State to
                             a resident of the other Contracting State shall, for the purpose of determining the taxable
                             profits of such enterprise, be deductible under the same conditions as if they had been paid
@@ -1379,7 +1106,7 @@
                             will result for him in taxation not in accordance with the provisions of this Convention, he
                             may, irrespective of the remedies provided by the domestic law of those States, present his
                             case to the competent authority of the Contracting State of which he is a resident or, if
-                            his case comes under paragraph 1 of <a href="#a23">Article 23</a>, to that of the
+                            his case comes under paragraph 1 of  <a href="#a23" target="_blank" rel="noopener noreferrer">Article 23</a>, to that of the
                             Contracting State of which he is a national. The case must be presented within three years
                             from the first notification of the action resulting in taxation not in accordance with the
                             provisions of the Convention.</p>
@@ -1444,7 +1171,7 @@
                     </li>
                     <li>
                         <p>The Contracting States may release to the joint committee, established under the provisions
-                            of paragraph 5 of <a href="#a24">Article 24</a>, such information as is necessary for
+                            of paragraph 5 of  <a href="#a24" target="_blank" rel="noopener noreferrer">Article 24</a>, such information as is necessary for
                             carrying out the arbitration procedure. The members of the joint committee shall be subject
                             to the limitations on disclosure described in paragraph 2 of this Article with respect to
                             any information so released.</p>
@@ -1606,7 +1333,7 @@
                         </ol>
                     </li>
                     <li>
-                        <p>Ad <a href="#a2">Article 2</a>, paragraph 1</p>
+                        <p>Ad  <a href="#a2" target="_blank" rel="noopener noreferrer">Article 2</a>, paragraph 1</p>
                         <p>It is understood that the United Arab Emirates consists of:</p>
                         <ol type="1">
                             <li>
@@ -1623,7 +1350,7 @@
                         </ol>
                     </li>
                     <li>
-                        <p>Ad <a href="#a3">Article 3</a>, paragraph 2 and <a href="#a24">Article 24</a></p>
+                        <p>Ad  <a href="#a3" target="_blank" rel="noopener noreferrer">Article 3</a>, paragraph 2 and  <a href="#a24" target="_blank" rel="noopener noreferrer">Article 24</a></p>
                         <p>It is understood that, if the competent authorities of the Contracting States have, by
                             mutual agreement, reached a solution within the context of the Convention for cases in
                             which</p>
@@ -1642,13 +1369,13 @@
                             similar cases.</p>
                     </li>
                     <li>
-                        <p>Ad <a href="#a4">Article 4</a>, paragraph 2</p>
+                        <p>Ad  <a href="#a4" target="_blank" rel="noopener noreferrer">Article 4</a>, paragraph 2</p>
                         <p>An individual living aboard a ship without any real domicile in either of the Contracting
                             States shall be deemed to be a resident of the Contracting State in which the ship has
                             its home harbour.</p>
                     </li>
                     <li>
-                        <p>Ad <a href="#a5">Articles 5</a>, <a href="#a6">6</a>, <a href="#a7">7</a> and <a
+                        <p>Ad  <a href="#a5" target="_blank" rel="noopener noreferrer">Articles 5</a>,  <a href="#a6" target="_blank" rel="noopener noreferrer">6</a>,  <a href="#a7" target="_blank" rel="noopener noreferrer">7</a> and <a
                                 href="#a13">13</a></p>
                         <p>It is understood that exploration and exploitation rights of natural resources, including
                             rights to interests in, or to the benefits of, assets to be produced by such exploration
@@ -1659,7 +1386,7 @@
                             the national tax laws and regulations of that State.</p>
                     </li>
                     <li>
-                        <p>Ad <a href="#a7">Article 7</a></p>
+                        <p>Ad  <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a></p>
                         <p>In respect of paragraphs 1 and 2 of Article 7, where an enterprise of a Contracting State
                             sells goods or merchandise or carries on business in the other Contracting State through
                             a permanent establishment situated therein, the profits of that permanent establishment
@@ -1678,20 +1405,20 @@
                             in the Contracting State of which the enterprise is a resident.</p>
                     </li>
                     <li>
-                        <p>Ad <a href="#a7">Article 7</a></p>
+                        <p>Ad  <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a></p>
                         <p>Payments received as a consideration for technical services, including studies or surveys
                             of a scientific, geological or technical nature, or for consultancy or supervisory
                             services shall be deemed to be payments to which the provisions of Article 7 apply.</p>
                     </li>
                     <li>
-                        <p>Ad <a href="#a8">Article 8</a></p>
+                        <p>Ad  <a href="#a8" target="_blank" rel="noopener noreferrer">Article 8</a></p>
                         <p>The International Air Transport Agreement between the Netherlands and the United Arab
                             Emirates, signed in January 1992, will remain in force. However, if this Convention
                             provides for a more beneficial treatment of the items of income concerned, this
                             Convention shall also be applicable to the extent that it is more favourable.</p>
                     </li>
                     <li>
-                        <p>Ad <a href="#a9">Article 9</a></p>
+                        <p>Ad  <a href="#a9" target="_blank" rel="noopener noreferrer">Article 9</a></p>
                         <p>It is understood, however, that the fact that associated enterprises have concluded
                             arrangements, such as cost contribution arrangements or general services agreements, for
                             or based on the allocation of executive, general administrative, technical and
@@ -1699,7 +1426,7 @@
                             not in itself a condition as meant in paragraph 1 of Article 9.</p>
                     </li>
                     <li>
-                        <p>Ad <a href="#a10">Articles 10</a>, <a href="#a11">11</a> and <a href="#a12">12</a></p>
+                        <p>Ad  <a href="#a10" target="_blank" rel="noopener noreferrer">Articles 10</a>,  <a href="#a11" target="_blank" rel="noopener noreferrer">11</a> and  <a href="#a12" target="_blank" rel="noopener noreferrer">12</a></p>
                         <p>Where tax has been levied at source in excess of the amount of tax chargeable under the
                             provisions of Articles 10, 11 or 12, applications for the refund of the excess amount of
                             tax have to be lodged with the competent authority of the State having levied the tax,
@@ -1707,7 +1434,7 @@
                             tax has been levied.</p>
                     </li>
                     <li>
-                        <p>Ad <a href="#a10">Articles 10</a> and <a href="#a13">13</a></p>
+                        <p>Ad  <a href="#a10" target="_blank" rel="noopener noreferrer">Articles 10</a> and  <a href="#a13" target="_blank" rel="noopener noreferrer">13</a></p>
                         <ol type="1">
                             <li>
                                 <p>It is understood that income received in connection with the (partial)
@@ -1726,7 +1453,7 @@
                         </ol>
                     </li>
                     <li>
-                        <p>Ad <a href="#a17">Article 17</a></p>
+                        <p>Ad  <a href="#a17" target="_blank" rel="noopener noreferrer">Article 17</a></p>
                         <p>It is understood that a pension or other similar remuneration or annuity is deemed to be
                             derived from a Contracting State if and insofar as the contributions or payments
                             associated with the pension or other similar remuneration or annuity, or the
@@ -1736,7 +1463,7 @@
                             rights of the first-mentioned State under this Article.</p>
                     </li>
                     <li>
-                        <p>Ad <a href="#a24">Article 24</a></p>
+                        <p>Ad  <a href="#a24" target="_blank" rel="noopener noreferrer">Article 24</a></p>
                         <p>The competent authorities of the States may also agree, with respect to any agreement
                             reached as a result of a mutual agreement procedure as meant in Article 24, if necessary
                             contrary to their respective national legislation, that the State, in which there is an
@@ -1747,7 +1474,7 @@
                             reduction of tax.</p>
                     </li>
                     <li>
-                        <p>Ad <a href="#a25">Article 25</a></p>
+                        <p>Ad  <a href="#a25" target="_blank" rel="noopener noreferrer">Article 25</a></p>
                         <ol type="1">
                             <li>
                                 <p>The provisions of Article 25 shall apply accordingly to information that is

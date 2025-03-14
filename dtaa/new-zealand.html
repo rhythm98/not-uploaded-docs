@@ -4,285 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dtaa.css">
     <title>New-Zealand-DTAA</title>
 </head>
 
 <body>
-    <style>
-        .scope {
-            margin: 0;
-            padding: 8px;
-            font-size: large;
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            overflow-x: hidden;
-            max-width: 100%;
-            box-sizing: border-box;
-        }
-
-        .scope header {
-            padding: 1rem 1.25rem;
-            margin: 0.25rem 0.75rem;
-        }
-
-        .scope header * {
-            text-align: center;
-        }
-
-        .scope header h1,
-        .scope header h2,
-        .scope header h3,
-        .scope header h4 {
-            color: #2f438d;
-        }
-
-        .scope main h3 {
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        .scope main hr {
-            max-width: 640px;
-            margin: 0.5rem auto;
-        }
-
-        .scope main ::-webkit-scrollbar {
-            width: 0.25rem;
-        }
-
-        .scope main ::-webkit-scrollbar-track {
-            background: grey;
-        }
-
-        .scope main ::-webkit-scrollbar-thumb {
-            background: white;
-            width: 0.25rem;
-        }
-
-        .scope main .example {
-            background-color: bisque;
-            padding: 0.25rem 0.75rem;
-            border-radius: 0.25rem;
-            margin: 1em 0;
-            overflow-x: scroll;
-        }
-
-        .scope main .example h3 {
-            color: black;
-        }
-
-        .scope main .box {
-            min-width: 40vw;
-            padding: 0.25rem 0.75rem;
-            border: 1px solid black;
-            font-size: small;
-        }
-
-        .scope footer p * {
-            font-style: italic;
-        }
-
-        .scope ul.dashed>li::marker {
-            content: "- ";
-        }
-
-        .scope table {
-            width: 100%;
-            margin: 0.25rem auto;
-            overflow-x: auto;
-        }
-
-        .scope table,
-        .scope td,
-        .scope th {
-            border: 1px black solid;
-            border-collapse: collapse;
-            padding: 0.5rem 0.75rem;
-        }
-
-        .scope table.list {
-            border: 0;
-            width: calc(100% - 2rem);
-            margin: 0.25rem auto;
-            padding: 0.25rem;
-            table-layout: fixed;
-        }
-
-        .scope table.list * {
-            border: 0;
-        }
-
-        .scope table.list td:first-child {
-            vertical-align: top;
-            width: 2.5rem;
-        }
-
-        .scope table.list tr:not(:first-child) {
-            width: auto;
-        }
-
-        .scope .fraction {
-            display: inline-block;
-            vertical-align: middle;
-            text-align: center;
-        }
-
-        .scope .fraction>span {
-            display: block;
-            padding: 0 0.2em;
-        }
-
-        .scope .fraction .numerator {
-            border-bottom: 1px solid #000;
-        }
-
-        .scope .fraction .denominator {
-            margin-top: -0.1em;
-        }
-
-        .scope h3 {
-            color: #2f438d;
-        }
-
-        .scope #linktogtl,
-        .scope #linktogtl *,
-        .scope #gtlnotes h3 {
-            color: #43af76;
-        }
-
-        .scope .repeal,
-        .scope .repeal *,
-        .scope .attention {
-            color: #c00000;
-        }
-
-        .scope p {
-            padding: 0.25rem 0;
-            margin-top: 0.25rem;
-            margin-bottom: 0.25rem;
-            line-height: 1.5rem;
-            text-align: justify;
-        }
-
-        .scope a {
-            color: #5948ca;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .scope a:hover {
-            text-decoration: underline;
-        }
-
-        .scope main article {
-            background-color: #f8f8f8;
-            width: calc(100% - 2rem);
-            margin: 0.5rem 0.75rem;
-            padding: 0.5rem;
-        }
-
-        .scope main article>*:nth-child(1),
-        .scope main article>*:nth-child(2) {
-            text-align: center;
-        }
-
-        /* Media Queries for Responsive Design */
-        @media only screen and (max-width: 1200px) {
-            .scope {
-                font-size: medium;
-            }
-
-            .scope main article {
-                width: calc(100% - 1rem);
-                margin: 0.5rem 0.5rem;
-            }
-        }
-
-        @media only screen and (max-width: 768px) {
-            .scope {
-                font-size: small;
-                padding: 5px;
-            }
-
-            .scope header {
-                padding: 0.75rem 0.5rem;
-                margin: 0.25rem 0.5rem;
-            }
-
-            .scope main article {
-                width: calc(100% - 1rem);
-                margin: 0.5rem 0.25rem;
-                padding: 0.25rem;
-            }
-
-            .scope table {
-                display: block;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-
-            .scope header h1 {
-                font-size: 1.5rem;
-            }
-
-            .scope header h2,
-            .scope header h3,
-            .scope header h4 {
-                font-size: 1.3rem;
-            }
-
-            .scope main h3 {
-                font-size: 1rem;
-            }
-        }
-
-        @media only screen and (max-width: 480px) {
-            .scope {
-                font-size: x-small;
-                padding: 2px;
-            }
-
-            .scope header {
-                padding: 0.5rem 0.25rem;
-                margin: 0.25rem;
-            }
-
-            .scope header h1 {
-                font-size: 1.2rem;
-            }
-
-            .scope header h2,
-            .scope header h3,
-            .scope header h4 {
-                font-size: 1.1rem;
-            }
-
-            .scope main h3 {
-                font-size: 0.9rem;
-            }
-
-            .scope p {
-                line-height: 1.3rem;
-            }
-
-            .scope main article {
-                width: calc(100% - 0.5rem);
-                margin: 0.25rem;
-                padding: 0.25rem 0.125rem;
-            }
-
-            .scope table.list td:first-child {
-                width: 1.5rem;
-            }
-
-            .scope ol {
-                padding-left: 1.5rem;
-            }
-
-            .scope a {
-                word-break: break-word;
-            }
-        }
-    </style>
+   
     <div style="
       margin: 0.5rem auto;
       padding: 0.5rem;
@@ -682,7 +409,7 @@
                 <h3>Ship and Aircraft Operations</h3>
                 <ol type="1">
                     <li>
-                        <p>Notwithstanding the provisions of <a href="#a8">Article 8</a>, profits derived by a resident
+                        <p>Notwithstanding the provisions of  <a href="#a8" target="_blank" rel="noopener noreferrer">Article 8</a>, profits derived by a resident
                             of a Contracting State from the operation of ships or aircraft in international traffic
                             shall be taxable only in that State.</p>
                     </li>
@@ -817,7 +544,7 @@
                             permanent establishment situated therein or performs in that other State independent
                             services from a fixed base situated therein and the holding in respect of which the
                             dividends are paid is effectively connected which such permanent establishment or fixed
-                            base. In such case the provisions of <a href="#a8">Article 8</a> or <a href="#a15">Article
+                            base. In such case the provisions of  <a href="#a8" target="_blank" rel="noopener noreferrer">Article 8</a> or  <a href="#a15" target="_blank" rel="noopener noreferrer">Article
                                 15</a>, as the case may be, shall apply.</p>
                     </li>
                     <li>
@@ -879,7 +606,7 @@
                             including premiums and prizes attaching to such securities, bonds or debentures, as well as
                             all other income treated as income from money lent by the laws, relating to tax, of the
                             Contracting State in which the income arises, but does not include any income which is
-                            treated as a dividend under <a href="#a11">Article 11</a>.</p>
+                            treated as a dividend under  <a href="#a11" target="_blank" rel="noopener noreferrer">Article 11</a>.</p>
                     </li>
                     <li>
                         <p>The provisions of paragraphs 1, 2, 3 and 4 shall not apply if the beneficial owner of the
@@ -888,7 +615,7 @@
                             therein, or performs in that other State independent personal services from a fixed base
                             situated therein, and the debt-claim in respect of which the interest is paid is effectively
                             connected with such permanent establishment or fixed base. In such case the provisions of <a
-                                href="#a8">Article 8</a> or <a href="#a15">Article 15</a>, as the case may be, shall
+                                href="#a8">Article 8</a> or  <a href="#a15" target="_blank" rel="noopener noreferrer">Article 15</a>, as the case may be, shall
                             apply.</p>
                     </li>
                     <li>
@@ -963,7 +690,7 @@
                             therein, or performs in that other State independent personal services from a fixed based
                             situated therein, and the right or property in respect of which the royalties are paid is
                             effectively connected with such permanent establishment or fixed base. In such case the
-                            provisions of <a href="#a8">Article 8</a> or <a href="#a15">Article 15</a>, as the case may
+                            provisions of  <a href="#a8" target="_blank" rel="noopener noreferrer">Article 8</a> or  <a href="#a15" target="_blank" rel="noopener noreferrer">Article 15</a>, as the case may
                             be, shall apply.</p>
                     </li>
                     <li>
@@ -994,7 +721,7 @@
                 <ol type="1">
                     <li>
                         <p>Income, profits or gains derived by a resident of a Contracting State from the alienation of
-                            immovable property (as defined in paragraph 2 of <a href="#a7">Article 7</a>) situated in
+                            immovable property (as defined in paragraph 2 of  <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a>) situated in
                             the other Contracting State may be taxed in that other State except as provided to the
                             contrary by the domestic laws of that other State.</p>
                     </li>
@@ -1057,7 +784,7 @@
                 <h3>Income from Employment</h3>
                 <ol type="1">
                     <li>
-                        <p>Subject to the provisions of <a href="#a17">Articles 17</a>, <a href="#a19">19</a> and <a
+                        <p>Subject to the provisions of  <a href="#a17" target="_blank" rel="noopener noreferrer">Articles 17</a>,  <a href="#a19" target="_blank" rel="noopener noreferrer">19</a> and <a
                                 href="#a20">20</a>, salaries, wages and other similar remuneration derived by a resident
                             of a Contracting State in respect of an employment shall be taxable only in that State
                             unless the employment is exercised in the other Contracting State. If the employment is so
@@ -1105,7 +832,7 @@
                 <h3>Entertainers and Sportspersons</h3>
                 <ol type="1">
                     <li>
-                        <p>Notwithstanding the provisions of <a href="#a15">Articles 15</a> and <a href="#a16">16</a>,
+                        <p>Notwithstanding the provisions of  <a href="#a15" target="_blank" rel="noopener noreferrer">Articles 15</a> and  <a href="#a16" target="_blank" rel="noopener noreferrer">16</a>,
                             income derived by a resident of a Contracting State as an entertainer, such as a theatre,
                             motion picture, radio or television artiste, or a musician, or as a sportsperson, from that
                             person's personal activities as such exercised in the other Contracting State, may be taxed
@@ -1114,8 +841,8 @@
                     <li>
                         <p>Where income in respect of personal activities exercised by an entertainer or a sportsperson
                             in that person's capacity as such accrues not to the entertainer or sportsperson but to
-                            another person, that income may, notwithstanding the provisions of <a href="#a15">Articles
-                                15</a> and <a href="#a16">16</a>, be taxed in the Contracting State in which the
+                            another person, that income may, notwithstanding the provisions of  <a href="#a15" target="_blank" rel="noopener noreferrer">Articles
+                                15</a> and  <a href="#a16" target="_blank" rel="noopener noreferrer">16</a>, be taxed in the Contracting State in which the
                             activities of the entertainer or sportsperson are exercised.</p>
                     </li>
                     <li>
@@ -1134,7 +861,7 @@
                 <h3>Pensions</h3>
                 <ol type="1">
                     <li>
-                        <p>Subject to paragraph 2 of <a href="#a20">Article 20</a>, pensions, including government
+                        <p>Subject to paragraph 2 of  <a href="#a20" target="_blank" rel="noopener noreferrer">Article 20</a>, pensions, including government
                             pensions and annuities, paid to a resident of a Contracting State shall be taxable only in
                             that State.</p>
                     </li>
@@ -1185,8 +912,8 @@
                         </ol>
                     </li>
                     <li>
-                        <p>The provisions of <a href="#a15">Articles 15</a>, <a href="#a16">16</a>, <a
-                                href="#a17">17</a> and <a href="#a19">19</a> of this Agreement shall apply to salaries,
+                        <p>The provisions of  <a href="#a15" target="_blank" rel="noopener noreferrer">Articles 15</a>,  <a href="#a16" target="_blank" rel="noopener noreferrer">16</a>, <a
+                                href="#a17">17</a> and  <a href="#a19" target="_blank" rel="noopener noreferrer">19</a> of this Agreement shall apply to salaries,
                             wages and other similar remuneration, and to pensions, in respect of services rendered in
                             connection with a business carried on by a Contracting State or a political subdivision,
                             local government or a local authority thereof.</p>
@@ -1297,7 +1024,7 @@
                             necessary for carrying out the provisions of this Agreement or of the domestic laws
                             concerning taxes of every kind and description imposed on behalf of the Contracting States
                             insofar as the taxation thereunder is not contrary to the Agreement. The exchange of
-                            information is not restricted by <a href="#a1">Article 1</a> and <a href="#a2">Article
+                            information is not restricted by  <a href="#a1" target="_blank" rel="noopener noreferrer">Article 1</a> and  <a href="#a2" target="_blank" rel="noopener noreferrer">Article
                                 2</a>. Any information received by a Contracting State shall be treated as secret in the
                             same manner as information obtained under the domestic laws of that State and shall be
                             disclosed only to persons or authorities, including courts and administrative bodies,
@@ -1407,7 +1134,7 @@
                 <p>It is understood:</p>
 
                 <ol type="1">
-                    <li>With respect to paragraph 1 of <a href="#a5">Article 5</a>:
+                    <li>With respect to paragraph 1 of  <a href="#a5" target="_blank" rel="noopener noreferrer">Article 5</a>:
                         <p>It is agreed that:</p>
                         <ol type="a">
                             <li>Any institution is a resident of a Contracting State if it was created by the Government
@@ -1421,56 +1148,56 @@
                         </ol>
                     </li>
 
-                    <li>With respect to <a href="#a8">Article 8</a>:
-                        <p>Without prejudice to <a href="#a9">Article 9</a>, it is understood that paragraph 1 means
+                    <li>With respect to  <a href="#a8" target="_blank" rel="noopener noreferrer">Article 8</a>:
+                        <p>Without prejudice to  <a href="#a9" target="_blank" rel="noopener noreferrer">Article 9</a>, it is understood that paragraph 1 means
                             that if an enterprise of a Contracting State carries on business in the other Contracting
                             State, other than through a permanent establishment, profits or gains of this enterprise
                             will be subject to tax only in the Contracting State of which the enterprise is resident.
                         </p>
                     </li>
 
-                    <li>With respect to <a href="#a7">Article 7</a> and <a href="#a9">Article 9</a>:
+                    <li>With respect to  <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a> and  <a href="#a9" target="_blank" rel="noopener noreferrer">Article 9</a>:
                         <p>It is understood that any income derived from immovable property that is primarily used for
-                            the purpose of aircraft operations is governed by <a href="#a9">Article 9</a> of this
+                            the purpose of aircraft operations is governed by  <a href="#a9" target="_blank" rel="noopener noreferrer">Article 9</a> of this
                             Agreement.</p>
                         <p>If the New Zealand aircraft operator is charged with any tax of the kind referred to in <a
                                 href="#a2">Article 2</a> in any State of which Gulf Air is the national carrier, the
                             Contracting States shall open negotiations without delay with a view to adjusting the
-                            exemptions afforded by <a href="#a9">Article 9</a> of this Agreement only to the extent of
+                            exemptions afforded by  <a href="#a9" target="_blank" rel="noopener noreferrer">Article 9</a> of this Agreement only to the extent of
                             the United Arab Emirates' share in the ownership of Gulf Air.</p>
                     </li>
 
-                    <li>With respect to <a href="#a11">Article 11</a>, <a href="#a12">Article 12</a> and <a
+                    <li>With respect to  <a href="#a11" target="_blank" rel="noopener noreferrer">Article 11</a>,  <a href="#a12" target="_blank" rel="noopener noreferrer">Article 12</a> and <a
                             href="#a13">Article 13</a>:
                         <p>It is understood that a trustee resident in New Zealand and subject to tax in New Zealand in
                             respect of dividends, interest or royalties shall be entitled to relief under <a
-                                href="#a11">Article 11</a>, <a href="#a12">Article 12</a> and <a href="#a13">Article
+                                href="#a11">Article 11</a>,  <a href="#a12" target="_blank" rel="noopener noreferrer">Article 12</a> and  <a href="#a13" target="_blank" rel="noopener noreferrer">Article
                                 13</a> of this Agreement.</p>
                     </li>
 
-                    <li>With respect to <a href="#a11">Article 11</a>:
+                    <li>With respect to  <a href="#a11" target="_blank" rel="noopener noreferrer">Article 11</a>:
                         <p>It is understood that New Zealand's Foreign Investor Tax Credit rules contained in subpart LE
                             of the Income Tax Act 1994 are designed to offset the 15% withholding tax that New Zealand
-                            may levy in accordance with paragraph 2 of <a href="#a11">Article 11</a>, by a payment of a
+                            may levy in accordance with paragraph 2 of  <a href="#a11" target="_blank" rel="noopener noreferrer">Article 11</a>, by a payment of a
                             special dividend by the New Zealand company of an amount equal to this 15% tax. This special
                             dividend is paid to the shareholder at the same time as the principal dividend.</p>
                     </li>
 
-                    <li>With respect to <a href="#a11">Article 11</a>:
-                        <p>It is understood in relation to paragraphs 4 and 5 of <a href="#a11">Article 11</a> that if a
+                    <li>With respect to  <a href="#a11" target="_blank" rel="noopener noreferrer">Article 11</a>:
+                        <p>It is understood in relation to paragraphs 4 and 5 of  <a href="#a11" target="_blank" rel="noopener noreferrer">Article 11</a> that if a
                             company resident in the United Arab Emirates operates as a branch that has no permanent
                             establishment in New Zealand the profit of that branch will be subject to tax only in the
                             United Arab Emirates.</p>
                     </li>
 
-                    <li>With respect to <a href="#a12">Article 12</a>:
+                    <li>With respect to  <a href="#a12" target="_blank" rel="noopener noreferrer">Article 12</a>:
                         <p>It is understood that no withholding tax is levied on interest on New Zealand Government
                             bonds and other similarly registered widely held debt securities, under current New Zealand
                             income tax law, if that interest income is paid to a non-resident not carrying on a business
                             in New Zealand through a permanent establishment.</p>
                     </li>
 
-                    <li>With respect to <a href="#a22">Article 22</a>:
+                    <li>With respect to  <a href="#a22" target="_blank" rel="noopener noreferrer">Article 22</a>:
                         <p>It is agreed that if an item of income arises to be dealt with under this Article the
                             competent authorities of the Contracting States shall negotiate to reach a satisfactory
                             solution as to how the item should be taxed.</p>
@@ -1492,8 +1219,8 @@
                             <li>The Abu Dhabi Investment Authority and the Dubai Development and Investment Authority
                                 are recognised as being an integral part of the Government of the United Arab Emirates
                                 for the purposes of paragraph (a).</li>
-                            <li>Notwithstanding the provisions of <a href="#a11">Article 11</a>, <a href="#a12">Article
-                                    12</a> and <a href="#a13">Article 13</a>, sovereign immunity tax relief will be
+                            <li>Notwithstanding the provisions of  <a href="#a11" target="_blank" rel="noopener noreferrer">Article 11</a>,  <a href="#a12" target="_blank" rel="noopener noreferrer">Article
+                                    12</a> and  <a href="#a13" target="_blank" rel="noopener noreferrer">Article 13</a>, sovereign immunity tax relief will be
                                 accorded to the Government of the United Arab Emirates, its local governments and their
                                 financial institutions on a case by case basis through consultation between the
                                 competent authorities.</li>
@@ -1502,7 +1229,7 @@
 
                     <li>With respect to the entire Agreement:
                         <ol type="a">
-                            <li>Notwithstanding paragraph 5 of <a href="#a11">Article 11</a> no taxation relief shall be
+                            <li>Notwithstanding paragraph 5 of  <a href="#a11" target="_blank" rel="noopener noreferrer">Article 11</a> no taxation relief shall be
                                 available with respect to taxation on dividends paid to a person who is resident of
                                 neither Contracting State. Prior to denying treaty relief under this paragraph, the
                                 competent authority of the relevant Contracting State shall discuss the matter with the
@@ -1510,15 +1237,15 @@
                             <li>No benefits by way of relief from taxation shall arise under this Agreement where and to
                                 the extent to which such relief is contrary to the intent of this Agreement. The
                                 competent authorities of the Contracting States shall, under the Mutual Agreement
-                                Procedure of <a href="#a24">Article 24</a> recommend specific amendments to the
+                                Procedure of  <a href="#a24" target="_blank" rel="noopener noreferrer">Article 24</a> recommend specific amendments to the
                                 Agreement. The Contracting States further agree that any such recommendation will be
                                 considered and discussed in an expeditious manner with a view to amending the Agreement,
                                 where necessary.</li>
                         </ol>
                     </li>
 
-                    <li>With respect to <a href="#a16">Article 16</a>:
-                        <p>Notwithstanding <a href="#a27">Article 27</a> it is agreed that the provisions of <a
+                    <li>With respect to  <a href="#a16" target="_blank" rel="noopener noreferrer">Article 16</a>:
+                        <p>Notwithstanding  <a href="#a27" target="_blank" rel="noopener noreferrer">Article 27</a> it is agreed that the provisions of <a
                                 href="#a16">Article 16</a> shall apply from 27 October 2002.</p>
                     </li>
                 </ol>

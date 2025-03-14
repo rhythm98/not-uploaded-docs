@@ -4,284 +4,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="dtaa.css">
         <title>MALTA-DTAA</title>
     </head>
     <body>
-        <style>
-            .scope {
-                margin: 0;
-                padding: 8px;
-                font-size: large;
-                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-                overflow-x: hidden;
-                max-width: 100%;
-                box-sizing: border-box;
-            }
-    
-            .scope header {
-                padding: 1rem 1.25rem;
-                margin: 0.25rem 0.75rem;
-            }
-    
-            .scope header * {
-                text-align: center;
-            }
-    
-            .scope header h1,
-            .scope header h2,
-            .scope header h3,
-            .scope header h4 {
-                color: #2f438d;
-            }
-    
-            .scope main h3 {
-                font-size: 1.2rem;
-                font-weight: bold;
-            }
-    
-            .scope main hr {
-                max-width: 640px;
-                margin: 0.5rem auto;
-            }
-    
-            .scope main ::-webkit-scrollbar {
-                width: 0.25rem;
-            }
-    
-            .scope main ::-webkit-scrollbar-track {
-                background: grey;
-            }
-    
-            .scope main ::-webkit-scrollbar-thumb {
-                background: white;
-                width: 0.25rem;
-            }
-    
-            .scope main .example {
-                background-color: bisque;
-                padding: 0.25rem 0.75rem;
-                border-radius: 0.25rem;
-                margin: 1em 0;
-                overflow-x: scroll;
-            }
-    
-            .scope main .example h3 {
-                color: black;
-            }
-    
-            .scope main .box {
-                min-width: 40vw;
-                padding: 0.25rem 0.75rem;
-                border: 1px solid black;
-                font-size: small;
-            }
-    
-            .scope footer p * {
-                font-style: italic;
-            }
-    
-            .scope ul.dashed>li::marker {
-                content: "- ";
-            }
-    
-            .scope table {
-                width: 100%;
-                margin: 0.25rem auto;
-                overflow-x: auto;
-            }
-    
-            .scope table,
-            .scope td,
-            .scope th {
-                border: 1px black solid;
-                border-collapse: collapse;
-                padding: 0.5rem 0.75rem;
-            }
-    
-            .scope table.list {
-                border: 0;
-                width: calc(100% - 2rem);
-                margin: 0.25rem auto;
-                padding: 0.25rem;
-                table-layout: fixed;
-            }
-    
-            .scope table.list * {
-                border: 0;
-            }
-    
-            .scope table.list td:first-child {
-                vertical-align: top;
-                width: 2.5rem;
-            }
-    
-            .scope table.list tr:not(:first-child) {
-                width: auto;
-            }
-    
-            .scope .fraction {
-                display: inline-block;
-                vertical-align: middle;
-                text-align: center;
-            }
-    
-            .scope .fraction>span {
-                display: block;
-                padding: 0 0.2em;
-            }
-    
-            .scope .fraction .numerator {
-                border-bottom: 1px solid #000;
-            }
-    
-            .scope .fraction .denominator {
-                margin-top: -0.1em;
-            }
-    
-            .scope h3 {
-                color: #2f438d;
-            }
-    
-            .scope #linktogtl,
-            .scope #linktogtl *,
-            .scope #gtlnotes h3 {
-                color: #43af76;
-            }
-    
-            .scope .repeal,
-            .scope .repeal *,
-            .scope .attention {
-                color: #c00000;
-            }
-    
-            .scope p {
-                padding: 0.25rem 0;
-                margin-top: 0.25rem;
-                margin-bottom: 0.25rem;
-                line-height: 1.5rem;
-                text-align: justify;
-            }
-    
-            .scope a {
-                color: #5948ca;
-                text-decoration: none;
-                font-weight: 600;
-            }
-    
-            .scope a:hover {
-                text-decoration: underline;
-            }
-    
-            .scope main article {
-                background-color: #f8f8f8;
-                width: calc(100% - 2rem);
-                margin: 0.5rem 0.75rem;
-                padding: 0.5rem;
-            }
-    
-            .scope main article>*:nth-child(1),
-            .scope main article>*:nth-child(2) {
-                text-align: center;
-            }
-    
-            /* Media Queries for Responsive Design */
-            @media only screen and (max-width: 1200px) {
-                .scope {
-                    font-size: medium;
-                }
-    
-                .scope main article {
-                    width: calc(100% - 1rem);
-                    margin: 0.5rem 0.5rem;
-                }
-            }
-    
-            @media only screen and (max-width: 768px) {
-                .scope {
-                    font-size: small;
-                    padding: 5px;
-                }
-    
-                .scope header {
-                    padding: 0.75rem 0.5rem;
-                    margin: 0.25rem 0.5rem;
-                }
-    
-                .scope main article {
-                    width: calc(100% - 1rem);
-                    margin: 0.5rem 0.25rem;
-                    padding: 0.25rem;
-                }
-    
-                .scope table {
-                    display: block;
-                    overflow-x: auto;
-                    -webkit-overflow-scrolling: touch;
-                }
-    
-                .scope header h1 {
-                    font-size: 1.5rem;
-                }
-    
-                .scope header h2,
-                .scope header h3,
-                .scope header h4 {
-                    font-size: 1.3rem;
-                }
-    
-                .scope main h3 {
-                    font-size: 1rem;
-                }
-            }
-    
-            @media only screen and (max-width: 480px) {
-                .scope {
-                    font-size: x-small;
-                    padding: 2px;
-                }
-    
-                .scope header {
-                    padding: 0.5rem 0.25rem;
-                    margin: 0.25rem;
-                }
-    
-                .scope header h1 {
-                    font-size: 1.2rem;
-                }
-    
-                .scope header h2,
-                .scope header h3,
-                .scope header h4 {
-                    font-size: 1.1rem;
-                }
-    
-                .scope main h3 {
-                    font-size: 0.9rem;
-                }
-    
-                .scope p {
-                    line-height: 1.3rem;
-                }
-    
-                .scope main article {
-                    width: calc(100% - 0.5rem);
-                    margin: 0.25rem;
-                    padding: 0.25rem 0.125rem;
-                }
-    
-                .scope table.list td:first-child {
-                    width: 1.5rem;
-                }
-    
-                .scope ol {
-                    padding-left: 1.5rem;
-                }
-    
-                .scope a {
-                    word-break: break-word;
-                }
-            }
-        </style>
+       
         <div style="
           margin: 0.5rem auto;
           padding: 0.5rem;
@@ -290,7 +17,7 @@
           max-width: 100%;
           box-sizing: border-box;
         ">
-            <a href="./index.html" style="
+             <a href="./index.html" target="_blank" rel="noopener noreferrer" style="
               color: #5948ca;
               text-decoration: none;
               font-weight: 600;
@@ -789,7 +516,7 @@
                                 permanent establishment situated therein, or performs in that other State independent
                                 personal services from a fixed base situated therein, and the holding in respect of
                                 which the dividends are paid is effectively connected with such permanent establishment
-                                or fixed base. In such case the provisions of <a href="#a7">Article 7</a> or <a
+                                or fixed base. In such case the provisions of  <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a> or <a
                                     href="#a14">Article 14</a>, as the case may be, shall apply.</p>
                         </li>
                         <li>
@@ -827,7 +554,7 @@
                                 or performs in that other State independent personal services from a fixed base situated
                                 therein, and the debt-claim in respect of which the interest is paid is effectively
                                 connected with such permanent establishment or fixed base. In such case the provisions
-                                of <a href="#a7">Article 7</a> or <a href="#a14">Article 14</a>, as the case may be,
+                                of  <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a> or  <a href="#a14" target="_blank" rel="noopener noreferrer">Article 14</a>, as the case may be,
                                 shall apply.</p>
                         </li>
                         <li>
@@ -864,7 +591,7 @@
                                 or performs in that other State independent personal services from a fixed base situated
                                 therein, and the right or property in respect of which the royalties are paid is
                                 effectively connected with such permanent establishment or fixed base. In such case the
-                                provisions of <a href="#a7">Article 7</a> or <a href="#a14">Article 14</a>, as the case
+                                provisions of  <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a> or  <a href="#a14" target="_blank" rel="noopener noreferrer">Article 14</a>, as the case
                                 may be, shall apply.</p>
                         </li>
                         <li>
@@ -886,7 +613,7 @@
                     <ol type="1">
                         <li>
                             <p>Gains derived by a resident of a Contracting State from the alienation of immovable
-                                property referred to in <a href="#a6">Article 6</a> and situated in the other
+                                property referred to in  <a href="#a6" target="_blank" rel="noopener noreferrer">Article 6</a> and situated in the other
                                 Contracting State may be taxed in that other State.</p>
                         </li>
                         <li>
@@ -954,8 +681,8 @@
                     <h3>DEPENDENT PERSONAL SERVICES</h3>
                     <ol type="1">
                         <li>
-                            <p>Subject to the provisions of <a href="#a16">Article 16</a>, <a href="#a18">Article 18</a>
-                                and <a href="#a19">Article 19</a>, salaries, wages and other similar remuneration
+                            <p>Subject to the provisions of  <a href="#a16" target="_blank" rel="noopener noreferrer">Article 16</a>,  <a href="#a18" target="_blank" rel="noopener noreferrer">Article 18</a>
+                                and  <a href="#a19" target="_blank" rel="noopener noreferrer">Article 19</a>, salaries, wages and other similar remuneration
                                 derived by a resident of a Contracting State in respect of an employment shall be
                                 taxable only in that State unless the employment is exercised in the other Contracting
                                 State. If the employment is so exercised, such remuneration as is derived therefrom may
@@ -1004,7 +731,7 @@
                     <h3>ARTISTES AND SPORTSMEN</h3>
                     <ol type="1">
                         <li>
-                            <p>Notwithstanding the provisions of <a href="#a14">Article 14</a> and <a
+                            <p>Notwithstanding the provisions of  <a href="#a14" target="_blank" rel="noopener noreferrer">Article 14</a> and <a
                                     href="#a15">Article 15</a>, income derived by a resident of a Contracting State as
                                 an entertainer, such as a theatre, motion picture, radio or television artiste, or a
                                 musician, or as a sportsman, from his personal activities as such exercised in the other
@@ -1013,8 +740,8 @@
                         <li>
                             <p>Where income in respect of personal activities exercised by an entertainer or a sportsman
                                 in his capacity as such accrues not to the entertainer or sportsman himself but to
-                                another person, that income may, notwithstanding the provisions of <a href="#a7">Article
-                                    7</a>, <a href="#a14">Article 14</a> and <a href="#a15">Article 15</a>, be taxed in
+                                another person, that income may, notwithstanding the provisions of  <a href="#a7" target="_blank" rel="noopener noreferrer">Article
+                                    7</a>,  <a href="#a14" target="_blank" rel="noopener noreferrer">Article 14</a> and  <a href="#a15" target="_blank" rel="noopener noreferrer">Article 15</a>, be taxed in
                                 the Contracting State in which the activities of the entertainer or sportsman are
                                 exercised.</p>
                         </li>
@@ -1026,7 +753,7 @@
                     <h3>PENSIONS AND SOCIAL SECURITY PAYMENTS</h3>
                     <ol type="1">
                         <li>
-                            <p>Subject to the provisions of paragraph 2 of <a href="#a19">Article 19</a>, pensions and
+                            <p>Subject to the provisions of paragraph 2 of  <a href="#a19" target="_blank" rel="noopener noreferrer">Article 19</a>, pensions and
                                 other similar remuneration paid to a resident of a Contracting State in consideration of
                                 past employment shall be taxable only in that State.</p>
                         </li>
@@ -1081,8 +808,8 @@
                             </ol>
                         </li>
                         <li>
-                            <p>The provisions of <a href="#a15">Article 15</a>, <a href="#a16">Article 16</a>, <a
-                                    href="#a17">Article 17</a> and <a href="#a18">Article 18</a> shall apply to
+                            <p>The provisions of  <a href="#a15" target="_blank" rel="noopener noreferrer">Article 15</a>,  <a href="#a16" target="_blank" rel="noopener noreferrer">Article 16</a>, <a
+                                    href="#a17">Article 17</a> and  <a href="#a18" target="_blank" rel="noopener noreferrer">Article 18</a> shall apply to
                                 salaries, wages and other similar remuneration, and to pensions, in respect of services
                                 rendered in connection with a business carried on by a Contracting State or a political
                                 subdivision or a local authority thereof.</p>
@@ -1109,13 +836,13 @@
                         </li>
                         <li>
                             <p>The provisions of paragraph 1 shall not apply to income, other than income from immovable
-                                property as defined in paragraph 2 of <a href="#a6">Article 6</a>, if the recipient of
+                                property as defined in paragraph 2 of  <a href="#a6" target="_blank" rel="noopener noreferrer">Article 6</a>, if the recipient of
                                 such income, being a resident of a Contracting State, carries on business in the other
                                 Contracting State through a permanent establishment situated therein, or performs in
                                 that other State independent personal services from a fixed base situated therein, and
                                 the right or property in respect of which the income is paid is effectively connected
                                 with such permanent establishment or fixed base. In such case, the provisions of <a
-                                    href="#a7">Article 7</a> or <a href="#a14">Article 14</a>, as the case may be, shall
+                                    href="#a7">Article 7</a> or  <a href="#a14" target="_blank" rel="noopener noreferrer">Article 14</a>, as the case may be, shall
                                 apply.</p>
                         </li>
                     </ol>
@@ -1153,7 +880,7 @@
                                 any taxation or any requirement connected therewith which is other or more burdensome
                                 than the taxation and connected requirements to which nationals of that other State in
                                 the same circumstances, in particular with respect to residence, are or may be
-                                subjected. This provision shall, notwithstanding the provisions of <a href="#a1">Article
+                                subjected. This provision shall, notwithstanding the provisions of  <a href="#a1" target="_blank" rel="noopener noreferrer">Article
                                     1</a>, also apply to persons who are not residents of one or both of the Contracting
                                 States.</p>
                         </li>
@@ -1167,8 +894,8 @@
                                 which it grants to its own residents.</p>
                         </li>
                         <li>
-                            <p>Except where the provisions of paragraph 1 of <a href="#a9">Article 9</a>, paragraph 4 of
-                                <a href="#a11">Article 11</a>, or paragraph 4 of <a href="#a12">Article 12</a> apply,
+                            <p>Except where the provisions of paragraph 1 of  <a href="#a9" target="_blank" rel="noopener noreferrer">Article 9</a>, paragraph 4 of
+                                 <a href="#a11" target="_blank" rel="noopener noreferrer">Article 11</a>, or paragraph 4 of  <a href="#a12" target="_blank" rel="noopener noreferrer">Article 12</a> apply,
                                 interest, royalties and other disbursements paid by an enterprise of a Contracting State
                                 to a resident of the other Contracting State shall, for the purpose of determining the
                                 taxable profits of such enterprise, be deductible under the same conditions as if they
@@ -1194,7 +921,7 @@
                                 or will result for him in taxation not in accordance with the provisions of this
                                 Convention, he may, irrespective of the remedies provided by the domestic law of those
                                 States, present his case to the competent authority of the Contracting State of which he
-                                is a resident or, if his case comes under paragraph 1 of <a href="#a23">Article 23</a>,
+                                is a resident or, if his case comes under paragraph 1 of  <a href="#a23" target="_blank" rel="noopener noreferrer">Article 23</a>,
                                 to that of the Contracting State of which he is a national. The case must be presented
                                 within three years from the first notification of the action resulting in taxation not
                                 in accordance with the provisions of the Convention.</p>
@@ -1230,7 +957,7 @@
                                 necessary for carrying out the provisions of this Convention or of the domestic laws of
                                 the Contracting States concerning taxes covered by the Convention insofar as the
                                 taxation thereunder is not contrary to the Convention. The exchange of information is
-                                not restricted by <a href="#a1">Article 1</a>. Any information received by a Contracting
+                                not restricted by  <a href="#a1" target="_blank" rel="noopener noreferrer">Article 1</a>. Any information received by a Contracting
                                 State shall be treated as secret in the same manner as information obtained under the
                                 domestic laws of that State and shall be disclosed only to persons or authorities
                                 (including courts and administrative bodies) concerned with the assessment or collection
@@ -1385,12 +1112,12 @@
                             </ol>
                         </li>
                         <li>
-                            <p>With reference to <a href="#a6">Article 6</a>, paragraph 1:</p>
+                            <p>With reference to  <a href="#a6" target="_blank" rel="noopener noreferrer">Article 6</a>, paragraph 1:</p>
                             <p>It is understood that "income" means gross income less any expenses deductible for tax
                                 purposes thereagainst.</p>
                         </li>
                         <li>
-                            <p>With reference to <a href="#a8">Article 8</a>:</p>
+                            <p>With reference to  <a href="#a8" target="_blank" rel="noopener noreferrer">Article 8</a>:</p>
                             <ol type="a">
                                 <li>
                                     <p>the term "profits" includes:</p>
@@ -1433,14 +1160,14 @@
                             </ol>
                         </li>
                         <li>
-                            <p>With reference to <a href="#a10">Article 10</a>:</p>
+                            <p>With reference to  <a href="#a10" target="_blank" rel="noopener noreferrer">Article 10</a>:</p>
                             <p>It is understood that in the case of dividends paid by a company which is a resident of
                                 Malta to a resident of the U.A.E. the provisions of paragraph 1 shall not apply if the
                                 resident of the U.A.E. claims a credit or refund of the tax paid in Malta by the company
                                 on the profits out of which the dividend has been paid.</p>
                         </li>
                         <li>
-                            <p>With reference to <a href="#a10">Articles 10</a>, <a href="#a11">11</a> and <a
+                            <p>With reference to  <a href="#a10" target="_blank" rel="noopener noreferrer">Articles 10</a>,  <a href="#a11" target="_blank" rel="noopener noreferrer">11</a> and <a
                                     href="#a12">12</a>:</p>
                             <p>For the purposes of paragraph 5 of Article 10, paragraph 3 of Article 11 and paragraph 3
                                 of Article 12, a representative office (or otherwise) in Malta of such U.A.E. Public
@@ -1452,12 +1179,12 @@
                                 public institution.</p>
                         </li>
                         <li>
-                            <p>With reference to <a href="#a12">Article 12</a>:</p>
+                            <p>With reference to  <a href="#a12" target="_blank" rel="noopener noreferrer">Article 12</a>:</p>
                             <p>It is understood that the term "royalties" does not include payments in respect of the
                                 operation of mines or quarries or the exploitation of natural resources.</p>
                         </li>
                         <li>
-                            <p>With reference to <a href="#a13">Article 13</a>:</p>
+                            <p>With reference to  <a href="#a13" target="_blank" rel="noopener noreferrer">Article 13</a>:</p>
                             <ol type="a">
                                 <li>
                                     <p>It is understood that "gains" means gains chargeable to tax under the laws of the
@@ -1476,7 +1203,7 @@
                                 between the competent authorities of the Contracting States.</p>
                         </li>
                         <li>
-                            <p>With reference to <a href="#a15">Article 15</a>:</p>
+                            <p>With reference to  <a href="#a15" target="_blank" rel="noopener noreferrer">Article 15</a>:</p>
                             <p>Notwithstanding the provisions of Article 15, remuneration derived in respect of an
                                 employment exercised in a Contracting State by a person forming part of the ground staff
                                 of an enterprise of the other Contracting State that is engaged in international traffic
@@ -1497,7 +1224,7 @@
                             </ol>
                         </li>
                         <li>
-                            <p>With reference to <a href="#a28">Article 28</a>:</p>
+                            <p>With reference to  <a href="#a28" target="_blank" rel="noopener noreferrer">Article 28</a>:</p>
                             <p>It is understood that notwithstanding the provisions of Article 28 of this Convention the
                                 provisions of Articles 8 and of paragraph 4 of Article 13 of this Convention shall have
                                 effect for taxes levied on profits derived from the operation of ships or aircraft in
