@@ -5,13 +5,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The UAE-Andorra Double Taxation Avoidance Agreement (DTAA) aims to eliminate double taxation and prevent fiscal evasion, fostering stronger economic and trade relations between the UAE and Andorra. This treaty offers tax benefits for businesses and individuals, enhancing cross-border investment and financial transactions">
-    <link rel="stylesheet" href="dtaa.css">
+    <link rel="stylesheet" href="https://gtlcdnstorage.blob.core.windows.net/guide/stylesheets/dtaa.css">
     <title>Andorra-DTAA</title>
 </head>
 
 <body>
+    <button id="back-to-top" title="Back to Top">↑</button>
+
+    <style>
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #5948ca;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 18px;
+            width: 50px;
+            height: 50px;
+            display: none;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+        
+        #back-to-top:hover {
+            background-color: #4938a0;
+        }
+    </style>
+
+    <script>
+        // Get the button
+        let backToTopBtn = document.getElementById("back-to-top");
+        
+        // When the user scrolls down 300px from the top, show the button
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+        
+        // When the user clicks the button, scroll to the top
+        backToTopBtn.onclick = function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        };
+    </script>
    
-    <div style="
+     <div style="
      margin: 0.5rem auto;
      padding: 0.5rem;
      text-align: center;
@@ -19,14 +66,14 @@
      max-width: 100%;
      box-sizing: border-box;
    ">
-        <a href="./index.html" style="
+        <a href="./index.html" target="_blank" rel="noopener noreferrer" style="
          color: #5948ca;
          text-decoration: none;
          font-weight: 600;
          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
          font-size: large;
        ">HOME</a>
-    </div>
+   </div>
     <div class="scope">
         <header>
 
@@ -44,15 +91,13 @@
             <article>
 
                 <!-- Start of Article 1 -->
-                <h3 id="a1">Article 1</h3>
-                <h3>PERSONS COVERED</h3>
+                <h3 id="a1">Article 1<br/>PERSONS COVERED</h3>
                 <p>This Convention shall apply to persons who are residents of one or both of the Contracting States.
                 </p>
             </article>
             <article>
                 <!-- Start of Article 2 -->
-                <h3 id="a2">Article 2</h3>
-                <h3>TAXES COVERED</h3>
+                <h3 id="a2">Article 2<br/>TAXES COVERED</h3>
 
                 <ol id="l1">
                     <li>
@@ -115,8 +160,7 @@
             </article>
             <article>
                 <!-- Start of Article 3 -->
-                <h3 id="a3">Article 3</h3>
-                <h3>INCOME FROM HYDROCARBONS</h3>
+                <h3 id="a3">Article 3<br/>INCOME FROM HYDROCARBONS</h3>
 
                 <p>Notwithstanding any other provision of this convention nothing shall affect the right of either one
                     of the Contracting States, or of any of their local Governments or local authorities thereof to
@@ -128,8 +172,7 @@
             <article>
 
                 <!-- Start of Article 4 -->
-                <h3 id="a4">Article 4</h3>
-                <h3>GENERAL DEFINITIONS</h3>
+                <h3 id="a4">Article 4<br/>GENERAL DEFINITIONS</h3>
 
                 <ol id="l5">
                     <li>
@@ -228,8 +271,7 @@
             <article>
 
                 <!-- Start of Article 5 -->
-                <h3 id="a5">Article 5</h3>
-                <h3>RESIDENT</h3>
+                <h3 id="a5">Article 5<br/>RESIDENT</h3>
 
                 <ol id="l9">
                     <li>
@@ -296,8 +338,7 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a6">Article 6</h3>
-                <h3>PERMANENT ESTABLISHMENT</h3>
+                <h3 id="a6">Article 6<br/>PERMANENT ESTABLISHMENT</h3>
 
                 <ol id="l13">
                     <li>
@@ -392,8 +433,7 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a7">Article 7</h3>
-                <h3>INCOME FROM IMMOVABLE PROPERTY</h3>
+                <h3 id="a7">Article 7<br/>INCOME FROM IMMOVABLE PROPERTY</h3>
 
                 <ol id="l16">
                     <li>
@@ -422,8 +462,7 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a8">Article 8</h3>
-                <h3>BUSINESS PROFITS</h3>
+                <h3 id="a8">Article 8<br/>BUSINESS PROFITS</h3>
 
                 <ol id="l17">
                     <li>
@@ -464,8 +503,7 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a9">Article 9</h3>
-                <h3>SHIPPING AND AIR TRANSPORT</h3>
+                <h3 id="a9">Article 9<br/>SHIPPING AND AIR TRANSPORT</h3>
 
                 <ol id="l18">
                     <li>
@@ -514,8 +552,7 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a10">Article 10</h3>
-                <h3>ASSOCIATED ENTERPRISES</h3>
+                <h3 id="a10">Article 10<br/>ASSOCIATED ENTERPRISES</h3>
 
                 <ol id="l21">
                     <li>
@@ -553,8 +590,7 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a11">Article 11</h3>
-                <h3>DIVIDENDS</h3>
+                <h3 id="a11">Article 11<br/>DIVIDENDS</h3>
 
                 <ol id="l23">
                     <li>
@@ -575,7 +611,7 @@
                             a resident of a Contracting State, carries on business in the other Contracting State of
                             which the company paying the dividends is a resident through a permanent establishment
                             situated therein and the holding in respect of which the dividends are paid is effectively
-                            connected with such permanent establishment. In such case the provisions of <a href="#a8" target="_blank">Article 8</a> shall apply.</p>
+                            connected with such permanent establishment. In such case the provisions of <a href="#a8" target="_blank" rel="noopener noreferrer">Article 8</a> shall apply.</p>
                     </li>
                     <li>
                         <p>Where a company which is a resident of a Contracting State derives profits or income from the
@@ -590,8 +626,7 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a12">Article 12</h3>
-                <h3>INTEREST</h3>
+                <h3 id="a12">Article 12<br/>INTEREST</h3>
 
                 <ol id="l24">
                     <li>
@@ -611,7 +646,7 @@
                             a resident of a Contracting State, carries on business in the other Contracting State in
                             which the interest arises through a permanent establishment situated therein and the
                             debt-claim in respect of which the interest is paid is effectively connected with such
-                            permanent establishment. In such case the provisions of<a href="#a8" target="_blank">Article 8</a> shall
+                            permanent establishment. In such case the provisions of<a href="#a8" target="_blank" rel="noopener noreferrer">Article 8</a> shall
                             apply.</p>
                     </li>
                     <li>
@@ -634,8 +669,7 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a13">Article 13</h3>
-                <h3>ROYALTIES</h3>
+                <h3 id="a13">Article 13<br/>ROYALTIES</h3>
 
                 <ol id="l25">
                     <li>
@@ -655,7 +689,7 @@
                             a resident of a Contracting State, carries on business in the other Contracting State in
                             which the royalties arise through a permanent establishment situated therein and the right
                             or property in respect of which the royalties are paid is effectively connected with such
-                            permanent establishment. In such case the provisions of<a href="#a8" target="_blank">Article 8</a> shall
+                            permanent establishment. In such case the provisions of<a href="#a8" target="_blank" rel="noopener noreferrer">Article 8</a> shall
                             apply.</p>
                     </li>
                     <li>
@@ -678,13 +712,12 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a14">Article 14</h3>
-                <h3>CAPITAL GAINS</h3>
+                <h3 id="a14">Article 14<br/>CAPITAL GAINS</h3>
 
                 <ol id="l26">
                     <li>
                         <p>Gains derived by a resident of a Contracting State from the alienation of immovable property
-                            referred to in <a href="#a7" target="_blank">Article 7</a> and situated in the other Contracting State may
+                            referred to in <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a> and situated in the other Contracting State may
                             be taxed in that other State.</p>
                     </li>
                     <li>
@@ -715,12 +748,11 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a15">Article 15</h3>
-                <h3>INCOME FROM EMPLOYMENT</h3>
+                <h3 id="a15">Article 15<br/>INCOME FROM EMPLOYMENT</h3>
 
                 <ol id="l27">
                     <li>
-                        <p>Subject to the provisions of <a href="#a16" target="_blank">Articles 16</a>, <a href="#a18" target="_blank">18</a>, and <a href="#a19" target="_blank">19</a>, salaries, wages and other similar remuneration derived by a resident
+                        <p>Subject to the provisions of <a href="#a16" target="_blank" rel="noopener noreferrer">Articles 16</a>, <a href="#a18" target="_blank" rel="noopener noreferrer">18</a>, and <a href="#a19" target="_blank" rel="noopener noreferrer">19</a>, salaries, wages and other similar remuneration derived by a resident
                             of a Contracting State in respect of an employment shall be taxable only in that State
                             unless the employment is exercised in the other Contracting State. If the employment is so
                             exercised, such remuneration as is derived there from may be taxed in that other State.</p>
@@ -759,19 +791,17 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a17">Article 16</h3>
-                <h3>DIRECTORS’ FEES</h3>
+                <h3 id="a17">Article 16<br/>DIRECTORS’ FEES</h3>
                 <p>Directors’ fees and other similar payments derived by a resident of a Contracting State in his
                     capacity as a member of the board of directors of a company which is a resident of the other
                     Contracting State may be taxed in that other State.</p>
             </article>
             <article>
-                <h3>ARTICLE 17</h3>
-                <h3>ENTERTAINERS AND SPORTSPERSONS</h3>
+                <h3>ARTICLE 17<br/>ENTERTAINERS AND SPORTSPERSONS</h3>
 
                 <ol id="l29">
                     <li>
-                        <p>Notwithstanding the provisions of <a href="#a8" target="_blank">Articles 8</a> and <a href="#a15" target="_blank">15</a>,
+                        <p>Notwithstanding the provisions of <a href="#a8" target="_blank" rel="noopener noreferrer">Articles 8</a> and <a href="#a15" target="_blank" rel="noopener noreferrer">15</a>,
                             income derived by a resident of a Contracting State as an entertainer, such as a theatre,
                             motion picture, radio or television artiste, or a musician, or as a sportsperson, from that
                             resident’s personal activities as such exercised in the other Contracting State may be taxed
@@ -780,7 +810,7 @@
                     <li>
                         <p>Where income in respect of personal activities exercised by an entertainer or a sportsperson
                             acting as such accrues not to the entertainer or sportsperson but to another person, that
-                            income may, notwithstanding the provisions of <a href="#a8" target="_blank">Articles 8</a> and <a href="#a15" target="_blank">15</a>, be taxed in the Contracting State in which the activities of the
+                            income may, notwithstanding the provisions of <a href="#a8" target="_blank" rel="noopener noreferrer">Articles 8</a> and <a href="#a15" target="_blank" rel="noopener noreferrer">15</a>, be taxed in the Contracting State in which the activities of the
                             entertainer or sportsperson are exercised.</p>
                     </li>
                     <li>
@@ -797,12 +827,11 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a18">Article 18</h3>
-                <h3>PENSIONS</h3>
+                <h3 id="a18">Article 18<br/>PENSIONS</h3>
 
                 <ol id="l30">
                     <li>
-                        <p>Subject to the provisions of <a href="#a18" target="_blank">paragraph 2 of Article 18</a>, pensions and other
+                        <p>Subject to the provisions of <a href="#a18" target="_blank" rel="noopener noreferrer">paragraph 2 of Article 18</a>, pensions and other
                             similar remuneration and annuities paid to an individual who is a resident of a Contracting
                             State in consideration of past employment shall be taxable only in that State.</p>
                     </li>
@@ -829,8 +858,7 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a19">Article 19</h3>
-                <h3>GOVERNMENT SERVICE</h3>
+                <h3 id="a19">Article 19<br/>GOVERNMENT SERVICE</h3>
 
                 <ol id="l32">
                     <li>
@@ -866,7 +894,7 @@
 
                     </li>
                     <li>
-                        <p>The provisions of Articles <a href="#a15" target="_blank">15</a>, <a href="#a16" target="_blank">16</a>, <a href="#a17" target="_blank">17</a>, and <a href="#a18" target="_blank">18</a>, shall apply to salaries, wages, pensions,
+                        <p>The provisions of Articles <a href="#a15" target="_blank" rel="noopener noreferrer">15</a>, <a href="#a16" target="_blank" rel="noopener noreferrer">16</a>, <a href="#a17" target="_blank" rel="noopener noreferrer">17</a>, and <a href="#a18" target="_blank" rel="noopener noreferrer">18</a>, shall apply to salaries, wages, pensions,
                             and other similar remuneration in respect of services rendered in connection with a business
                             carried on by a Contracting State or a political subdivision or a local authority thereof.
                         </p>
@@ -874,10 +902,9 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a20">Article 20</h3>
-                <h3>TEACHERS AND RESEARCHERS</h3>
+                <h3 id="a20">Article 20<br/>TEACHERS AND RESEARCHERS</h3>
 
-                <p>Subject to the provisions of <a href="#a18" target="_blank">Article 19</a>, an individual who is or was immediately
+                <p>Subject to the provisions of <a href="#a18" target="_blank" rel="noopener noreferrer">Article 19</a>, an individual who is or was immediately
                     before visiting a Contracting State a resident of the other Contracting State and who at the
                     invitation of the Government of the first-mentioned Contracting State or of a university, college,
                     school, museum or other cultural institution in that first-mentioned Contracting State or under an
@@ -888,8 +915,7 @@
 
             </article>
             <article>
-                <h3 id="a21">Article 21</h3>
-                <h3>STUDENTS</h3>
+                <h3 id="a21">Article 21<br/>STUDENTS</h3>
 
                 <ol id="l36">
                     <li>
@@ -908,8 +934,7 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a22">Article 22</h3>
-                <h3>OTHER INCOME</h3>
+                <h3 id="a22">Article 22<br/>OTHER INCOME</h3>
 
                 <ol id="l37">
                     <li>
@@ -918,17 +943,16 @@
                     </li>
                     <li>
                         <p>The provisions of paragraph 1 shall not apply to income, other than income from immovable
-                            property as defined in paragraph 2 of <a href="#a7" target="_blank">Article 7</a>, if the recipient of such
+                            property as defined in paragraph 2 of <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a>, if the recipient of such
                             income, being a resident of a Contracting State, carries on business in the other
                             Contracting State through a permanent establishment situated therein and the right or
                             property in respect of which the income is paid is effectively connected with such permanent
-                            establishment. In such case the provisions of <a href="#a8" target="_blank">Article 8</a> shall apply.</p>
+                            establishment. In such case the provisions of <a href="#a8" target="_blank" rel="noopener noreferrer">Article 8</a> shall apply.</p>
                     </li>
                 </ol>
             </article>
             <article>
-                <h3 id="a23">Article 23</h3>
-                <h3>ELIMINATION OF DOUBLE TAXATION</h3>
+                <h3 id="a23">Article 23<br/>ELIMINATION OF DOUBLE TAXATION</h3>
 
                 <ol id="l38">
                     <li>
@@ -949,8 +973,7 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a24">Article 24</h3>
-                <h3>NON-DISCRIMINATION</h3>
+                <h3 id="a24">Article 24<br/>NON-DISCRIMINATION</h3>
 
                 <ol id="l39">
                     <li>
@@ -958,7 +981,7 @@
                             taxation or any requirement connected therewith, which is other or more burdensome than the
                             taxation and connected requirements to which nationals of that other State in the same
                             circumstances, in particular with respect to residence, are or may be subjected. This
-                            provision shall, notwithstanding the provisions of <a href="#a1" target="_blank">Article 1</a>, also apply
+                            provision shall, notwithstanding the provisions of <a href="#a1" target="_blank" rel="noopener noreferrer">Article 1</a>, also apply
                             to persons who are not residents of one or both of the Contracting States.</p>
                     </li>
                     <li>
@@ -971,7 +994,7 @@
                             residents.</p>
                     </li>
                     <li>
-                        <p>a) Except where the provisions of <a href="#a10" target="_blank">paragraph 1 of Article 10</a>, <a href="#a12" target="_blank">paragraph 4 of Article 12</a>, or <a href="#a13" target="_blank">paragraph 4 of Article
+                        <p>a) Except where the provisions of <a href="#a10" target="_blank" rel="noopener noreferrer">paragraph 1 of Article 10</a>, <a href="#a12" target="_blank" rel="noopener noreferrer">paragraph 4 of Article 12</a>, or <a href="#a13" target="_blank" rel="noopener noreferrer">paragraph 4 of Article
                                 13</a>, apply, interest, royalties and other disbursements paid by an enterprise of a
                             Contracting State to a resident of the other Contracting State shall, for the purpose of
                             determining the taxable profits of such enterprise, be deductible under the same conditions
@@ -983,9 +1006,9 @@
                         <p>b) Where a permanent establishment situated in a State receives dividends, interest or
                             royalties arising in the other State corresponding to property or rights effectively
                             connected with that permanent establishment, such income shall be taxable in the other State
-                            in accordance with the provisions of <a href="#a12" target="_blank">paragraphs 1 and 2 of Article 12</a> and
-                            <a href="#a13" target="_blank">paragraphs 1 and 2 of Article 13</a>. The first-mentioned State shall
-                            eliminate double taxation according to the terms set forth in <a href="#a23" target="_blank">paragraphs 1
+                            in accordance with the provisions of <a href="#a12" target="_blank" rel="noopener noreferrer">paragraphs 1 and 2 of Article 12</a> and
+                            <a href="#a13" target="_blank" rel="noopener noreferrer">paragraphs 1 and 2 of Article 13</a>. The first-mentioned State shall
+                            eliminate double taxation according to the terms set forth in <a href="#a23" target="_blank" rel="noopener noreferrer">paragraphs 1
                                 and 2 of Article 23</a>. This provision shall apply irrespective of the location of the
                             head office of the enterprise on which the permanent establishment depends.
                         </p>
@@ -999,14 +1022,13 @@
                             subjected.</p>
                     </li>
                     <li>
-                        <p>The provisions of this Article shall, notwithstanding the provisions of <a href="#a2" target="_blank">Article
+                        <p>The provisions of this Article shall, notwithstanding the provisions of <a href="#a2" target="_blank" rel="noopener noreferrer">Article
                                 2</a>, apply to taxes of every kind and description.</p>
                     </li>
                 </ol>
             </article>
             <article>
-                <h3 id="a25">Article 25</h3>
-                <h3>MUTUAL AGREEMENT PROCEDURE</h3>
+                <h3 id="a25">Article 25<br/>MUTUAL AGREEMENT PROCEDURE</h3>
 
                 <ol>
                     <li>
@@ -1014,7 +1036,7 @@
                             will result for him in taxation not in accordance with the provisions of this Convention, he
                             may, irrespective of the remedies provided by the domestic law of those States, present his
                             case to the competent authority of the Contracting State of which he is a resident or, if
-                            his case comes under <a href="#a23" target="_blank">paragraph 1 of Article 23</a>, to that of the
+                            his case comes under <a href="#a23" target="_blank" rel="noopener noreferrer">paragraph 1 of Article 23</a>, to that of the
                             Contracting State of which he is a national. The case must be presented within three years
                             from the first notification of the action resulting in taxation not in accordance with the
                             provisions of the Convention.</p>
@@ -1042,8 +1064,7 @@
             </article>
             <article>
 
-                <h3 id="a26">ARTICLE 26</h3>
-                <h3>EXCHANGE OF INFORMATION</h3>
+                <h3 id="a26">ARTICLE 26<br/>EXCHANGE OF INFORMATION</h3>
 
                 <ol id="l41">
                     <li>
@@ -1052,7 +1073,7 @@
                             administration or enforcement of the domestic laws concerning taxes of every kind and
                             description imposed on behalf of the Contracting States, or of their political subdivisions
                             or local authorities, insofar as the taxation there under is not contrary to the Convention.
-                            The exchange of information is not restricted by <a href="#a1" target="_blank">Articles 1</a> and <a href="#a2" target="_blank">2</a>.</p>
+                            The exchange of information is not restricted by <a href="#a1" target="_blank" rel="noopener noreferrer">Articles 1</a> and <a href="#a2" target="_blank" rel="noopener noreferrer">2</a>.</p>
                     </li>
                     <li>
                         <p>Any information received under paragraph 1 by a Contracting State shall be treated as secret
@@ -1101,26 +1122,23 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a27">ARTICLE 27</h3>
-                <h3>INCOME OF GOVERNMENT AND INSTITUTIONS</h3>
+                <h3 id="a27">ARTICLE 27<br/>INCOME OF GOVERNMENT AND INSTITUTIONS</h3>
                 <p>The Federal or the Local Governments and the financial institutions which are wholly owned by one of
                     the Contracting States shall be exempt from tax in the other Contracting State in respect of any
                     income or capital gains derived by such federal or Local Government from that other Contracting
-                    State except income from hydrocarbons as stated in <a href="#a3" target="_blank">Article 3</a>, income from
-                    immovable property as stated in <a href="#a7" target="_blank">Article 7</a> and capital gains on immovable property
-                    as stated in <a href="#a14" target="_blank">Article 14</a> paragraph 1 and 4.</p>
+                    State except income from hydrocarbons as stated in <a href="#a3" target="_blank" rel="noopener noreferrer">Article 3</a>, income from
+                    immovable property as stated in <a href="#a7" target="_blank" rel="noopener noreferrer">Article 7</a> and capital gains on immovable property
+                    as stated in <a href="#a14" target="_blank" rel="noopener noreferrer">Article 14</a> paragraph 1 and 4.</p>
             </article>
             <article>
-                <h3 id="a28">ARTICLE 28</h3>
-                <h3>MEMBERS OF DIPLOMATIC MISSIONS AND CONSULAR POSTS</h3>
+                <h3 id="a28">ARTICLE 28<br/>MEMBERS OF DIPLOMATIC MISSIONS AND CONSULAR POSTS</h3>
 
                 <p>The provisions of the Convention shall not affect the fiscal privileges of members of diplomatic
                     missions, consular posts or permanent delegations to international organizations, under the general
                     rules of international law or under the provisions of special agreements.</p>
             </article>
             <article>
-                <h3 id="a29">ARTICLE 29</h3>
-                <h3>ENTRY INTO FORCE</h3>
+                <h3 id="a29">ARTICLE 29<br/>ENTRY INTO FORCE</h3>
 
                 <ol>
                     <li>
@@ -1146,8 +1164,7 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a30">ARTICLE 30</h3>
-                <h3>TERMINATION</h3>
+                <h3 id="a30">ARTICLE 30<br/>TERMINATION</h3>
 
                 <ol>
                     <li>
@@ -1193,7 +1210,7 @@
                     form an integral part of this Convention:</p>
                 <ol>
                     <li>
-                        <p>With reference to <a href="#a5" target="_blank">paragraph 1 of Article 5 (Residence)</a>:
+                        <p>With reference to <a href="#a5" target="_blank" rel="noopener noreferrer">paragraph 1 of Article 5 (Residence)</a>:
                         </p>
                         <ol type="i">
 
@@ -1248,7 +1265,7 @@
                         </ol>
                     </li>
                     <li>
-                        <p>With reference to <a href="#a26" target="_blank">Article 26 (Exchange of
+                        <p>With reference to <a href="#a26" target="_blank" rel="noopener noreferrer">Article 26 (Exchange of
                                 Information)</a>:</p>
                         <ol type="i">
                             <li>
@@ -1389,17 +1406,17 @@
                             adopted the common standard of the OECD concerning the automatic
                             exchange of financial
                             information under a bilateral or multilateral agreement for the full
-                            implementation of <a href="#a25" target="_blank">Article 25</a> of the Convention.</p>
+                            implementation of <a href="#a25" target="_blank" rel="noopener noreferrer">Article 25</a> of the Convention.</p>
                     </li>
                 </ol>
                 <li>
-                    <p>With reference to <a href="#a27" target="_blank">Article 27</a> (Income of Government and
+                    <p>With reference to <a href="#a27" target="_blank" rel="noopener noreferrer">Article 27</a> (Income of Government and
                         Institutions)</p>
                 </li>
                 </ol>
                 <ol type="i">
                     <li>
-                        <p>For the purpose of <a href="#a27" target="_blank">Article 27</a>, the following institutions are
+                        <p>For the purpose of <a href="#a27" target="_blank" rel="noopener noreferrer">Article 27</a>, the following institutions are
                             included:
                         </p>
 

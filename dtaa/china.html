@@ -4,11 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dtaa.css">
+    <link rel="stylesheet" href="https://gtlcdnstorage.blob.core.windows.net/guide/stylesheets/dtaa.css">
     <title>China-DTAA</title>
 </head>
 
 <body>
+    <button id="back-to-top" title="Back to Top">↑</button>
+
+    <style>
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #5948ca;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 18px;
+            width: 50px;
+            height: 50px;
+            display: none;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+        
+        #back-to-top:hover {
+            background-color: #4938a0;
+        }
+    </style>
+
+    <script>
+        // Get the button
+        let backToTopBtn = document.getElementById("back-to-top");
+        
+        // When the user scrolls down 300px from the top, show the button
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+        
+        // When the user clicks the button, scroll to the top
+        backToTopBtn.onclick = function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        };
+    </script>
    
      <div style="
      margin: 0.5rem auto;
@@ -887,11 +934,12 @@
 
                 <ol type="1">
                     <li>
-                        <p>(a) Remuneration other than pension, paid by the Government of a Contracting State or a local
+                         <ol type="a">
+                            <li><p> Remuneration other than pension, paid by the Government of a Contracting State or a local
                             authority thereof to an individual in respect of services rendered to the Government of that
                             Contracting State or a local authority thereof, in the discharge of functions of a
-                            governmental nature, shall be taxable only in that Contracting State.</p>
-                        <ol type="a">
+                            governmental nature, shall be taxable only in that Contracting State.</p></li>
+                       
                             <li>
                                 <p>However, such remuneration shall be taxable only in the other Contracting State if
                                     the services are rendered in that other Contracting State and the individual is a
@@ -909,11 +957,12 @@
                         </ol>
                     </li>
                     <li>
-                        <p>(a) Any pension paid by, or out of funds to which contributions are made by the Government of
+                       <ol type="a">
+                        <li> <p> Any pension paid by, or out of funds to which contributions are made by the Government of
                             a Contracting State or a local authority thereof to an individual in respect of services
                             rendered to the Government of that Contracting State or a local authority thereof shall be
-                            taxable only in that Contracting State.</p>
-                        <ol type="a">
+                            taxable only in that Contracting State.</p></li>
+                        
                             <li>
                                 <p>However, such pension shall be taxable only in the other Contracting State if the
                                     individual is a resident of, and a national of, that other Contracting State.</p>
@@ -921,8 +970,7 @@
                         </ol>
                     </li>
                     <li>
-                        <p>The provisions of  <a href="#a15" target="_blank" rel="noopener noreferrer">Article 15</a>,  <a href="#a16" target="_blank" rel="noopener noreferrer">Article 16</a>, <a
-                                href="#a17">Article 17</a> and  <a href="#a18" target="_blank" rel="noopener noreferrer">Article 18</a> shall apply to remuneration
+                        <p>The provisions of  <a href="#a15" target="_blank" rel="noopener noreferrer">Article 15</a>,  <a href="#a16" target="_blank" rel="noopener noreferrer">Article 16</a>, <a href="#a17">Article 17</a> and  <a href="#a18" target="_blank" rel="noopener noreferrer">Article 18</a> shall apply to remuneration
                             and pensions in respect of services rendered in connection with a business carried on by the
                             Government of a Contracting State or a local authority thereof.</p>
                     </li>

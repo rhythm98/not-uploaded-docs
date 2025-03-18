@@ -1,15 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dtaa.css">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='https://gtlcdnstorage.blob.core.windows.net/guide/stylesheets/dtaa.css'>
     <title>Algeria-DTAA</title>
 </head>
 
 <body>
   
+    <button id="back-to-top" title="Back to Top">↑</button>
+
+    <style>
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #5948ca;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 18px;
+            width: 50px;
+            height: 50px;
+            display: none;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+        
+        #back-to-top:hover {
+            background-color: #4938a0;
+        }
+    </style>
+
+    <script>
+        // Get the button
+        let backToTopBtn = document.getElementById("back-to-top");
+        
+        // When the user scrolls down 300px from the top, show the button
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+        
+        // When the user clicks the button, scroll to the top
+        backToTopBtn.onclick = function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        };
+    </script>
+   
      <div style="
      margin: 0.5rem auto;
      padding: 0.5rem;
@@ -18,7 +66,7 @@
      max-width: 100%;
      box-sizing: border-box;
    ">
-       <a href="./index.html" style="
+        <a href="./index.html" target="_blank" rel="noopener noreferrer" style="
          color: #5948ca;
          text-decoration: none;
          font-weight: 600;
@@ -26,29 +74,27 @@
          font-size: large;
        ">HOME</a>
    </div>
-    <div class="scope">
+    <div class='scope'>
         
         <header>
 
-            <h3>CONVENTION BETWEEN THE STATE OF THE UNITED ARAB EMIRATES AND THE PEOPLE’S DEMOCRATIC REPUBLIC OF ALGERIA
+            <h3>CONVENTION BETWEEN THE STATE OF THE UNITED ARAB EMIRATES AND THE PEOPLE&apos;S DEMOCRATIC REPUBLIC OF ALGERIA
                 FOR THE AVOIDANCE OF DOUBLE TAXATION AND THE PREVENTION OF FISCAL EVASION WITH RESPECT TO TAXES ON
                 INCOME AND ON CAPITAL</h3>
-            <p>The State of the United Arab Emirates and the People’s Democratic Republic of Algeria, desiring to
+            <p>The State of the United Arab Emirates and the People&apos;s Democratic Republic of Algeria, desiring to
                 promote and strengthen their economic relations by concluding a Convention for the avoidance of double
                 taxation and the prevention of fiscal evasion with respect to taxes on income and on capital, have
                 agreed as follows:</p>
         </header>
         <main>
             <article>
-                <h3 id="a1">Article 1</h3>
-                <h3> Persons Covered</h3>
+                <h3 id='a1'>Article 1<br/> Persons Covered</h3>
                 <p>This Convention shall apply to persons who are residents of one or both of the Contracting States.
                 </p>
             </article>
             <article>
-                <h3 id="a2">Article 2</h3>
-                <h3> Taxes Covered</h3>
-                <ol type="1">
+                <h3 id='a2'>Article 2<br/> Taxes Covered</h3>
+                <ol type='1'>
                     <li>
                         <p>This Convention applies to taxes on income and on capital imposed on behalf of the
                             Contracting State, or by its local governments, or any political subdivision, or its local
@@ -62,22 +108,22 @@
                     </li>
                     <li>
                         <p>The existing taxes to which this Convention shall apply are, in particular:</p>
-                        <ol type="a">
+                        <ol type='a'>
                             <li>
                                 <p>in the State of the United Arab Emirates:</p>
-                                <ol type="i">
+                                <ol type='i'>
                                     <li>
                                         <p>income tax</p>
                                     </li>
                                     <li>
                                         <p>company tax</p>
-                                        <p>(hereinafter referred to as "the United Arab Emirates tax")</p>
+                                        <p>(hereinafter referred to as 'the United Arab Emirates tax')</p>
                                     </li>
                                 </ol>
                             </li>
                             <li>
-                                <p>in the People’s Democratic Republic of Algeria,</p>
-                                <ol type="i">
+                                <p>in the People&apos;s Democratic Republic of Algeria,</p>
+                                <ol type='i'>
                                     <li>
                                         <p>total income tax</p>
                                     </li>
@@ -96,7 +142,7 @@
                                     <li>
                                         <p>royalties and taxes on petroleum drilling, exploration, and transportation
                                             activities.</p>
-                                        <p>(hereinafter referred to as "the Algerian tax").</p>
+                                        <p>(hereinafter referred to as 'the Algerian tax').</p>
                                     </li>
                                 </ol>
                             </li>
@@ -113,19 +159,18 @@
                
             </article>
             <article>
-                <h3 id="a3">Article 3</h3>
-                <h3> General Definitions</h3>
-                <ol type="1">
+                <h3 id='a3'>Article 3<br/> General Definitions</h3>
+                <ol type='1'>
                     <li>
                         <p>For the purposes of this Convention, unless the context otherwise requires:</p>
-                        <ol type="a">
+                        <ol type='a'>
                             <li>
-                                <p>the terms "Contracting State" and "the other Contracting State" mean the State of the
-                                    United Arab Emirates or the People’s Democratic Republic of Algeria, as the context
+                                <p>the terms 'Contracting State' and 'the other Contracting State' mean the State of the
+                                    United Arab Emirates or the People&apos;s Democratic Republic of Algeria, as the context
                                     requires;</p>
                             </li>
                             <li>
-                                <p>the term "the State of the United Arab Emirates," when used in a geographical sense
+                                <p>the term 'the State of the United Arab Emirates,' when used in a geographical sense
                                     refers to the country of the United Arab Emirates that includes its territorial
                                     waters, islands, economic development zones, continental shelf, and air space. It
                                     also includes natural resources over which the State of the United Arab Emirates
@@ -133,51 +178,51 @@
                                     domestic and international law;</p>
                             </li>
                             <li>
-                                <p>the term "the People’s Democratic Republic of Algeria" means in its geographical
-                                    sense the country of the People’s Democratic Republic of Algeria that includes its
-                                    territorial waters. It also includes natural resources over which the People’s
+                                <p>the term 'the People&apos;s Democratic Republic of Algeria' means in its geographical
+                                    sense the country of the People&apos;s Democratic Republic of Algeria that includes its
+                                    territorial waters. It also includes natural resources over which the People&apos;s
                                     Democratic Republic of Algeria exercises sovereign rights and jurisdiction in
                                     accordance with the provisions of domestic and international law.</p>
                             </li>
                             <li>
-                                <p>the term "tax" means the United Arab Emirates tax or the People’s Democratic Republic
+                                <p>the term 'tax' means the United Arab Emirates tax or the People&apos;s Democratic Republic
                                     of Algeria tax as the context requires;</p>
                             </li>
                             <li>
-                                <p>the term "person" includes an individual, a company and any other body of persons
+                                <p>the term 'person' includes an individual, a company and any other body of persons
                                     established legally in either of the two Contracting States;</p>
                             </li>
                             <li>
-                                <p>the term "company" means any body corporate or any other entity that is treated as a
+                                <p>the term 'company' means any body corporate or any other entity that is treated as a
                                     body corporate for tax purposes;</p>
                             </li>
                             <li>
-                                <p>the terms "enterprise of a Contracting State" and "enterprise of the other
-                                    Contracting State" mean respectively an enterprise carried on by a resident of a
+                                <p>the terms 'enterprise of a Contracting State' and 'enterprise of the other
+                                    Contracting State' mean respectively an enterprise carried on by a resident of a
                                     Contracting State and an enterprise carried on by a resident of the other
                                     Contracting State;</p>
                             </li>
                             <li>
-                                <p>the term "national" means any individual possessing the citizenship of a Contracting
+                                <p>the term 'national' means any individual possessing the citizenship of a Contracting
                                     State or any legal person, partnership, or any other company deriving its status as
                                     such from the laws in force in a Contracting State.</p>
                             </li>
                         </ol>
                     </li>
                     <li>
-                        <p>The term "international transport" means any transport by ship or aircraft operated by an
+                        <p>The term 'international transport' means any transport by ship or aircraft operated by an
                             enterprise of a Contracting State, except when the ship or aircraft is operated solely
                             between places situated in the other Contracting State.</p>
                     </li>
                     <li>
-                        <p>The term "competent authority" means:</p>
-                        <ol type="a">
+                        <p>The term 'competent authority' means:</p>
+                        <ol type='a'>
                             <li>
                                 <p>in the State of the United Arab Emirates, the Minister of Finance and Industry or his
                                     authorized representative;</p>
                             </li>
                             <li>
-                                <p>in the People’s Democratic Republic of Algeria, the Minister of Finance or his
+                                <p>in the People&apos;s Democratic Republic of Algeria, the Minister of Finance or his
                                     authorized representative.</p>
                             </li>
                         </ol>
@@ -191,26 +236,25 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a4">Article 4</h3>
-                <h3> Resident</h3>
-                <ol type="1">
+                <h3 id='a4'>Article 4<br/> Resident</h3>
+                <ol type='1'>
                     <li>
-                        <p>For the purposes of this Convention, the term "resident of a Contracting State" means:</p>
-                        <ol type="a">
+                        <p>For the purposes of this Convention, the term 'resident of a Contracting State' means:</p>
+                        <ol type='a'>
                             <li>
                                 <p>in the case of the State of the United Arab Emirates, any person or individual
                                     resident in the State of the United Arab Emirates;</p>
                             </li>
                             <li>
-                                <p>in the case of the People’s Democratic Republic of Algeria, any person subject to tax
+                                <p>in the case of the People&apos;s Democratic Republic of Algeria, any person subject to tax
                                     in accordance with its laws by reason of his domicile, residence, place of
                                     management or any other criterion of a similar nature.</p>
                             </li>
                         </ol>
                     </li>
                     <li>
-                        <p>For the purposes of paragraph 1 above, the term "resident" includes:</p>
-                        <ol type="a">
+                        <p>For the purposes of paragraph 1 above, the term 'resident' includes:</p>
+                        <ol type='a'>
                             <li>
                                 <p>the government of a Contracting State, or any political subdivision, or the local
                                     authorities, or regional administrative units thereof;</p>
@@ -229,7 +273,7 @@
                     <li>
                         <p>Where an individual is a resident of both Contracting States, in accordance with the
                             provisions in paragraph 1, his status shall be determined as follows:</p>
-                        <ol type="a">
+                        <ol type='a'>
                             <li>
                                 <p>he shall be deemed to be a resident only of the State in which he has a permanent
                                     home available to him; if he has a permanent home available to him in both States,
@@ -259,17 +303,16 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a5">Article 5</h3>
-                <h3> Permanent Establishment</h3>
+                <h3 id='a5'>Article 5<br/> Permanent Establishment</h3>
 
-                <ol id="l12">
+                <ol id='l12'>
                     <li>
-                        <p>For the purposes of this Convention, the term "permanent establishment" means a fixed place
+                        <p>For the purposes of this Convention, the term 'permanent establishment' means a fixed place
                             of business through which the business of an enterprise is wholly or partly carried on.</p>
                     </li>
                     <li>
-                        <p>The term "permanent establishment" includes especially:</p>
-                        <ol type="a">
+                        <p>The term 'permanent establishment' includes especially:</p>
+                        <ol type='a'>
                             <li>
                                 <p>a place of management;</p>
                             </li>
@@ -298,8 +341,8 @@
                         </ol>
                     </li>
                     <li>
-                        <p>The term "permanent establishment" also includes:</p>
-                        <ol type="a">
+                        <p>The term 'permanent establishment' also includes:</p>
+                        <ol type='a'>
                             <li>
                                 <p>a construction, installation or assembly site or project and the supervisory
                                     activities related thereto, but only when such site, construction project or
@@ -314,9 +357,9 @@
                         </ol>
                     </li>
                     <li>
-                        <p>Notwithstanding the preceding provisions of paragraphs 1 and 3, the term "permanent
-                            establishment" is deemed not to include:</p>
-                        <ol type="a">
+                        <p>Notwithstanding the preceding provisions of paragraphs 1 and 3, the term 'permanent
+                            establishment' is deemed not to include:</p>
+                        <ol type='a'>
                             <li>
                                 <p>the use of facilities solely for the purpose of storage, display or delivery of goods
                                     or merchandise belonging to the enterprise;</p>
@@ -356,7 +399,7 @@
                             than an agent of an independent status to whom paragraph 2 of this Article applies is acting
                             on behalf of an enterprise in the other Contracting State, it shall be deemed to have a
                             permanent establishment in the first State:</p>
-                        <ol type="a">
+                        <ol type='a'>
                             <li>
                                 <p>if it has in the Contracting State an authority to conclude contracts in the name of
                                     the enterprise;</p>
@@ -388,7 +431,7 @@
                             not of itself constitute either company a permanent establishment of the other.</p>
                     </li>
                     <li>
-                        <p>Notwithstanding the provisions of paragraph 3 of <a href="#a12" target="_blank">Article 12</a>, profits
+                        <p>Notwithstanding the provisions of paragraph 3 of <a href='#a12' target='_blank' rel='noopener noreferrer'>Article 12</a>, profits
                             resulting from the activities of the enterprise, including planning, business, design,
                             research and technical services undertaken by a resident of either of the Contracting States
                             regarding a construction site or an installation or building project in the other
@@ -400,16 +443,15 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a6">Article 6</h3>
-                <h3>Income From Immovable Property</h3>
-                <ol id="l17">
+                <h3 id='a6'>Article 6<br/>Income From Immovable Property</h3>
+                <ol id='l17'>
                     <li>
                         <p>Income derived by a resident of a Contracting State from immovable property (including income
                             from agriculture or forestry) situated in the other Contracting State may be taxed in that
                             other State.</p>
                     </li>
                     <li>
-                        <p>The term "immovable property" shall have the meaning which it has under the law of the
+                        <p>The term 'immovable property' shall have the meaning which it has under the law of the
                             Contracting State in which the property in question is situated. The term in any case shall
                             include property accessory to immovable property, livestock and equipment used in
                             agriculture and forestry, rights to which the provisions of general law respecting landed
@@ -428,9 +470,8 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a7">Article 7</h3>
-                <h3>Business Profits</h3>
-                <ol id="l18">
+                <h3 id='a7'>Article 7<br/>Business Profits</h3>
+                <ol id='l18'>
                     <li>
                         <p>The profits of an enterprise of a Contracting State shall be taxable only in that State
                             unless the enterprise carries on business in the other Contracting State through a permanent
@@ -477,11 +518,10 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a8">Article 8</h3>
-                <h3>International Transport</h3>
-                <ol id="l19">
+                <h3 id='a8'>Article 8<br/>International Transport</h3>
+                <ol id='l19'>
                     <li>
-                        <p>Notwithstanding the provisions of <a href="#a7" target="_blank">Article 7</a>, profits from the operation of
+                        <p>Notwithstanding the provisions of <a href='#a7' target='_blank' rel='noopener noreferrer'>Article 7</a>, profits from the operation of
                             ships or aircraft in international traffic shall be taxable only in the Contracting State in
                             which the place of effective management of the enterprise is situated.</p>
                     </li>
@@ -500,7 +540,7 @@
                             international traffic shall mean profits derived by the enterprise indicated in paragraph 1
                             above, resulting from the activities of passenger transport by sea or air, and the transport
                             of goods. They will also include:</p>
-                        <ol type="a">
+                        <ol type='a'>
                             <li>
                                 <p>the charter or rental of ships and aircraft for such transport;</p>
                             </li>
@@ -522,12 +562,11 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a9">Article 9</h3>
-                <h3>Associated Enterprises</h3>
-                <ol id="l21">
+                <h3 id='a9'>Article 9<br/>Associated Enterprises</h3>
+                <ol id='l21'>
                     <li>
                         <p>Where</p>
-                        <ol type="a">
+                        <ol type='a'>
                             <li>
                                 <p>an enterprise of a Contracting State participates directly or indirectly in the
                                     management, control or capital of an enterprise of the other Contracting State, or
@@ -559,16 +598,15 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a10">Article 10</h3>
-                <h3>Dividends</h3>
-                <ol id="l23">
+                <h3 id='a10'>Article 10<br/>Dividends</h3>
+                <ol id='l23'>
                     <li>
                         <p>Dividends paid by a company which is a resident of a Contracting State to a resident of the
                             other Contracting State shall be taxable only in that other State.</p>
                     </li>
                     <li>
-                        <p>The term "dividends" as used in this Article means income from shares, jouissance shares,
-                            jouissance rights, mining shares and founders’ shares or other rights, not being
+                        <p>The term 'dividends' as used in this Article means income from shares, jouissance shares,
+                            jouissance rights, mining shares and founders&apos; shares or other rights, not being
                             debt-claims, participating in profits, as well as income deemed to be a distribution under
                             the tax law of the Contracting State of which the company making the distribution is a
                             resident.</p>
@@ -579,7 +617,7 @@
                             Contracting State of which the company paying the dividends is a resident through a
                             permanent establishment situated therein, and the holding in respect of which the dividends
                             are paid is effectively connected with such permanent establishment. In such case, the
-                            provisions of <a href="#a7" target="_blank">Article 7</a> or <a href="#a14" target="_blank">Article 14</a>, as the case may
+                            provisions of <a href='#a7' target='_blank' rel='noopener noreferrer'>Article 7</a> or <a href='#a14' target='_blank' rel='noopener noreferrer'>Article 14</a>, as the case may
                             be, shall apply.</p>
                     </li>
                     <li>
@@ -587,23 +625,22 @@
                             other Contracting State, that other State may not impose any tax on the dividends paid by
                             the company, except insofar as such dividends are paid to a resident of that other State or
                             insofar as the holding in respect of which the dividends are paid is effectively connected
-                            with a permanent establishment situated in that other State, nor subject the company’s
-                            undistributed profits to a tax on the company’s undistributed profits, even if the dividends
+                            with a permanent establishment situated in that other State, nor subject the company&apos;s
+                            undistributed profits to a tax on the company&apos;s undistributed profits, even if the dividends
                             paid or the undistributed profits consist wholly or partly of profits or income arising in
                             such other State.</p>
                     </li>
                 </ol>
             </article>
             <article>
-                <h3 id="a11">Article 11</h3>
-                <h3>Interest</h3>
-                <ol id="l24">
+                <h3 id='a11'>Article 11<br/>Interest</h3>
+                <ol id='l24'>
                     <li>
                         <p>Interest arising in a Contracting State and paid to a resident of the other Contracting State
                             shall be taxable only in that other State.</p>
                     </li>
                     <li>
-                        <p>The term "interest" as used in this Article means income from debt-claims of every kind,
+                        <p>The term 'interest' as used in this Article means income from debt-claims of every kind,
                             whether or not secured by mortgage, and, in particular, income from government securities
                             and income from bonds or debentures, including premiums attaching to such securities, bonds
                             or debentures. Penalty charges for late payments shall not be deemed to be interest for
@@ -614,8 +651,8 @@
                             being a resident of a Contracting State, carries on business in the other Contracting State
                             in which the interest arises, through a permanent establishment situated therein and the
                             debt-claim in respect of which the interest is paid is effectively connected with such
-                            permanent establishment. In such case, the provisions of <a href="#a7" target="_blank">Article 7</a> or <a
-                                href="#a14">Article 14</a>, as the case may be, shall apply.</p>
+                            permanent establishment. In such case, the provisions of <a href='#a7' target='_blank' rel='noopener noreferrer'>Article 7</a> or <a
+                                href='#a14'>Article 14</a>, as the case may be, shall apply.</p>
                     </li>
                     <li>
                         <p>Interest shall be deemed to arise in a Contracting State when the payer is a resident of that
@@ -636,9 +673,8 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a12">Article 12</h3>
-                <h3>Royalties</h3>
-                <ol id="l25">
+                <h3 id='a12'>Article 12<br/>Royalties</h3>
+                <ol id='l25'>
                     <li>
                         <p>Royalties arising in a Contracting State and paid to a resident of the other Contracting
                             State shall be taxable in that other State.</p>
@@ -658,20 +694,20 @@
                             political subdivisions or financial entities.</p>
                     </li>
                     <li>
-                        <p>The term "royalties" as used in this Article means payments of any kind received as a
+                        <p>The term 'royalties' as used in this Article means payments of any kind received as a
                             consideration for the use of, or the right to use, any copyright of literary, artistic or
                             scientific work, including cinematographic films or movies, tapes and other means of image
                             or sound reproduction, any patent, trademark, design or model, plan, secret formula or
                             process or other similar property or right, or for the use of, or the right to use,
                             industrial, commercial or scientific equipment, or for information concerning industrial,
-                            commercial or scientific experience ("know-how").</p>
+                            commercial or scientific experience ('know-how').</p>
                     </li>
                     <li>
                         <p>The provisions of paragraph 1 of this Article shall not apply if the beneficial owner of the
                             royalties, being a resident of a Contracting State, carries on business in the other
                             Contracting State in which the royalties arise, through a permanent establishment situated
                             therein, and the right or property in respect of which the royalties are paid is effectively
-                            connected with such permanent establishment. In such case, the provisions of <a href="#a7" target="_blank">Article 7</a> or <a href="#a14" target="_blank">Article 14</a> shall apply.</p>
+                            connected with such permanent establishment. In such case, the provisions of <a href='#a7' target='_blank' rel='noopener noreferrer'>Article 7</a> or <a href='#a14' target='_blank' rel='noopener noreferrer'>Article 14</a> shall apply.</p>
                     </li>
                     <li>
                         <p>Royalties shall be deemed to arise in a Contracting State when the payer is a resident of
@@ -693,12 +729,11 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a13">Article 13</h3>
-                <h3>Capital Gains</h3>
-                <ol id="l26">
+                <h3 id='a13'>Article 13<br/>Capital Gains</h3>
+                <ol id='l26'>
                     <li>
                         <p>Gains derived by a resident of a Contracting State from the alienation of immovable property
-                            referred to in <a href="#a6" target="_blank">Article 6</a>, and situated in the other Contracting State may
+                            referred to in <a href='#a6' target='_blank' rel='noopener noreferrer'>Article 6</a>, and situated in the other Contracting State may
                             be taxed in that other State.</p>
                        
                     </li>
@@ -723,9 +758,8 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a14">Article 14</h3>
-                <h3>Independent Personal Services</h3>
-                <ol id="l27">
+                <h3 id='a14'>Article 14<br/>Independent Personal Services</h3>
+                <ol id='l27'>
                     <li>
                         <p>Income derived by a resident of a Contracting State in respect of professional services or
                             other activities of an independent character shall be taxable only in that State unless such
@@ -734,19 +768,18 @@
                             attributable to that fixed base may be taxed in that other State.</p>
                     </li>
                     <li>
-                        <p>The term "professional services" includes especially independent scientific, literary,
+                        <p>The term 'professional services' includes especially independent scientific, literary,
                             artistic, educational or teaching activities as well as the independent activities of
                             physicians, lawyers, engineers, architects, dentists and accountants.</p>
                     </li>
                 </ol>
             </article>
             <article>
-                <h3 id="a15">Article 15</h3>
-                <h3>Dependent Personal Services</h3>
-                <ol id="l28">
+                <h3 id='a15'>Article 15<br/>Dependent Personal Services</h3>
+                <ol id='l28'>
                     <li>
-                        <p>Subject to the provisions of <a href="#a16" target="_blank">Articles 16</a>, <a href="#a18" target="_blank">18</a>, <a
-                                href="#a19">19</a> and <a href="#a20" target="_blank">20</a> of this Convention, salaries, wages and
+                        <p>Subject to the provisions of <a href='#a16' target='_blank' rel='noopener noreferrer'>Articles 16</a>, <a href='#a18' target='_blank' rel='noopener noreferrer'>18</a>, <a
+                                href='#a19'>19</a> and <a href='#a20' target='_blank' rel='noopener noreferrer'>20</a> of this Convention, salaries, wages and
                             other similar remuneration derived by a resident of a Contracting State in respect of an
                             employment shall be taxable only in that State unless the employment is exercised in the
                             other Contracting State. If the employment is so exercised, such remuneration as is derived
@@ -757,7 +790,7 @@
                         <p>Notwithstanding the provisions of paragraph 1 above, remuneration derived by a resident of a
                             Contracting State in respect of an employment exercised in the other Contracting State shall
                             be taxable only in the first-mentioned State if:</p>
-                        <ol type="a">
+                        <ol type='a'>
                             <li>
                                 <p>the recipient is present in the other State for a period or periods not exceeding in
                                     the aggregate 183 days in each 12-month period beginning or ending in the fiscal
@@ -782,18 +815,16 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a16">Article 16</h3>
-                <h3>Directors’ Fees</h3>
-                <p>Directors’ fees and other similar payments derived by a resident of a Contracting State in his
+                <h3 id='a16'>Article 16<br/>Directors&apos; Fees</h3>
+                <p>Directors&apos; fees and other similar payments derived by a resident of a Contracting State in his
                     capacity as a member of the board of directors or similar body of a company which is a resident of
                     the other Contracting State may be taxed in that other State.</p>
             </article>
             <article>
-                <h3 id="a17">Article 17</h3>
-                <h3>Artistes and Sportsmen</h3>
-                <ol id="l30">
+                <h3 id='a17'>Article 17<br/>Artistes and Sportsmen</h3>
+                <ol id='l30'>
                     <li>
-                        <p>Notwithstanding the provisions of <a href="#a14" target="_blank">Articles 14</a> and <a href="#a15" target="_blank">15</a>,
+                        <p>Notwithstanding the provisions of <a href='#a14' target='_blank' rel='noopener noreferrer'>Articles 14</a> and <a href='#a15' target='_blank' rel='noopener noreferrer'>15</a>,
                             income derived by a resident of a Contracting State as an entertainer, such as a theater,
                             motion picture, radio or television artiste, or a musician, or as a sportsman, from his
                             personal activities as such exercised in the other Contracting State, may be taxed in that
@@ -802,8 +833,8 @@
                     <li>
                         <p>Where income in respect of personal activities exercised by an entertainer or a sportsman in
                             his capacity as such accrues not to the entertainer or sportsman himself but to another
-                            person, that income may, notwithstanding the provisions of <a href="#a7" target="_blank">Articles 7</a>, <a
-                                href="#a14">14</a> and <a href="#a15" target="_blank">15</a>, be taxed in the Contracting State in which
+                            person, that income may, notwithstanding the provisions of <a href='#a7' target='_blank' rel='noopener noreferrer'>Articles 7</a>, <a
+                                href='#a14'>14</a> and <a href='#a15' target='_blank' rel='noopener noreferrer'>15</a>, be taxed in the Contracting State in which
                             the activities of the entertainer or sportsman are exercised.</p>
                     </li>
                     <li>
@@ -816,18 +847,16 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a18">Article 18</h3>
-                <h3>Pensions</h3>
-                <p>Subject to the provisions of paragraph 2 of <a href="#a19" target="_blank">Article 19</a>, pensions and other similar
+                <h3 id='a18'>Article 18<br/>Pensions</h3>
+                <p>Subject to the provisions of paragraph 2 of <a href='#a19' target='_blank' rel='noopener noreferrer'>Article 19</a>, pensions and other similar
                     remuneration paid to a resident of a Contracting State in consideration of past employment and any
                     annuity paid to such a resident shall be taxable only in that State.</p>
             </article>
             <article>
-                <h3 id="a19">Article 19</h3>
-                <h3>Government Service</h3>
-                <ol id="l31">
+                <h3 id='a19'>Article 19<br/>Government Service</h3>
+                <ol id='l31'>
                     <li>
-                        <ol type="a">
+                        <ol type='a'>
                         <p> Remuneration, other than a pension, paid by a Contracting State or a political subdivision
                             or a local authority thereof to an individual in respect of services rendered to that State
                             or subdivision or authority in the discharge of functions of a governmental nature shall be
@@ -837,7 +866,7 @@
                                 <p>However, such remuneration shall be taxable only in the other Contracting State if
                                     the services are rendered in that State and the individual is a resident of that
                                     State who:</p>
-                                <ol type="a">
+                                <ol type='a'>
                                     <li>
                                         <p>is a national of that State; or</p>
                                     </li>
@@ -850,7 +879,7 @@
                         </ol>
                     </li>
                     <li>
-                        <ol type="a">
+                        <ol type='a'>
                             <li> Any pension paid by, or out of funds created by, a Contracting State or a political
                                 subdivision or a local authority thereof to an individual in respect of services
                                 rendered to that State or subdivision or local authority in the discharge of functions
@@ -864,8 +893,8 @@
                 </ol>
                 </li>
                 <li>
-                    <p>The provisions of <a href="#a15" target="_blank">Articles 15</a>, <a href="#a16" target="_blank">16</a>, <a href="#a17" target="_blank">17</a>
-                        and <a href="#a18" target="_blank">18</a> shall apply to remuneration and pensions in respect of services
+                    <p>The provisions of <a href='#a15' target='_blank' rel='noopener noreferrer'>Articles 15</a>, <a href='#a16' target='_blank' rel='noopener noreferrer'>16</a>, <a href='#a17' target='_blank' rel='noopener noreferrer'>17</a>
+                        and <a href='#a18' target='_blank' rel='noopener noreferrer'>18</a> shall apply to remuneration and pensions in respect of services
                         rendered in connection with a business carried on by a Contracting State or a political
                         subdivision or a local authority thereof.</p>
                 </li>
@@ -874,10 +903,9 @@
                
             </article>
             <article>
-                <h3 id="a20">Article 20</h3>
-                <h3>Professors and Researchers</h3>
+                <h3 id='a20'>Article 20<br/>Professors and Researchers</h3>
                
-                <ol id="l35">
+                <ol id='l35'>
                     <li>
                         <p>A professor or researcher who visits a Contracting State upon the invitation of said State or
                             any of its universities or educational or cultural institutions, or who visits a Contracting
@@ -897,8 +925,7 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a21">Article 21</h3>
-                <h3>Students</h3>
+                <h3 id='a21'>Article 21<br/>Students</h3>
                 <p>Payments, other than grants, which a student or trainee who is or was immediately before visiting a
                     Contracting State, a resident of the other Contracting State and who is present in the
                     first-mentioned State solely for the purpose of his education or training and receives such payments
@@ -907,17 +934,15 @@
                
             </article>
             <article>
-                <h3 id="a22">Article 22</h3>
-                <h3>Other Income</h3>
+                <h3 id='a22'>Article 22<br/>Other Income</h3>
                 <p>Items of income of a resident of a Contracting State, wherever arising, not dealt with in the
                     foregoing Articles of this Convention shall be taxable only in that State.</p>
             </article>
             <article>
-                <h3 id="a23">Article 23</h3>
-                <h3>Capital</h3>
-                <ol id="l36">
+                <h3 id='a23'>Article 23<br/>Capital</h3>
+                <ol id='l36'>
                     <li>
-                        <p>Capital represented by immovable property referred to in <a href="#a6" target="_blank">Article 6</a>, owned
+                        <p>Capital represented by immovable property referred to in <a href='#a6' target='_blank' rel='noopener noreferrer'>Article 6</a>, owned
                             by a resident of a Contracting State and situated in the other Contracting State, may be
                             taxed in that other State.</p>
                     </li>
@@ -943,10 +968,9 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a24">Article 24</h3>
-                <h3>Income Paid to Governments and Authorities Related Thereto</h3>
+                <h3 id='a24'>Article 24<br/>Income Paid to Governments and Authorities Related Thereto</h3>
                
-                <ol id="l37">
+                <ol id='l37'>
                     <li>
                         <p>Any income paid to the government of a Contracting State shall be exempted from the taxes of
                             the other Contracting State provided that the other State provides reciprocal tax treatment.
@@ -961,11 +985,10 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a25">Article 25</h3>
-                <h3>Methods for the Elimination of Double Taxation</h3>
+                <h3 id='a25'>Article 25<br/>Methods for the Elimination of Double Taxation</h3>
                 <p>Double taxation shall be avoided as follows:</p>
                
-                <ol id="l38">
+                <ol id='l38'>
                     <li>
                         <p>Where a resident of a Contracting State derives income or owns capital which, in accordance
                             with the provisions of this Convention, may be taxed in the other Contracting State, the
@@ -984,15 +1007,14 @@
                 <h2>Special Provisions</h2>
             </article>
             <article>
-                <h3 id="a26">Article 26</h3>
-                <h3>Non-Discrimination</h3>
-                <ol id="l39">
+                <h3 id='a26'>Article 26<br/>Non-Discrimination</h3>
+                <ol id='l39'>
                     <li>
                         <p>Nationals of a Contracting State shall not be subjected in the other Contracting State to any
                             taxation or any requirement connected therewith which is other or more burdensome than the
                             taxation and connected requirements to which nationals of that other State, in the same
                             circumstances, in particular with respect to residence, are or may be subjected.</p>
-                        <p>This provision shall, notwithstanding the provisions of <a href="#a1" target="_blank">Article 1</a>, also
+                        <p>This provision shall, notwithstanding the provisions of <a href='#a1' target='_blank' rel='noopener noreferrer'>Article 1</a>, also
                             apply to persons who are not residents of one or both of the Contracting States.</p>
                     </li>
                     <li>
@@ -1006,8 +1028,8 @@
                        
                     </li>
                     <li>
-                        <p>Except where the provisions of paragraph 1 of <a href="#a9" target="_blank">Article 9</a>, paragraph 6 of <a
-                                href="#a11">Article 11</a>, or paragraph 6 of <a href="#a12" target="_blank">Article 12</a> apply,
+                        <p>Except where the provisions of paragraph 1 of <a href='#a9' target='_blank' rel='noopener noreferrer'>Article 9</a>, paragraph 6 of <a
+                                href='#a11'>Article 11</a>, or paragraph 6 of <a href='#a12' target='_blank' rel='noopener noreferrer'>Article 12</a> apply,
                             interest, royalties and other disbursements paid by an enterprise of a Contracting State to
                             a resident of the other Contracting State shall be deductible under the same conditions as
                             if they had been contracted to a resident of the first-mentioned State.</p>
@@ -1024,15 +1046,14 @@
                
             </article>
             <article>
-                <h3 id="a27">Article 27</h3>
-                <h3>Mutual Agreement Procedure</h3>
-                <ol id="l40">
+                <h3 id='a27'>Article 27<br/>Mutual Agreement Procedure</h3>
+                <ol id='l40'>
                     <li>
                         <p>Where a person considers that the actions of one or both of the Contracting States result or
                             will result for him in taxation not in accordance with the provisions of this Convention, he
                             may, irrespective of the remedies provided by the domestic law of those</p>
                         <p>States, present his case to the competent authority of the Contracting State of which he is a
-                            resident or, if his case comes under paragraph 1 of <a href="#a24" target="_blank">Article 24</a> above, the
+                            resident or, if his case comes under paragraph 1 of <a href='#a24' target='_blank' rel='noopener noreferrer'>Article 24</a> above, the
                             case must be presented within three years from the first notification of the action
                             resulting in taxation not in accordance with the provisions of the Convention.</p>
                     </li>
@@ -1058,8 +1079,7 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a28">Article 28</h3>
-                <h3>Exchange of Information</h3>
+                <h3 id='a28'>Article 28<br/>Exchange of Information</h3>
                 <ol>
                     <li>
                         <p>The competent authorities of the Contracting States shall exchange such information as is
@@ -1077,7 +1097,7 @@
                     <li>
                         <p>In no case shall the provisions of paragraph 1 above be construed so as to impose on a
                             Contracting State the obligation:</p>
-                        <ol type="a">
+                        <ol type='a'>
                             <li>
                                 <p>to carry out administrative measures at variance with the laws of that or of the
                                     other Contracting State;</p>
@@ -1096,15 +1116,13 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a29">Article 29</h3>
-                <h3>Members of Diplomatic Missions and Consular Posts</h3>
+                <h3 id='a29'>Article 29<br/>Members of Diplomatic Missions and Consular Posts</h3>
                 <p>The provisions of this Convention shall not affect the fiscal privileges of members of diplomatic
                     missions or consular posts under the general rules of international law or under the provisions of
                     special agreements.</p>
             </article>
             <article>
-                <h3 id="a30">Article 30</h3>
-                <h3>Entry Into Force</h3>
+                <h3 id='a30'>Article 30<br/>Entry Into Force</h3>
                 <ol>
                     <li>
                         <p>The Convention shall enter into force upon the exchange of instruments of ratification.</p>
@@ -1112,7 +1130,7 @@
                     <li>
                         <p>The Convention shall enter into force one month following the exchange of instruments of
                             ratification and its provisions shall apply:</p>
-                        <ol type="a">
+                        <ol type='a'>
                             <li>
                                 <p>in respect of income tax withheld at source, for taxable periods beginning after
                                     December 31 of the year in which the instruments of ratification are exchanged;</p>
@@ -1127,8 +1145,7 @@
                 </ol>
             </article>
             <article>
-                <h3 id="a31">Article 31</h3>
-                <h3>Termination</h3>
+                <h3 id='a31'>Article 31<br/>Termination</h3>
                 <ol>
                     <li>
                         <p>This Convention shall remain in force indefinitely, but either Contracting State may
@@ -1137,7 +1154,7 @@
                             such notice shall only be effective after the expiration of a period of five calendar years
                             from the date of signature of this Convention. In such event, the Convention shall cease to
                             have effect, and consequently its provisions shall no longer apply:</p>
-                        <ol type="a">
+                        <ol type='a'>
                             <li>
                                 <p>in respect of income tax withheld at source, from the first day of January in the
                                     calendar year following the year indicated in the Convention termination notice.</p>
@@ -1158,7 +1175,7 @@
                     <h3>PROTOCOL</h3>
 
                     <p>Having signed the Convention between the Government
-                        of the State of the United Arab Emirates and the Government of the People’s Democratic Republic
+                        of the State of the United Arab Emirates and the Government of the People&apos;s Democratic Republic
                         of Algeria for
                         the avoidance of double taxation and the prevention of fiscal evasion with respect to taxes on
                         income, the
@@ -1167,7 +1184,7 @@
                     <ol>
                         <li>
                             <p>In respect of paragraph
-                                3 of <a href="#a10" target="_blank">Article 10</a>:</p>
+                                3 of <a href='#a10' target='_blank' rel='noopener noreferrer'>Article 10</a>:</p>
                             <p>Dividends generated by a
                                 permanent establishment or fixed base in a Contracting State shall not be subject to tax
                                 in the other
@@ -1176,7 +1193,7 @@
                         </li>
                         <li>
                             <p>In respect of paragraph
-                                3 of <a href="#a11" target="_blank">Article 11</a>:</p>
+                                3 of <a href='#a11' target='_blank' rel='noopener noreferrer'>Article 11</a>:</p>
                             <p>Interest paid to a
                                 permanent establishment or fixed base in a Contracting State shall not be subject to tax
                                 in the other
@@ -1184,10 +1201,10 @@
                         </li>
                         <li>
                             <p>The provisions of
-                                paragraph 1 of <a href="#a8" target="_blank">Article 8</a> (Air and Sea Transport) and paragraph 3 of <a href="#a13" target="_blank">Article 13</a> (Capital Gains) shall
+                                paragraph 1 of <a href='#a8' target='_blank' rel='noopener noreferrer'>Article 8</a> (Air and Sea Transport) and paragraph 3 of <a href='#a13' target='_blank' rel='noopener noreferrer'>Article 13</a> (Capital Gains) shall
                                 apply to the profits of Gulf Air but only to that portion of the profits constituting
                                 the shareholding
-                                of the Government of the State of the United Arab Emirates in the company’s capital in
+                                of the Government of the State of the United Arab Emirates in the company&apos;s capital in
                                 accordance with
                                 the Articles and Memorandum of Association.</p>
                         </li>
@@ -1205,6 +1222,7 @@
                 </article>
             </main>
     </div>
+  
 </body>
 
 </html>
