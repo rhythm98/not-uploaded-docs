@@ -1,60 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testing for user manual download</title>
     <link rel='stylesheet' href='https://gtlcdnstorage.blob.core.windows.net/guide/stylesheets/guide.css'>
 </head>
+
 <body>
     <style>
         .btn {
-    background-color: #5948ca;
-    border: none;
-    color: white;  /* Set text color properly */
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block; /* Ensures button-like styling */
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px; /* Optional for rounded buttons */
-}
+            background-color: #5948ca;
+            border: none;
+            color: white;
+            /* Set text color properly */
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            /* Ensures button-like styling */
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            /* Optional for rounded buttons */
+        }
 
-/* Apply styles specifically for anchor buttons */
-a.btn {
-    display: inline-block;
-    color: white; /* Override default anchor text color */
-    text-decoration: none; /* Remove underline */
-    padding: 15px 32px;
-    background-color: #5948ca; /* Match button style */
-    border-radius: 5px;
-}
+        /* Apply styles specifically for anchor buttons */
+        a.btn {
+            display: inline-block;
+            color: white;
+            /* Override default anchor text color */
+            text-decoration: none;
+            /* Remove underline */
+            padding: 15px 32px;
+            background-color: #5948ca;
+            /* Match button style */
+            border-radius: 5px;
+        }
 
-/* Ensure hover effect is consistent */
-a.btn:hover {
-    background-color: #45a049;
-}
-
+        /* Ensure hover effect is consistent */
+        a.btn:hover {
+            background-color: #45a049;
+        }
     </style>
     <div class="scope">
         <header>
             <h3>Sample User manual for download</h3>
         </header>
-        
+
         <main>
             <section>
                 <h4>Download the user manual</h4>
                 <p>Click the button below to view and download the user manual</p>
-                
+
                 <!-- First apprach we can directly add the link to anchor tag then it will fetch the document then we have to download in the pdf viewer -->
-                <a href="https://gtlcdnstorage.blob.core.windows.net/guide/temp-pdf/GCC-VAT-Agreement.pdf" 
+                <a href="https://gtlcdnstorage.blob.core.windows.net/guide/temp-pdf/corporate-tax-period.pdf" 
                    download="GCC-VAT-Agreement.pdf" 
                    class="btn">
                     View and Download
                 </a>
-                
+
                 <!-- Here we are directly downloading the PDF  -->
                 <button onclick="downloadPDF()" class="btn" style="margin-left: 10px;">
                     Download PDF
@@ -66,54 +73,55 @@ a.btn:hover {
     <script>
         // Function to handle PDF download with proper binary handling
         async function downloadPDF() {
-    const url = "https://gtlcdnstorage.blob.core.windows.net/guide/temp-pdf/GCC-VAT-Agreement.pdf";
+    const url = "https://gtlcdnstorage.blob.core.windows.net/guide/temp-pdf/corporate-tax-period.pdf";
     const filename = "GCC-VAT-Agreement.pdf";
 
-    try {
-        // Show feedback on the button
-        const button = event.target;
-        const originalText = button.textContent;
-        button.textContent = "Downloading...";
-        button.disabled = true;
+            try {
+                // Show feedback on the button
+                const button = event.target;
+                const originalText = button.textContent;
+                button.textContent = "Downloading...";
+                button.disabled = true;
 
-        // Fetch the PDF file
-        const response = await fetch(url);
-        
-        // Convert the response into a binary Blob
-        const blob = await response.blob();
+                // Fetch the PDF file
+                const response = await fetch(url);
 
-        // Create a downloadable URL for the Blob
-        const downloadUrl = URL.createObjectURL(blob);
+                // Convert the response into a binary Blob
+                const blob = await response.blob();
 
-        // Create a temporary anchor (<a>) element for downloading
-        const link = document.createElement('a');
-        link.href = downloadUrl;
-        link.download = filename; // Set the filename for the download
-        document.body.appendChild(link);
-        link.click(); // Trigger the download
-        document.body.removeChild(link); // Remove the anchor after download
+                // Create a downloadable URL for the Blob
+                const downloadUrl = URL.createObjectURL(blob);
 
-        // Release the object URL to free memory
-        URL.revokeObjectURL(downloadUrl);
+                // Create a temporary anchor (<a>) element for downloading
+                const link = document.createElement('a');
+                link.href = downloadUrl;
+                link.download = filename; // Set the filename for the download
+                document.body.appendChild(link);
+                link.click(); // Trigger the download
+                document.body.removeChild(link); // Remove the anchor after download
 
-        // Reset button text and enable it after 1 second
-        setTimeout(() => {
-            button.textContent = originalText;
-            button.disabled = false;
-        }, 1000);
+                // Release the object URL to free memory
+                URL.revokeObjectURL(downloadUrl);
 
-    } catch (error) {
-        console.error('Error downloading PDF:', error);
-        alert('Failed to download the PDF. Please try again.');
+                // Reset button text and enable it after 1 second
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.disabled = false;
+                }, 1000);
 
-        // Reset button on error
-        if (event && event.target) {
-            event.target.textContent = originalText;
-            event.target.disabled = false;
+            } catch (error) {
+                console.error('Error downloading PDF:', error);
+                alert('Failed to download the PDF. Please try again.');
+
+                // Reset button on error
+                if (event && event.target) {
+                    event.target.textContent = originalText;
+                    event.target.disabled = false;
+                }
+            }
         }
-    }
-}
 
     </script>
 </body>
+
 </html>

@@ -12,430 +12,7 @@
     <style>
         .i-color {
             background-color: bisque;
-        }
-
-        .scopeGUIDE,
-        .scopePC,
-        .scope {
-            margin: 0;
-            padding: 0.5vw;
-            font-size: large;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            overflow-x: auto;
-        }
-
-        .scopeGUIDE body,
-        .scopePC body,
-        .scope body {
-            margin: 0;
-            padding: 8px;
-            font-size: large;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            overflow-x: auto;
-        }
-
-        .scopeGUIDE header,
-        .scopePC header,
-        .scope header {
-            padding: 1.5rem 1.25rem;
-            margin: 0.25rem 0.75rem;
-        }
-
-        .scopeGUIDE header *,
-        .scopePC header *,
-        .scope header * {
-            text-align: center;
-            margin: 0.25rem auto;
-        }
-
-        .scopeGUIDE header h1,
-        .scopeGUIDE header h2,
-        .scopeGUIDE header h3,
-        .scopeGUIDE header h4,
-        .scopePC header h1,
-        .scopePC header h2,
-        .scopePC header h3,
-        .scopePC header h4,
-        .scope header h1,
-        .scope header h2,
-        .scope header h3,
-        .scope header h4 {
-            color: #2f438d;
-        }
-
-        @media (max-width: 768px) {
-
-            .scopeGUIDE header h1,
-            .scopeGUIDE header h2,
-            .scopeGUIDE header h3,
-            .scopeGUIDE header h4,
-            .scopePC header h1,
-            .scopePC header h2,
-            .scopePC header h3,
-            .scopePC header h4,
-            .scope header h1,
-            .scope header h2,
-            .scope header h3,
-            .scope header h4 {
-                font-size: 1.2rem;
-            }
-        }
-
-        @media (max-width: 490px) and (max-width: 568px) {
-
-            .scopeGUIDE main .amendments,
-            .scopePC main .amendments,
-            .scope main .amendments {
-                display: table-cell;
-            }
-        }
-
-        .scopeGUIDE main h3,
-        .scopePC main h3,
-        .scope main h3 {
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        @media (max-width: 768px) {
-
-            .scopeGUIDE main h3,
-            .scopePC main h3,
-            .scope main h3 {
-                font-size: 0.9rem;
-            }
-        }
-
-        .scopeGUIDE main hr,
-        .scopePC main hr,
-        .scope main hr {
-            max-width: 640px;
-            margin: auto;
-        }
-
-        .scopeGUIDE main ::-webkit-scrollbar,
-        .scopePC main ::-webkit-scrollbar,
-        .scope main ::-webkit-scrollbar {
-            width: 0.25rem;
-        }
-
-        .scopeGUIDE main ::-webkit-scrollbar-track,
-        .scopePC main ::-webkit-scrollbar-track,
-        .scope main ::-webkit-scrollbar-track {
-            background: grey;
-        }
-
-        .scopeGUIDE main ::-webkit-scrollbar-thumb,
-        .scopePC main ::-webkit-scrollbar-thumb,
-        .scope main ::-webkit-scrollbar-thumb {
-            background: white;
-            width: 0.25rem;
-        }
-
-        .scopeGUIDE main .example,
-        .scopePC main .example,
-        .scope main .example {
-            background-color: bisque;
-            padding: 0.25rem 0.75rem;
-            border-radius: 0.25rem;
-            margin: 1em 0;
-            overflow-x: scroll;
-        }
-
-        .scopeGUIDE main .example h3,
-        .scopePC main .example h3,
-        .scope main .example h3 {
-            color: black;
-        }
-
-        .scopeGUIDE main .example th,
-        .scopePC main .example th,
-        .scope main .example th {
-            text-align: center;
-        }
-
-        .scopeGUIDE main .box,
-        .scopePC main .box,
-        .scope main .box {
-            min-width: 40vw;
-            padding: 0.25rem 0.75rem;
-            border: 2px solid black;
-            border-radius: 1rem;
-            font-size: small;
-            border-radius: 1rem;
-        }
-
-        .scopeGUIDE main .index,
-        .scopePC main .index,
-        .scope main .index {
-            border: 2px solid black;
-            padding: 10px;
-            border-radius: 1rem;
-        }
-
-        .scopeGUIDE main .index li,
-        .scopePC main .index li,
-        .scope main .index li {
-            list-style: none;
-        }
-
-        @media (max-width: 768px) {
-
-            .scopeGUIDE main .box,
-            .scopePC main .box,
-            .scope main .box {
-                border: 1px solid black;
-            }
-
-            .scopeGUIDE main .index,
-            .scopePC main .index,
-            .scope main .index {
-                border: 1px solid black;
-                padding: 0.5rem;
-            }
-
-            .scopeGUIDE main .index h3,
-            .scopePC main .index h3,
-            .scope main .index h3 {
-                text-align: center;
-                font-size: 0.9rem;
-            }
-        }
-
-        .scopeGUIDE main .index ol,
-        .scopePC main .index ol,
-        .scope main .index ol {
-            list-style-type: none;
-            margin-top: 0;
-        }
-
-        .scopeGUIDE footer p *,
-        .scopePC footer p *,
-        .scope footer p * {
-            font-style: italic;
-        }
-
-        .scopeGUIDE ul.dashed>li::marker,
-        .scopePC ul.dashed>li::marker,
-        .scope ul.dashed>li::marker {
-            content: '- ';
-        }
-
-        .scopeGUIDE ol,
-        .scopeGUIDE ul,
-        .scopePC ol,
-        .scopePC ul,
-        .scope ol,
-        .scope ul {
-            padding-inline-start: 1.75rem;
-        }
-
-        @media (max-width: 768px) {
-
-            .scopeGUIDE ol,
-            .scopeGUIDE ul,
-            .scopePC ol,
-            .scopePC ul,
-            .scope ol,
-            .scope ul {
-                padding-inline-start: 1.25rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-
-            .scopeGUIDE li::marker,
-            .scopePC li::marker,
-            .scope li::marker {
-                font-size: 0.9rem;
-            }
-        }
-
-        .scopeGUIDE img,
-        .scopePC img,
-        .scope img {
-            display: block;
-            margin: 1em auto;
-            width: 100%;
-            max-width: 1080px;
-            height: auto;
-        }
-
-        .scopeGUIDE table,
-        .scopePC table,
-        .scope table {
-            width: 100%;
-            margin: 0.25rem auto;
-            overflow-x: auto;
-            border-spacing: 0;
-            overflow: hidden;
-        }
-
-        @media (max-width: 490px) and (max-width: 568px) {
-
-            .scopeGUIDE table,
-            .scopePC table,
-            .scope table {
-                display: block;
-                overflow-x: auto;
-                white-space: nowrap;
-                border: none;
-            }
-        }
-
-        .scopeGUIDE table,
-        .scopePC table,
-        .scope table {
-            border: 1px solid #000;
-            border-top-right-radius: 10px;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-        }
-
-        .scopeGUIDE td,
-        .scopeGUIDE th,
-        .scopePC td,
-        .scopePC th,
-        .scope td,
-        .scope th {
-            border: 1px solid #000;
-            padding: 0.5rem;
-        }
-
-        .scopeGUIDE td,
-        .scopePC td,
-        .scope td {
-            text-align: left;
-        }
-
-        .scopeGUIDE th,
-        .scopePC th,
-        .scope th {
-            text-align: center;
-        }
-
-        .scopeGUIDE .fraction,
-        .scopePC .fraction,
-        .scope .fraction {
-            display: inline-block;
-            vertical-align: middle;
-            text-align: center;
-        }
-
-        .scopeGUIDE .fraction>span,
-        .scopePC .fraction>span,
-        .scope .fraction>span {
-            display: block;
-            padding: 0 0.2em;
-        }
-
-        .scopeGUIDE .fraction .numerator,
-        .scopePC .fraction .numerator,
-        .scope .fraction .numerator {
-            border-bottom: 1px solid #000;
-        }
-
-        .scopeGUIDE .fraction .denominator,
-        .scopePC .fraction .denominator,
-        .scope .fraction .denominator {
-            margin-top: -0.1em;
-        }
-
-        .scopeGUIDE h3,
-        .scopePC h3,
-        .scope h3 {
-            color: #2f438d;
-        }
-
-        .scopeGUIDE #linktogtl,
-        .scopeGUIDE #linktogtl *,
-        .scopeGUIDE #gtlnotes h3,
-        .scopeGUIDE #gtlnotes h3 *,
-        .scopePC #linktogtl,
-        .scopePC #linktogtl *,
-        .scopePC #gtlnotes h3,
-        .scopePC #gtlnotes h3 *,
-        .scope #linktogtl,
-        .scope #linktogtl *,
-        .scope #gtlnotes h3,
-        .scope #gtlnotes h3 * {
-            color: #43af76;
-        }
-
-        .scopeGUIDE .repeal,
-        .scopeGUIDE .repeal *,
-        .scopeGUIDE .attention,
-        .scopeGUIDE .attention *,
-        .scopePC .repeal,
-        .scopePC .repeal *,
-        .scopePC .attention,
-        .scopePC .attention *,
-        .scope .repeal,
-        .scope .repeal *,
-        .scope .attention,
-        .scope .attention * {
-            color: #c00000;
-        }
-
-        .scopeGUIDE p,
-        .scopePC p,
-        .scope p {
-            padding: 0.25rem 0;
-            margin: 0.25rem auto;
-            line-height: 1.5rem;
-            text-align: justify;
-        }
-
-        @media (max-width: 768px) {
-
-            .scopeGUIDE p,
-            .scopePC p,
-            .scope p {
-                padding: 0.15rem 0;
-                font-size: 0.9rem;
-            }
-        }
-
-        .scopeGUIDE a,
-        .scopePC a,
-        .scope a {
-            color: #5948ca;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .scopeGUIDE a:hover,
-        .scopePC a:hover,
-        .scope a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-
-            .scopeGUIDE,
-            .scopePC,
-            .scope {
-                padding: 0.5vw;
-            }
-        }
-
-        .scopeGUIDE main section,
-        .scope main section {
-            counter-reset: i;
-        }
-
-        .scopeGUIDE main section>article,
-        .scope main section>article {
-            counter-increment: i;
-        }
-
-        .scopeGUIDE main article>h3::before,
-        .scope main article>h3::before {
-            content: counters(i, '.') '. ';
-        }
-
-        /*# sourceMappingURL=base.guide.css.map */
+        }        
     </style>
     <div class='scope'>
         <header>
@@ -635,7 +212,7 @@
             <section class='level-1'>
                 <article id='bookmarkSection3'>
                     <h2>3. Login to EmaraTax</h2>
-                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/01.webp'
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/webp/01.webp'
                         alt=''>
 
                     <table class='i-color'>
@@ -657,7 +234,7 @@
                         </tr>
                     </table>
 
-                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/02.webp'
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/webp/02.webp'
                         alt=''>
                     <table class='i-color'>
                         <tr>
@@ -678,7 +255,7 @@
                     </table>
 
 
-                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/03.webp'
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/webp/03.webp'
                         alt=''>
                     <table class='i-color'>
                         <tr>
@@ -713,7 +290,7 @@
                         </tr>
                     </table>
 
-                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/04.webp'
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/webp/04.webp'
                         alt=''>
                     <table class='i-color'>
                         <tr>
@@ -751,7 +328,7 @@
             <section class='level-1'>
                 <article id='bookmarkSection4'>
                     <h2>4. Change Corporate Tax Period</h2>
-                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/05.webp'
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/webp/05.webp'
                         alt=''>
                     <table class='i-color'>
                         <tr>
@@ -792,11 +369,11 @@
             <section class='level-1'>
                 <article id='bookmarkSection5'>
                     <h2>5. Instructions and Guidelines</h2>
-                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/06.webp'
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/webp/06.webp'
                         alt=''>
                     <table class='i-color'>
                         <tr>
-                            <td>
+                            <td style='width: 5%;'>
                                 <p>
                                     <strong>
                                         Step
@@ -827,11 +404,11 @@
                         </tr>
                     </table>
 
-                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/07.webp'
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/webp/07.webp'
                         alt=''>
                     <table class='i-color'>
                         <tr>
-                            <td>
+                            <td style='width: 5%;'>
                                 <p>
                                     <strong>
                                         Step
@@ -866,11 +443,11 @@
                 <article id='bookmarkSection6'>
                     <h2>6. Request Details <br> Detailed Description</h2>
 
-                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/08.webp'
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/webp/08.webp'
                         alt=''>
                     <table class='i-color'>
                         <tr>
-                            <td>
+                            <td style='width: 5%;'>
                                 <p>
                                     <strong>
                                         Step
@@ -915,11 +492,11 @@
             <section class='level-1'>
                 <article id='bookmarkSection7'>
                     <h2>7. New Corporate Tax Period</h2>
-                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/09.webp'
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/webp/09.webp'
                         alt=''>
                     <table class='i-color'>
                         <tr>
-                            <td>
+                            <td style='width: 5%;'>
                                 <p>
                                     <strong>
                                         Step
@@ -962,11 +539,11 @@
             <section class='level-1'>
                 <article id='bookmarkSection8'>
                     <h2>8. Review and Select the new filing dates</h2>
-                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/10.webp'
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/webp/10.webp'
                         alt=''>
                     <table class='i-color'>
                         <tr>
-                            <td>
+                            <td style='width: 5%;'>
                                 <p>
                                     <strong>
                                         Step
@@ -996,11 +573,11 @@
                         </tr>
                     </table>
 
-                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/11.webp'
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/webp/11.webp'
                         alt=''>
                     <table class='i-color'>
                         <tr>
-                            <td>
+                            <td style='width: 5%;'>
                                 <p>
                                     <strong>
                                         Step
@@ -1035,11 +612,11 @@
             <section class='level-1'>
                 <article id='bookmarkSection9'>
                     <h2>9. Review and Declaration</h2>
-                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/12.webp'
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/webp/12.webp'
                         alt=''>
                     <table class='i-color'>
                         <tr>
-                            <td>
+                            <td style='width: 5%;'>
                                 <p>
                                     <strong>
                                         Step
@@ -1073,11 +650,11 @@
                             </td>
                         </tr>
                     </table>
-                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/13.webp'
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/webp/13.webp'
                         alt=''>
                     <table class='i-color'>
                         <tr>
-                            <td>
+                            <td style='width: 5%;'>
                                 <p>
                                     <strong>
                                         Step
@@ -1114,7 +691,7 @@
                 <article id='bookmarkSection10'>
                     <h2>10. Post Application Submission
                     </h2>
-                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/14.webp'
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/change-corporate-tax-period/webp/14.webp'
                         alt=''>
 
                     <table class='i-color'>
