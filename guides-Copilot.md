@@ -36,7 +36,7 @@
  
 <!-- Main- Index [THIS IS FOR INDEX] -->
 
-7. Select only the code for index and use this prompt -  "Using this code as reference , rewrite the selected code while also removing styles, classes, data list texts and structure them" 
+7. Select only the code for index and use this prompt -  "Using this code as reference , rewrite the selected code while also removing styles, classes, data list texts and structure them while linking them with target=blank rel=noopenner noreferrer" 
 
 8. 
 Copy this index code- <section class="index"><p><a href="#bookmarkSection1">1. Introduction</a></p><ol><li><p><a href="#bookmarkSection1.1">1.1. Purpose of this guide</a></p></li><li><p><a   href="#bookmarkSection1.2">1.2. Changes to the previous version of the guide</a></p></li><li><p><a href="#bookmarkSection1.3">1.3. Who should read this guide</a></p></li><li><p><a href="#bookmarkSection1.4">1.4. How to use this document</a></p></li><li><p><a href="#bookmarkSection1.5">1.5. Other important publications</a></p></li><li><p><a href="#bookmarkSection1.6">1.6. Status of the document</a></p></li></ol><p><a href="#bookmarkSection2">2. Getting Additional Help</a></p><ol><li><p><a href="#bookmarkSection2.1">2.1. Chapter summary</a></p></li><li><p><a href="#bookmarkSection2.2">2.2. FTA support channels</a></p><ol><li><p><a href="#bookmarkSection2.2.1">2.2.1. E-Learning</a></p></li><li><p><a href="#bookmarkSection2.2.2">2.2.2. VAT Helpline</a></p></li></ol></li></ol><p><a href="#bookmarkSection2.3">2.3. Receiving support from external agents and advisers</a></p></section> 
@@ -47,7 +47,7 @@ Copy this index code- <section class="index"><p><a href="#bookmarkSection1">1. I
 9. Select about 45000-50000 words and while selecting: 
 
 a. Select only from the starting of a section like section 1 – section 4/5/6 (according to the wording capacity you have left. 
-B. DON,T select any additional text from the middle of the section , select until the end of the section you are able to. 
+B. DON'T select any additional text from the middle of the section , select until the end of the section you are able to. 
  
 
 10. 
@@ -66,5 +66,6 @@ Give this prompt- "  remove styles, classes,data list texts  and add hyperlinks 
 <!-- Check your links and Data  -->
 
 14. Briefly check  your document for links footnotes and compare them , 
+15. Add images manually at the right section
  
 
