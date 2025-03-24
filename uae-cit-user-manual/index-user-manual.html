@@ -8,84 +8,79 @@
     <link rel="stylesheet" href="../index.css" />
     <style>
         * {
-            margin: 0;
-            padding: 0;
+          margin: 0;
+          padding: 0;
         }
-
+    
         body {
-            box-sizing: border-box;
+          box-sizing: border-box;
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          padding: 20px;
         }
-
+    
+        .container {
+          max-width: 800px;
+          margin: 0 auto;
+          background: #fff;
+          padding: 20px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+        }
+    
+        h1 {
+          text-align: center;
+          margin-bottom: 20px;
+          color: #333;
+        }
+    
+        ul {
+          list-style-type: none;
+        }
+    
+        li {
+          margin: 10px 0;
+        }
+    
         a:link,
         a:visited {
-            color: #1098ad;
-            text-decoration: none;
+          color: #1098ad;
+          text-decoration: none;
+          display: block;
+          padding: 10px;
+          border: 1px solid #1098ad;
+          border-radius: 4px;
+          text-align: center;
+          transition: background-color 0.3s, color 0.3s;
         }
-
+    
         a:hover {
-            color: orangered;
-            text-decoration: none;
-        }
-
-        a:link {
-            color: #036b7a;
-            text-decoration: none;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            /* Creates 3 equal columns */
-            gap: 10px;
-            /* Adds spacing between grid items */
-        }
-
-        .grid-container a {
-            display: block;
-            padding: 10px;
-            background-color: #f4f4f4;
-            text-decoration: none;
-            text-align: center;
-            border: 1px solid #ddd;
+          background-color: #1098ad;
+          color: #fff;
         }
 
         .home-link {
-            text-align: center;
-            margin-top: 20px;
+          text-align: center;
+          margin-bottom: 20px;
         }
-    </style>
+      </style>
 </head>
 
 <body>
     <div class="home-link">
         <a href="../index.html">HOME</a>
     </div>
-    <div class="container" style="
-      display: grid;
-      row-gap: 60px;
-      column-gap: 65px;
-      width: 800px;
-      margin: 0 auto;
-      margin-top: 50px;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(1, 1fr);
-  ">
-        <div class="grid-container">
-            <a href="./html/Change Corporate Tax Period (PNG).html" class="article_01">Change Corporate Tax Period
-                (PNG)</a>
-            <a href="./html/Change Corporate Tax Period.html" class="article_01">Change Corporate Tax Period (Adobe)</a>
-
-            <a href="./html/Link Juridical Person Tax Agent with Representative Person copy.html" class="article_01">Link Juridical Person Tax Agent with Representative Person</a>
-            <a href="./html/Self Registration Corporate Tax Taxpayer User Manual.html" class="article_01">Self Registration Corporate Tax</a>
-            <a href="./html/Taxable Person - Link Juridical Person Tax Agent to Taxable Person User Manual.html" class="article_01">Link Juridical Person Tax Agent to Taxable Person User Manual</a>
-
-
-
-
-            <a href="./html/natural-person-tax-agent-update-qualification-tax-agent-user-manual.html"
-                class="article_01">natural-person-tax-agent-update-qualification-tax-agent-user-manual</a>
-            <a href="./html/PDF_DOWN_TEST.html" class="article_01">Download the Sample User Manual PDF</a>
-        </div>
+    <div class="container">
+        <h1>CIT User Manual</h1>
+        <ul>
+            <li><a href="./html/Change Corporate Tax Period (PNG).html">Change Corporate Tax Period (PNG)</a></li>
+            <li><a href="./html/Change Corporate Tax Period.html">Change Corporate Tax Period (Adobe)</a></li>
+            <li><a href="./html/Link Juridical Person Tax Agent with Representative Person copy.html">Link Juridical Person Tax Agent with Representative Person</a></li>
+            <li><a href="./html/Self Registration Corporate Tax Taxpayer User Manual.html">Self Registration Corporate Tax</a></li>
+            <li><a href="./html/Taxable Person - Link Juridical Person Tax Agent to Taxable Person User Manual.html">Link Juridical Person Tax Agent to Taxable Person User Manual</a></li>
+            <li><a href="./html/natural-person-tax-agent-update-qualification-tax-agent-user-manual.html">Natural Person Tax Agent Update Qualification Tax Agent User Manual</a></li>
+            <li><a href="./html/PDF_DOWN_TEST.html">Download the Sample User Manual PDF</a></li>
+        </ul>
     </div>
 </body>
 

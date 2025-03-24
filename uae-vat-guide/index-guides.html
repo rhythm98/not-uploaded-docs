@@ -8,81 +8,82 @@
     <link rel="stylesheet" href="../index.css" />
     <style>
         * {
-            margin: 0;
-            padding: 0;
+          margin: 0;
+          padding: 0;
         }
-
+    
         body {
-            box-sizing: border-box;
+          box-sizing: border-box;
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          padding: 20px;
         }
-
+    
+        .container {
+          max-width: 600px;
+          margin: 0 auto;
+          background: #fff;
+          padding: 20px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+        }
+    
+        h1 {
+          text-align: center;
+          margin-bottom: 20px;
+          color: #333;
+        }
+    
+        ul {
+          list-style-type: none;
+        }
+    
+        li {
+          margin: 10px 0;
+        }
+    
         a:link,
         a:visited {
-            color: #1098ad;
-            text-decoration: none;
+          color: #1098ad;
+          text-decoration: none;
+          display: block;
+          padding: 10px;
+          border: 1px solid #1098ad;
+          border-radius: 4px;
+          text-align: center;
+          transition: background-color 0.3s, color 0.3s;
         }
-
+    
         a:hover {
-            color: orangered;
-            text-decoration: none;
-        }
-
-        a:link {
-            color: #036b7a;
-            text-decoration: none;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            /* Creates 3 equal columns */
-            gap: 10px;
-            /* Adds spacing between grid items */
-        }
-
-        .grid-container a {
-            display: block;
-            padding: 10px;
-            background-color: #f4f4f4;
-            text-decoration: none;
-            text-align: center;
-            border: 1px solid #ddd;
+          background-color: #1098ad;
+          color: #fff;
         }
 
         .home-link {
-            text-align: center;
-            margin-top: 20px;
+          text-align: center;
+          margin-bottom: 20px;
         }
-    </style>
+      </style>
 </head>
 
 <body>
     <div class="home-link">
         <a href="../index.html">HOME</a>
     </div>
-    <div class="container" style="
-      display: grid;
-      row-gap: 60px;
-      column-gap: 65px;
-      width: 800px;
-      margin: 0 auto;
-      margin-top: 50px;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(1, 1fr);
-  ">
-        <div class="grid-container">
-            <a href="./html/uae-vat-guide-VATGAM1.html" class="article_01">UAE VAT Guide VATGAM1</a>
-            <a href="./html/uae-vat-guide-VATGDS1.html" class="article_01">UAE VAT Guide VATGDS1</a>
-            <a href="./html/uae-vat-guide-VATGDZ1.html" class="article_01">UAE VAT Guide VATGDZ1</a>
-            <a href="./html/uae-vat-guide-VATGEC1.html" class="article_01">UAE VAT Guide VATGEC1</a>
-            <a href="./html/uae-vat-guide-VATGCH1.html" class="article_01">UAE VAT Guide VATGCH1</a>
-            <a href="./html/uae-vat-guide-VATG001.html" class="article_01">UAE VAT Guide VATG001</a>
-
-            <a href='./html/uae-vat-VATGFS1.html' class='article_01'>UAE VAT Guide VATGFS1</a>
-            <a href='./html/uae-vat-VATGGR101.html' class='article_01'>UAE VAT Guide VATGGR101</a>
-            <a href="./html/uae-vat-VATGRE1.html">UAE VAT Guide VATGRE1</a>
-
-        </div>
+    
+    <div class="container">
+        <h1>UAE VAT Law Guides</h1>
+        <ul>
+            <li><a href="./html/uae-vat-guide-VATGAM1.html">UAE VAT Guide VATGAM1</a></li>
+            <li><a href="./html/uae-vat-guide-VATGDS1.html">UAE VAT Guide VATGDS1</a></li>
+            <li><a href="./html/uae-vat-guide-VATGDZ1.html">UAE VAT Guide VATGDZ1</a></li>
+            <li><a href="./html/uae-vat-guide-VATGEC1.html">UAE VAT Guide VATGEC1</a></li>
+            <li><a href="./html/uae-vat-guide-VATGCH1.html">UAE VAT Guide VATGCH1</a></li>
+            <li><a href="./html/uae-vat-guide-VATG001.html">UAE VAT Guide VATG001</a></li>
+            <li><a href='./html/uae-vat-VATGFS1.html'>UAE VAT Guide VATGFS1</a></li>
+            <li><a href='./html/uae-vat-VATGGR101.html'>UAE VAT Guide VATGGR101</a></li>
+            <li><a href="./html/uae-vat-VATGRE1.html">UAE VAT Guide VATGRE1</a></li>
+        </ul>
     </div>
 </body>
 

@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UAE DTAA</title>
   <link rel="stylesheet" href="./index.css" />
   <style>
@@ -14,144 +14,131 @@
 
     body {
       box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    ul {
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    li {
+      margin: 5px 0;
     }
 
     a:link,
     a:visited {
       color: #1098ad;
       text-decoration: none;
+      display: block;
+      padding: 10px;
+      border: 1px solid #1098ad;
+      border-radius: 4px;
+      text-align: center;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     a:hover {
-      color: orangered;
-      text-decoration: none;
-    }
-
-    a:link {
-      color: #036b7a;
-      text-decoration: none;
-    }
-
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      /* Creates 3 equal columns */
-      gap: 10px;
-      /* Adds spacing between grid items */
-    }
-
-    .grid-container a {
-      display: block;
-      padding: 10px;
-      background-color: #f4f4f4;
-      text-decoration: none;
-      text-align: center;
-      border: 1px solid #ddd;
+      background-color: #1098ad;
+      color: #fff;
     }
 
     .home-link {
       text-align: center;
-      margin-top: 20px;
+      margin: 20px 0;
     }
   </style>
 </head>
 
 <body>
-  
   <div class="home-link">
-    <a href="../index.html">HOME</a>
+    <a href="/index.html">HOME</a>
   </div>
-  <div class="container" style="
-    display: grid;
-    row-gap: 60px;
-    column-gap: 65px;
-    width: 800px;
-    margin: 0 auto;
-    margin-top: 50px;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-  ">
-    <div class="grid-container" style="grid-template-columns: repeat(5, 1fr);">
-      <h1>UAE DTAA</h1>
-      <a href="./albania.html" class="article_01">UAE - Albania</a>
-      <a href="./algeria.html" class="article_01">UAE - Algeria</a>
-      <a href="./andorra.html" class="article_01">UAE - Andorra</a>
-      <a href="./argentina.html" class="article_01">UAE - Argentina</a>
-      <a href="./armenia.html" class="article_01">UAE - Armenia</a>
-      
-      <a href="./austria.html" class="article_01">UAE - Austria</a>
-      <a href="./azerbaijan.html" class="article_01">UAE - Azerbaijan</a>
-      <a href="./bangladesh.html" class="article_01">UAE - Bangladesh</a>
-      <a href="./barbados.html" class="article_01">UAE - Barbados</a>
-      <a href="./bosnia-and-herzegovina.html" class="article_01">UAE - Bosnia and Herzegovina</a>
-      
-      <a href="./botswana.html" class="article_01">UAE - Botswana</a>
-      <a href="./brazil.html" class="article_01">UAE - Brazil</a>
-      <a href="./brunei-darussalem.html" class="article_01">UAE - Brunei Darussalam</a>
-      <a href="./canada.html" class="article_01">UAE - Canada</a>
-      <a href="./chile.html" class="article_01">UAE - Chile</a>
-      
-      <a href="./china.html" class="article_01">UAE - China</a>
-      <a href="./cyprus.html" class="article_01">UAE - Cyprus</a>
-      <a href="./czech.html" class="article_01">UAE - Czech Republic</a>
-      <a href="./estonia.html" class="article_01">UAE - Estonia</a>
-      <a href="./fiji.html" class="article_01">UAE - Fiji</a>
-      
-      <a href="./finland.html" class="article_01">UAE - Finland</a>
-      <a href="./georgia.html" class="article_01">UAE - Georgia</a>
-      <a href="./greece.html" class="article_01">UAE - Greece</a>
-      <a href="./hong-kong.html" class="article_01">UAE - Hong Kong</a>
-      <a href="./india.html" class="article_01">UAE - India</a>
-      
-      <a href="./indonesia.html" class="article_01">UAE - Indonesia</a>
-      <a href="./ireland.html" class="article_01">UAE - Ireland</a>
-      <a href="./israel.html" class="article_01">UAE - Israel</a>
-      <a href="./italy.html" class="article_01">UAE - Italy</a>
-      <a href="./japan.html" class="article_01">UAE - Japan</a>
-      
-      <a href="./jersey.html" class="article_01">UAE - Jersey</a>
-      <a href="./kazakhstan.html" class="article_01">UAE - Kazakhstan</a>
-      <a href="./ksa.html" class="article_01">UAE - KSA</a>
-      <a href="./kuwait.html" class="article_01">UAE - Kuwait</a>
-      <a href="./latvia.html" class="article_01">UAE - Latvia</a>
-      
-      <a href="./leichestein.html" class="article_01">UAE - Leichestein</a>
-      <a href="./malaysia.html" class="article_01">UAE - Malaysia</a>
-      <a href="./maldives.html" class="article_01">UAE - Maldives</a>
-      <a href="./malta.html" class="article_01">UAE - Malta</a>
-      <a href="./mauritius.html" class="article_01">UAE - Mauritius</a>
-      
-      <a href="./mexico.html" class="article_01">UAE - Mexico</a>
-      <a href="./moldova.html" class="article_01">UAE - Moldova</a>
-      <a href="./mozambique.html" class="article_01">UAE - Mozambique</a>
-      <a href="./netherland.html" class="article_01">UAE - Netherland</a>
-      <a href="./new-zealand.html" class="article_01">UAE - New Zealand</a>
-      
-      <a href="./pakistan.html" class="article_01">UAE - Pakistan</a>
-      <a href="./panama.html" class="article_01">UAE - Panama</a>
-      <a href="./paraguay.html" class="article_01">UAE - Paraguay</a>
-      <a href="./portugal.html" class="article_01">UAE - Portugal</a>
-      <a href="./san-marino.html" class="article_01">UAE - San Marino</a>
-      
-      <a href="./senegel.html" class="article_01">UAE - Senegal</a>
-      <a href="./seychelles.html" class="article_01">UAE - Seychelles</a>
-      <a href="./south-africa.html" class="article_01">UAE - South Africa</a>
-      <a href="./south-korea.html" class="article_01">UAE - South Korea</a>
-      <a href="./spain.html" class="article_01">UAE - Spain</a>
-      
-      <a href="./sri-lanka.html" class="article_01">UAE - Sri Lanka</a>
-      <a href="./uruguay.html" class="article_01">UAE - Uruguay</a>
-      <a href="./venezuela.html" class="article_01">UAE - Venezuela</a>
-      <a href="./vietnam.html" class="article_01">UAE - Vietnam</a>
-      <a href="./zambia.html" class="article_01">UAE - Zambia</a>
-      
-      <a href="./zimbabwe.html" class="article_01">UAE - Zimbabwe</a>
-    </div>
-
-    </div>
-    
-    </div>
-
+  
+  <div class="container">
+    <h1>UAE DTAA</h1>
+    <ul>
+      <li><a href="./albania.html">UAE - Albania</a></li>
+      <li><a href="./algeria.html">UAE - Algeria</a></li>
+      <li><a href="./andorra.html">UAE - Andorra</a></li>
+      <li><a href="./argentina.html">UAE - Argentina</a></li>
+      <li><a href="./armenia.html">UAE - Armenia</a></li>
+      <li><a href="./austria.html">UAE - Austria</a></li>
+      <li><a href="./azerbaijan.html">UAE - Azerbaijan</a></li>
+      <li><a href="./bangladesh.html">UAE - Bangladesh</a></li>
+      <li><a href="./barbados.html">UAE - Barbados</a></li>
+      <li><a href="./bosnia-and-herzegovina.html">UAE - Bosnia and Herzegovina</a></li>
+      <li><a href="./botswana.html">UAE - Botswana</a></li>
+      <li><a href="./brazil.html">UAE - Brazil</a></li>
+      <li><a href="./brunei-darussalem.html">UAE - Brunei Darussalam</a></li>
+      <li><a href="./canada.html">UAE - Canada</a></li>
+      <li><a href="./chile.html">UAE - Chile</a></li>
+      <li><a href="./china.html">UAE - China</a></li>
+      <li><a href="./cyprus.html">UAE - Cyprus</a></li>
+      <li><a href="./czech.html">UAE - Czech Republic</a></li>
+      <li><a href="./estonia.html">UAE - Estonia</a></li>
+      <li><a href="./fiji.html">UAE - Fiji</a></li>
+      <li><a href="./finland.html">UAE - Finland</a></li>
+      <li><a href="./georgia.html">UAE - Georgia</a></li>
+      <li><a href="./greece.html">UAE - Greece</a></li>
+      <li><a href="./hong-kong.html">UAE - Hong Kong</a></li>
+      <li><a href="./india.html">UAE - India</a></li>
+      <li><a href="./indonesia.html">UAE - Indonesia</a></li>
+      <li><a href="./ireland.html">UAE - Ireland</a></li>
+      <li><a href="./israel.html">UAE - Israel</a></li>
+      <li><a href="./italy.html">UAE - Italy</a></li>
+      <li><a href="./japan.html">UAE - Japan</a></li>
+      <li><a href="./jersey.html">UAE - Jersey</a></li>
+      <li><a href="./kazakhstan.html">UAE - Kazakhstan</a></li>
+      <li><a href="./ksa.html">UAE - KSA</a></li>
+      <li><a href="./kuwait.html">UAE - Kuwait</a></li>
+      <li><a href="./latvia.html">UAE - Latvia</a></li>
+      <li><a href="./leichestein.html">UAE - Leichestein</a></li>
+      <li><a href="./malaysia.html">UAE - Malaysia</a></li>
+      <li><a href="./maldives.html">UAE - Maldives</a></li>
+      <li><a href="./malta.html">UAE - Malta</a></li>
+      <li><a href="./mauritius.html">UAE - Mauritius</a></li>
+      <li><a href="./mexico.html">UAE - Mexico</a></li>
+      <li><a href="./moldova.html">UAE - Moldova</a></li>
+      <li><a href="./mozambique.html">UAE - Mozambique</a></li>
+      <li><a href="./netherland.html">UAE - Netherland</a></li>
+      <li><a href="./new-zealand.html">UAE - New Zealand</a></li>
+      <li><a href="./pakistan.html">UAE - Pakistan</a></li>
+      <li><a href="./panama.html">UAE - Panama</a></li>
+      <li><a href="./paraguay.html">UAE - Paraguay</a></li>
+      <li><a href="./portugal.html">UAE - Portugal</a></li>
+      <li><a href="./san-marino.html">UAE - San Marino</a></li>
+      <li><a href="./senegel.html">UAE - Senegal</a></li>
+      <li><a href="./seychelles.html">UAE - Seychelles</a></li>
+      <li><a href="./south-africa.html">UAE - South Africa</a></li>
+      <li><a href="./south-korea.html">UAE - South Korea</a></li>
+      <li><a href="./spain.html">UAE - Spain</a></li>
+      <li><a href="./sri-lanka.html">UAE - Sri Lanka</a></li>
+      <li><a href="./uruguay.html">UAE - Uruguay</a></li>
+      <li><a href="./venezuela.html">UAE - Venezuela</a></li>
+      <li><a href="./vietnam.html">UAE - Vietnam</a></li>
+      <li><a href="./zambia.html">UAE - Zambia</a></li>
+      <li><a href="./zimbabwe.html">UAE - Zimbabwe</a></li>
+    </ul>
   </div>
 </body>
 
