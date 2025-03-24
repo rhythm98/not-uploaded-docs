@@ -1,4 +1,5 @@
-# UAE CIT: GUIDES
+# UAE CIT: GUIDES (Time needed : 60-90 mins)
+
 1. convert the documents to html using XODO. 
 
 2. USE Claude thinking Sonnet 3.7 for copilot  
@@ -11,6 +12,7 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name="description" content="">
     <title></title>
     <link rel='stylesheet' href='https://gtlcdnstorage.blob.core.windows.net/guide/stylesheets/guide.css'>
 </head>
@@ -22,12 +24,6 @@
 <!-- Header [THIS IS FOR HEADER's]  -->
 
 4. Copy this header tag- <header><h1>TAXABLE PERSON GUIDE FOR VALUE ADDED TAX</h1><h2>VAT Guide | VATG001</h2> <h2>June 2018</h2></header> 
-
- 
-
- 
-
- 
 
 5. Give this prompt- "Using this code as reference , rewrite the selected code while also removing styles, classes." 
  
@@ -59,7 +55,7 @@ Give this prompt- "  remove styles, classes,data list texts  and add hyperlinks 
 
 11. Select only footers with footnotes and  
 
-12. Give this prompt- "  remove styles, classes,data list texts  and add hyperlinks to footnotes with return link oin the same footnote" 
+12. Give this prompt- "remove styles, classes,data list texts  and add hyperlinks to footnotes with return link oin the same footnote" 
 
 13. Close your Html tags appropriately and check for any missing </articles> and add them in the right place. 
  
