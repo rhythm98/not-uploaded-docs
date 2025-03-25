@@ -9,20 +9,15 @@
     box-sizing: border-box;
 }
 
-.scope header {
+.scope main header {
     padding: 1rem 1.25rem;
     margin: 0.25rem 0.75rem;
 }
 
-.scope header * {
-    text-align: center;
-}
-
 .scope header h1,
-.scope header h2,
-.scope header h3,
-.scope header h4 {
+.scope header h2 {
     color: #2f438d;
+    text-align: center;
 }
 
 .scope main h3 {
@@ -153,6 +148,7 @@
     text-align: justify;
 }
 
+
 .scope a {
     color: #5948ca;
     text-decoration: none;
@@ -168,11 +164,16 @@
     width: calc(100% - 2rem);
     margin: 0.5rem 0.75rem;
     padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 2px rgba(0,0,0,0.30);
+    margin-bottom: 5px;
 }
 
-.scope main article>*:nth-child(1),
-.scope main article>*:nth-child(2) {
+.scope main article>*:nth-child(1) {
     text-align: center;
+}
+.scope main article p>*:nth-child(1) {
+    text-align: left;
 }
 
 /* Media Queries for Responsive Design */
@@ -272,13 +273,13 @@
         word-break: break-word;
     }
 }
-
+/* Main articles styling - using more specific selector to prevent conflicts */
 .scope article {
-    margin-bottom: 50px; /* Add 0.75cm spacing between articles */
+    margin-bottom: 5px; /* Reduced spacing between articles */
     padding: 20px; /* Add some internal padding */
     background-color: #f0f0f0; /* Light gray background that's slightly darker */
-    border-radius: 4px; /* Slight rounding of corners */
-    box-shadow: 0 1px 2px rgba(0,0,0,0.10); /* Very subtle shadow */
+    border-radius: 10px; /* Slight rounding of corners */
+    box-shadow: 0 5px 2px rgba(0,0,0,0.30); /* Very subtle shadow */
 }
 
 /* Slightly darker alternating articles for better distinction */
@@ -288,5 +289,38 @@
 
 /* Add a subtle border at the bottom of each article */
 .scope article:not(:last-child) {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    border-top:  2px solid #ddd;
 }
+
+/* Index styling */
+.scope main .index {
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    background-color: #fff;
+    box-shadow: 0 5px 2px rgba(0,0,0,0.20);
+}
+
+.scope main .index li {
+    list-style: none;
+    margin: 0.5rem 0;
+}
+
+.scope main .index ol {
+    list-style-type: none;
+    margin-top: 0;
+    padding-left: 1rem;
+}
+
+.scope main .index a {
+    display: inline-block;
+    padding: 0.25rem 0;
+    text-align: left;
+    font-size: 1.17rem;
+}
+
+
+
+

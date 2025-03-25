@@ -22,7 +22,6 @@
         .i-color {
             background-color: bisque;
         }
-
         #img-width {
             max-width: 1400px;
         }
@@ -67,7 +66,7 @@
                         <p><a href='#bookmarkSection13' target="_blank" rel="noopener noreferrer">13. Application
                                 History - Approved</a></p>
                     </section>
-                </article>
+                </article>"
 
 
 <!-- Main - Body [THIS IS FOR BODY]  -->
@@ -83,7 +82,7 @@
                                 <td>
                                     <p>
                                         <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.webp' alt='Information icon'
-                                            style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                            class='i-icon'>
                                     </p>
                                 </td>
                                 <td>
