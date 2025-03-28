@@ -42,7 +42,7 @@ Copy this index code- <section class="index"><p><a href="#bookmarkSection1">1. I
 
 9. Select about 45000-50000 words and while selecting: 
 
-a. Select only from the starting of a section like section 1 – section 4/5/6 (according to the wording capacity you have left. 
+a. Select only from the starting of a section like section 1 – section 4/5/6 (according to the wording capacity you have left). 
 B. DON'T select any additional text from the middle of the section , select until the end of the section you are able to. 
  
 
