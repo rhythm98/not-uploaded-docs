@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Federal Tax Authority offers a range of comprehensive and distinguished electronic services in order to provide the opportunity for taxpayers to benefit from these services in the best and simplest ways.">
+    <meta name="keywords" content="EmaraTax, Tax Agent, Taxable Person, Juridical Person Tax Agent, Taxpayer, Tax Agent linking request application, Tax Agent request, Tax Agent, Taxable Person, Taxable Person Management Dashboard, Correspondences, Application Status, Linked">
+    <title>CT - Link Juridical Person Tax Agent to Taxable Person</title>
+    <link rel="stylesheet" href="https://gtlcdnstorage.blob.core.windows.net/guide/stylesheets/guide.css">
+</head>
+
+<body>
+    <style>
+        .i-color {
+            background-color: bisque;
+        }
+
+        #img-width {
+            max-width: 1400px;
+        }
+    </style>
+    <div class="scope">
+        <header>
+            <h2>CT - Link Juridical Person Tax Agent to Taxable Person</h2>
+            <h3>Tax Agent User Manual</h3>
+            <h3>Date: 25 June, 2024 | Version 1.2.0.0</h3>
+        </header>
+        <main>
+            <section>
+                <div class=" index">
+                    <h3>Contents</h3>
+                    <p>1. <a href="#bookmarkSection1">Navigating through EmaraTax</a></p>
+                    <p>2. <a href="#bookmarkSection2">Introduction</a></p>
+                    <p>3. <a href="#bookmarkSection3">Login to EmaraTax as Juridical Person Tax Agent</a></p>
+                    <p>4. <a href="#bookmarkSection4">Taxable Person Dashboard</a></p>
+                    <p>5. <a href="#bookmarkSection5">Link Juridical Person Tax Agent to Taxable Person</a></p>
+                    <p>6. <a href="#bookmarkSection6">Taxable Person Management Dashboard</a></p>
+                    <p>7. <a href="#bookmarkSection7">Correspondences</a></p>
+                    <p>8. <a href="#bookmarkSection8">Application Status &ndash; Linked</a></p>
+                </div>
+
+                <article id='bookmarkSection1'>
+                    <h3>Navigating through EmaraTax</h3>
+                    <p>The following Tabs and Buttons are available to help you navigate through this process</p>
+                    <table>
+                        <tr>
+                            <td style='width: 15%;'>
+                                <p><strong>Button</strong></p>
+                            </td>
+                            <td>
+                                <p><strong>Description</strong>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan='2'>
+                                <p><strong>In the Portal</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/user-types.webp'
+                                    alt='user-types' style='min-width: 150px;'>
+                            </td>
+                            <td>
+                                <p>
+                                    This is used to toggle between various personas within the user profile such as
+                                    Taxable Person, Tax
+                                    Agent, Tax Agency, Legal Representative etc</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/text-to-speech.webp'
+                                    alt='text-to-speech'>
+                            </td>
+                            <td>
+                                <p>This is used
+                                    to enable the Text to Speech feature of the portal</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/toggle-eng-arabic.webp'
+                                    alt='toggle-english-arabic'>
+                            </td>
+                            <td>
+                                <p>This is used
+                                    to toggle between the English and Arabic versions of the portal</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/screen-resolution.webp'
+                                    alt='screen-resolution'>
+                            </td>
+                            <td>
+                                <p>This is used
+                                    to decrease, reset, and increase the screen resolution of the user interface of the
+                                    portal</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/manage-account.webp'
+                                    alt='manage-account'>
+                            </td>
+                            <td>
+                                <p>This is used
+                                    to manage the user profile details such as the Name, Registered Email Address,
+                                    Registered Mobile
+                                    Number, and Password</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/logout.webp'
+                                    alt='logout'>
+                            </td>
+                            <td>
+                                <p><a name='bookmark1'>&zwnj;</a>This is used to log off from the portal</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan='2'>
+                                <p><strong>In the
+                                        Business Process application</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/previous-step.webp'
+                                    alt='previous-step' style='min-width: 150px;'>
+                            </td>
+                            <td>
+                                <p>This is used
+                                    to go the Previous section of the Input Form</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/next-step.webp'
+                                    alt='next-step'>
+                            </td>
+                            <td>
+                                <p>This is used
+                                    to go the Next section of the Input Form</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/save-as-draft.webp'
+                                    alt='save-as-draft'>
+                            </td>
+                            <td>
+                                <p>This is used
+                                    to save the application as draft, so that it can be completed later</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/1-2.webp'
+                                    alt='1-2'>
+                            </td>
+                            <td>
+                                <p>
+                                    This menu on the top gives an overview of the various sections within the form. All
+                                    the sections
+                                    need to be completed in order to submit the application for review. The current
+                                    section is
+                                    highlighted in Blue and the completed sections are highlighted in green with a check
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                    <p>The Federal Tax Authority offers a range of comprehensive and distinguished electronic services
+                        in
+                        order to provide the
+                        opportunity for taxpayers to benefit from these services in the best and simplest ways. </p>
+                </article>
+
+                <article id="bookmarkSection2">
+                    <h3>Introduction</h3>
+                    <p>
+                        This manual is prepared to help a registered or non-registered Tax Agent to navigate through the
+                        Federal Tax Authority EmaraTax portal to appoint a Juridical Person Tax Agent for managing
+                        his/her Taxpayer account. The Taxpayer can select the required access privileges to be granted
+                        to
+                        the Juridical Person Tax Agent and submit the Juridical Person Tax Agent linking request
+                        application. The Juridical Person Tax Agent can accept or reject the linking request. On
+                        accepting
+                        the Tax Agent request, the Juridical Person Tax Agent shall be linked to the Taxable Person.
+                    </p>
+                </article>
+
+                <article id="bookmarkSection3">
+                    <h3>Login to EmaraTax as Juridical Person Tax Agent</h3>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-juridical-person-to-taxable-person-v1.2/01.png'
+                        alt='Login to EmaraTax as Juridical Person Tax Agent' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p>
+                                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                        alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                </p>
+                            </td>
+                            <td>
+                                <p>You can login into the EmaraTax account using your login credentials or using UAE
+                                    Pass. If you do
+                                    not have an EmaraTax account, you can sign-up for an account by clicking the &lsquo;Sign
+                                    Up&rsquo; button. If
+                                    you have forgotten your password, you can use the 'Forgot password?' feature to
+                                    reset your
+                                    password.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+                <article id="bookmarkSection4">
+                    <h3>Taxable Person Dashboard</h3>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-juridical-person-to-taxable-person-v1.2/02.png'
+                        alt='Taxable Person Dashboard' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td style='width: 5%;'>
+                                <p>
+                                    <strong>
+                                        Step
+                                    </strong>
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    <strong>
+                                        Action
+                                    </strong>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    (1)
+                                </p>
+                            </td>
+                            <td>
+                                <p>Click on <strong>&lsquo;JURIDICAL PERSON TAX AGENT&rsquo;</strong>.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+                <article id="bookmarkSection5">
+                    <h3>Link Juridical Person Tax Agent to Taxable Person</h3>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-juridical-person-to-taxable-person-v1.2/03.png'
+                        alt='Link Juridical Person Tax Agent to Taxable Person' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td style='width: 5%;'>
+                                <p>
+                                    <strong>
+                                        Step
+                                    </strong>
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    <strong>
+                                        Action
+                                    </strong>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    (1)
+                                </p>
+                            </td>
+                            <td>
+                                <p>Click <strong>&lsquo;Manage&rsquo;</strong> on the Taxable Person Management tile.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+                <article id="bookmarkSection6">
+                    <h3>Taxable Person Management Dashboard</h3>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-juridical-person-to-taxable-person-v1.2/04.png'
+                        alt='taxable person management dashboard' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p>
+                                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                        alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                </p>
+                            </td>
+                            <td>
+                                <p>taxable person linking requests are displayed here.</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-juridical-person-to-taxable-person-v1.2/05.png'
+                        alt='taxable person management dashboard' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p>
+                                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                        alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                </p>
+                            </td>
+                            <td>
+                                <p>You can perform the following actions:</p>
+                                <p><strong>&lsquo;View&rsquo;</strong> option is to view the details of the link request.</p>
+                                <p><strong>&lsquo;Approve&rsquo;</strong> option is to approve the link request. On approving the request, the
+                                    linking is complete between the Juridical Person Tax Agent and the Taxable Person.
+                                    Taxable Person shall receive an email correspondence.</p>
+                                <p><strong>&lsquo;Reject&rsquo;</strong> option is to reject the link request. On rejecting the request, Taxable
+                                    Person shall receive an email correspondence.</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-juridical-person-to-taxable-person-v1.2/06.png'
+                        alt='taxable person management dashboard' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td style='width: 5%;'>
+                                <p>
+                                    <strong>
+                                        Step
+                                    </strong>
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    <strong>
+                                        Action
+                                    </strong>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    (1)
+                                </p>
+                            </td>
+                            <td>
+                                <p>Click on &apos;...&apos; and select <strong>&lsquo;Approve&rsquo;</strong> to approve the linking request from the Taxable Person.</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-juridical-person-to-taxable-person-v1.2/07.png'
+                        alt='taxable person management dashboard' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td style='width: 5%;'>
+                                <p>
+                                    <strong>
+                                        Step
+                                    </strong>
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    <strong>
+                                        Action
+                                    </strong>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    (1)
+                                </p>
+                            </td>
+                            <td>
+                                <p>Click <strong>&lsquo;Yes&rsquo;</strong> to continue.</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-juridical-person-to-taxable-person-v1.2/08.png'
+                        alt='taxable person management dashboard' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td style='width: 5%;'>
+                                <p>
+                                    <strong>
+                                        Step
+                                    </strong>
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    <strong>
+                                        Action
+                                    </strong>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    (1)
+                                </p>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <p>Once you approve the linking request, the linking is completed between the Juridical
+                                            Person Tax Agent and the Taxable Person.</p>
+                                    </li>
+                                    <li>
+                                        <p>Click <strong>&lsquo;OK&rsquo;</strong> to confirm.</p>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+                <article id="bookmarkSection7">
+                    <h3>Correspondences</h3>
+                    <p><strong>Juridical Person Tax Agent receives the following correspondences:</strong></p>
+                    <ul>
+                        <li>
+                            <p>Linking application by Taxable Person &ndash; acknowledgement.</p>
+                        </li>
+                        <li>
+                            <p>Reminder to take action on pending linking request.</p>
+                        </li>
+                    </ul>
+                </article>
+                <article id="bookmarkSection8">
+                    <h3>Application Status &ndash; Linked</h3>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-juridical-person-to-taxable-person-v1.2/09.png'
+                        alt='Application Status - Linked' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p>
+                                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                        alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                </p>
+                            </td>
+                            <td>
+                                <p>You can check the status of the link request application here once the link request is approved.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+            </section>
+        </main>
+        <footer></footer>
+    </div>
+
+</body>
+
+</html>
