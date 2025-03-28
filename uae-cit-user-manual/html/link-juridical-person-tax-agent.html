@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Agent User Manual</title>
+    <link rel="stylesheet" href="https://gtlcdnstorage.blob.core.windows.net/guide/stylesheets/guide.css">
+
+    <style>
+        .i-color {
+            background-color: bisque;
+        }
+
+        #img-width {
+            max-width: 1400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="scope">
+        <header>
+            <h3>Tax Agent User Manual</h3>
+            <h3>Link Juridical Person Tax Agent with Natural Person 
+                Tax Agent</h3>
+            <h3>Date: 25 June, 2024  2024 Version 1.0.0.0</h3>
+        </header>
+
+        <main>
+            <section>
+                <div class="index">
+                    <h3>Contents</h3>
+                    <p>1. <a href="#bookmarkSection1">Navigating through EmaraTax</a></p>
+                    <p>2. <a href="#bookmarkSection3">Introduction</a></p>
+                    <p>3. <a href="#bookmarkSection4">Login to EmaraTax</a></p>
+                    <p>4. <a href="#bookmarkSection5">Link Juridical Person Tax Agent to Natural Person Tax Agent</a></p>
+                    <p>5. <a href="#bookmarkSection6">Add Natural Person Tax Agent</a></p>
+                    <p>6. <a href="#bookmarkSection7">Post Application Submission</a></p>
+                    <p>7. <a href="#bookmarkSection8">Correspondences</a></p>
+                    <p>8. <a href="#bookmarkSection9">Application History - In-Review</a></p>
+                    <p>9. <a href="#bookmarkSection10">Application History – Approved</a></p>
+                    <p>10. <a href="#bookmarkSection11">Juridical Person Tax Agent Registration Certificate</a></p>
+                </div>
+                
+                <article id="bookmarkSection1">
+                    <h3>Navigating through EmaraTax</h3>
+                    <p>The following Tabs and Buttons are available to help you navigate through this process:</p>
+                    <table>
+                        <tr>
+                            <td style='width: 15%;'>
+                                <p><strong>Button</strong></p>
+                            </td>
+                            <td>
+                                <p><strong>Description</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan='2'>
+                                <p><strong>In the Portal</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/user-types.webp'
+                                    alt='user-types' style='min-width: 150px;'>
+                            </td>
+                            <td>
+                                <p>This is used to toggle between various personas within the user profile, such 
+                as Taxable Person, Tax Agent, Tax Agency, Legal Representative, etc</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/text-to-speech.webp'
+                                    alt='text-to-speech'>
+                            </td>
+                            <td>
+                                <p>This is used to enable the text to speech feature of the portal</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/toggle-eng-arabic.webp'
+                                    alt='toggle-english-arabic'>
+                            </td>
+                            <td>
+                                <p>This is used to toggle between the English and Arabic versions of the portal</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/screen-resolution.webp'
+                                    alt='screen-resolution'>
+                            </td>
+                            <td>
+                                <p>This is used to decrease, reset, and increase the screen resolution of the user 
+                interface of the portal</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/manage-account.webp'
+                                    alt='manage-account'>
+                            </td>
+                            <td>
+                                <p>This is used to manage the user profile details such as the Name, Registered 
+                Email Address, Registered Mobile Number, and Password</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/logout.webp'
+                                    alt='logout'>
+                            </td>
+                            <td>
+                                <p>This is used to log off from the portal</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan='2'>
+                                <p><strong>In the Business Process application</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/previous-step.webp'
+                                    alt='previous-step' style='min-width: 150px;'>
+                            </td>
+                            <td>
+                                <p>This is used to go to the Previous section of the Input Form</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/next-step.webp'
+                                    alt='next-step'>
+                            </td>
+                            <td>
+                                <p>This is used to go to the Next section of the Input Form</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/save-as-draft.webp'
+                                    alt='save-as-draft'>
+                            </td>
+                            <td>
+                                <p>This is used to save the application as a draft, so that it can be completed 
+                later</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/1-2.webp'
+                                    alt='1-2'>
+                            </td>
+                            <td>
+                                <p>This menu at the top gives an overview of the various sections within the 
+                application form. All the sections need to be completed in order to submit 
+                the application for review. The current section is highlighted in blue, and the 
+                completed sections are highlighted in green with a check</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>The Federal Tax Authority offers a range of comprehensive and distinguished electronic services in order to provide the 
+                opportunity for Tax Agents to benefit from these services in the best and simplest ways.</p>
+                </article>
+                
+                <article id="bookmarkSection2">
+                    <h3>Introduction</h3>
+                    <p>This manual is prepared to help a registered Juridical Person Tax Agent to navigate through the 
+                    Federal Tax Authority EmaraTax portal to link a Natural Person Tax Agent. The Juridical Person Tax 
+                    Agent needs to initiate a Natural Person Tax Agent link request application. The Natural Person 
+                    Tax Agent needs to accept the request by logging into their Emara Tax account. Once the request 
+                    is accepted, the application shall be sent to the FTA for review. On approval of the application by 
+                    the FTA, the Natural Person Tax Agent shall be linked to the Juridical Person Tax Agent.</p>
+                </article>
+                
+                <article id="bookmarkSection3">
+                    <h3>Login to EmaraTax</h3>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-natural-person-tax-agent/01.png'
+                        alt='Login to EmaraTax' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p>
+                                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                        alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                </p>
+                            </td>
+                            <td>
+                                <p>You can login into the EmaraTax account using your login credentials or using UAE Pass. If you do 
+                                not have an EmaraTax account, you can sign-up for an account by clicking the ‘Sign Up’ button. If 
+                                you have forgotten your password, you can use the 'Forgot password?' feature to reset your 
+                                password.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+
+                <article id="bookmarkSection4">
+                    <h3>Link Juridical Person Tax Agent to Natural Person Tax Agent</h3>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-natural-person-tax-agent/02.png'
+                        alt='Link Juridical to Natural Person Tax Agent' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p><strong>Step</strong></p>
+                            </td>
+                            <td>
+                                <p><strong>Action</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>(1)</p>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <p>Click 'Manage' in the Natural Person Tax Agent Management tile.</p>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <article>
+                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-natural-person-tax-agent/03.png'
+                            alt='Linked Natural Person Tax Agents List' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                            alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                    </p>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <p>The Natural Person Tax Agents linked to the Juridical Person Tax Agent are displayed in 
+                                            this page. If there are no Tax Agents linked to the Juridical Person Tax Agent, this list will 
+                                            be empty.</p>
+                                        </li>
+                                        <li>
+                                            <p>The application status of linking of each Natural Person Tax Agent is also available in the 
+                                            list.</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+                    
+                    <article>
+                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-natural-person-tax-agent/04.png'
+                            alt='Add Tax Agent' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p><strong>Step</strong></p>
+                                </td>
+                                <td>
+                                    <p><strong>Action</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>(1)</p>
+                                </td>
+                                <td>
+                                    <p>Click 'Add Tax Agent' to add details of the Tax Agent to be linked.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+                    
+                </article>
+                
+                <article id="bookmarkSection5">
+                    <h3>Add Natural Person Tax Agent</h3>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-natural-person-tax-agent/05.png'
+                        alt='Add Natural Person Tax Agent' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p>
+                                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                        alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                </p>
+                            </td>
+                            <td>
+                                <p>To add the Natural Person Tax Agent, you can search via 'Tax Agent Number (TAAN)' or 'Emirates 
+                                ID'.</p>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <article>
+                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-natural-person-tax-agent/06.png'
+                            alt='Enter Emirates ID' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p><strong>Step</strong></p>
+                                </td>
+                                <td>
+                                    <p><strong>Action</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>(1)</p>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <p>Enter the 'Emirates ID Number' of the Natural Person Tax Agent to be linked and press 
+                                            Enter.</p>
+                                        </li>
+                                        <li>
+                                            <p>The Natural Person Tax Agent details will be auto populated if the entered 'Emirates ID' 
+                                                is valid. </p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+                    
+                    <article>
+                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-natural-person-tax-agent/07.png'
+                            alt='Select Designation' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p><strong>Step</strong></p>
+                                </td>
+                                <td>
+                                    <p><strong>Action</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>(1)</p>
+                                </td>
+                                <td>
+                                    <p>Select 'Designation' from the dropdown list.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+                    
+                    <article>
+                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-natural-person-tax-agent/07.png'
+                            alt='Select Designation' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p><strong>Step</strong></p>
+                                </td>
+                                <td>
+                                    <p><strong>Action</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>(1)</p>
+                                </td>
+                                <td>
+                                    <p>Select 'Designation' from the dropdown list.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+    
+                    <article>
+                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-natural-person-tax-agent/08.png'
+                            alt='Upload Letter of Appointment' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p><strong>Step</strong></p>
+                                </td>
+                                <td>
+                                    <p><strong>Action</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>(1)</p>
+                                </td>
+                                <td>
+                                    <p>Upload the 'Copy of Letter of Appointment'.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+                </article>
+
+                
+                
+
+                <article id="bookmarkSection6">
+                    <h3>Post Application Submission</h3>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-natural-person-tax-agent/10.png'
+                        alt='Post Application Submission' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p>
+                                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                        alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                </p>
+                            </td>
+                            <td>
+                                <p>The Linking Natural Person Qualified Agent with Juridical Person Tax Agent application is 
+                                submitted successfully. A Reference Number is generated for the submitted application. Note 
+                                this reference number for future purposes.</p>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <article>
+                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-natural-person-tax-agent/11.png'
+                            alt='Acknowledgement Actions' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p><strong>Step</strong></p>
+                                </td>
+                                <td>
+                                    <p><strong>Action</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>(1)</p>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li><p>Click 'Download' to download a pdf copy of the acknowledgement screen.</p></li>
+                                        <li><p>Click 'Back to Dashboard' to navigate back to the Juridical Person Tax Agent dashboard.</p></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+                    
+                </article>
+                
+
+                <article id="bookmarkSection7">
+                    <h3>Correspondences</h3>
+                    <p>Juridical Person Tax Agent receives the following correspondences:</p>
+                    <ul>
+                        <li><p>Application acceptance acknowledgment.</p></li>
+                        <li><p>Additional acceptance or rejection notification (after Natural Person Tax Agent accepts or 
+                        rejects the link request; or an auto cancellation of the application in case Natural Person 
+                        Tax Agent does not take any action).</p></li>
+                        <li><p>Additional Information notification (only if the FTA requires more information to assist with 
+                        their review of your application).</p></li>
+                        <li><p>Application approval or rejection notification by the FTA.</p></li>
+                    </ul>
+                </article>
+                
+
+                <article id="bookmarkSection8">
+                    <h3>Application History - In-Review</h3>
+                    <p>Once the Natural Person Tax Agent accepts the linking request, the application will be sent to the 
+                    FTA for review and the status of the application will be 'In-Review'.</p>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-natural-person-tax-agent/12.png'
+                        alt='In-Review Application Status' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p><strong>Step</strong></p>
+                            </td>
+                            <td>
+                                <p><strong>Action</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>(1)</p>
+                            </td>
+                            <td>
+                                <p>Click 'Manage' in the Natural Person Tax Agent Management tile</p>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <article>
+                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-natural-person-tax-agent/13.png'
+                            alt='Check Application Status' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                            alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>You can check the status of the Linking application based on the application number once the 
+                                    application has been submitted.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+                    
+                </article>
+
+                
+                <article id="bookmarkSection9">
+                    <h3>Application History – Approved</h3>
+                    <p>Once the FTA approves your application, the linking process is complete between the Juridical 
+                    Person Tax Agent and Natural Person Tax Agent, and Registration Certificates are issued by the 
+                    FTA to Juridical Person Tax Agent and Natural Person Tax Agent.</p>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-natural-person-tax-agent/14.png'
+                        alt='Application Approved' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p>
+                                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                        alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                </p>
+                            </td>
+                            <td>
+                                <p>You can check the status of the Linking application based on the Application Number once the FTA 
+                                has approved the application.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+                
+                <article id="bookmarkSection10">
+                    <h3>Juridical Person Tax Agent Registration Certificate</h3>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-natural-person-tax-agent/15.png'
+                        alt='Juridical Person Tax Agent Registration Certificate' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p><strong>Step</strong></p>
+                            </td>
+                            <td>
+                                <p><strong>Action</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>(1)</p>
+                            </td>
+                            <td>
+                                <p>Click on 'MY CORRESPONDENCE'.</p>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <article>
+                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/link-natural-person-tax-agent/16.png'
+                            alt='Download Juridical Person Tax Agent Certificate' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                            alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>You can access and download your Juridical Person Tax Agent Registration Certificate from the 
+                                    Certificates tab.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+                    
+                </article>
+                
+            </section>
+        </main>
+    </div>
+</body>
+</html>
