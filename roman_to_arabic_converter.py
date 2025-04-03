@@ -23,6 +23,26 @@ def remove_base64_images(file_path):
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
 
+def replace_specific_url(file_path):
+    """Replace a specific URL in a file."""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            content = file.read()
+        
+        # Pattern to match the specific URL
+        pattern = r'https://gtlcdnstorage\.blob\.core\.windows\.net/guide/uae/vat/user-manual/taxpayer/initiate-vat-indirect-refund-claim-for-business-visitor/user-type-selection\.png'
+        
+        # Replace with the desired content
+        replacement = '<new-url-or-content>'
+        new_content = re.sub(pattern, replacement, content)
+        
+        with open(file_path, 'w', encoding='utf-8') as file:
+            file.write(new_content)
+        
+        print(f"Replaced specific URL in {file_path}")
+    except Exception as e:
+        print(f"Error processing {file_path}: {e}")
+
 def main():
     if len(sys.argv) < 2:
         print("Usage: python roman_to_arabic_converter.py <file_path> [mode]")
@@ -47,6 +67,14 @@ def main():
                 for file in files:
                     if file.endswith(('.html', '.htm', '.xml')):
                         remove_base64_images(os.path.join(root, file))
+    elif mode == "replace-url":
+        if os.path.isfile(file_path):
+            replace_specific_url(file_path)
+        elif os.path.isdir(file_path):
+            for root, _, files in os.walk(file_path):
+                for file in files:
+                    if file.endswith(('.html', '.htm', '.txt')):
+                        replace_specific_url(os.path.join(root, file))
     else:  # Default roman mode
         if os.path.isfile(file_path):
             replace_roman_in_file(file_path)
