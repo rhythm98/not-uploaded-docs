@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Agent User Manual</title>
+    <link rel="stylesheet" href="https://gtlcdnstorage.blob.core.windows.net/guide/stylesheets/guide.css">
+
+    <style>
+        .i-color {
+            background-color: bisque;
+        }
+
+        #img-width {
+            max-width: 1400px;
+        }
+    </style>
+</head>
+<body>
+    <body class="scope">
+        <header>
+            <h3>Tax Agent User Manual </h3>
+            <h3>Natural Person Representative Agent - Link with 
+                Juridical Person Tax Agent</h3>
+            <h3>Date: 25 June, 2024 Version 1.3.0.0</h3>
+        </header>
+
+        <main>
+            <section>
+                <div class="index">
+                    <h3>Contents</h3>
+                    <p>1. <a href="#bookmarkSection1">Navigating through EmaraTax</a></p>
+                    <p>2. <a href="#bookmarkSection2">Introduction</a></p>
+                    <p>3. <a href="#bookmarkSection3">Taxable Person Dashboard</a></p>
+                    <p>4. <a href="#bookmarkSection4">Natural Person Representative Agent</a></p>
+                    <p>5. <a href="#bookmarkSection5">Correspondence</a></p>
+                </div>
+                
+
+                <article id="bookmarkSection1">
+                    <h3>Navigating through EmaraTax</h3>
+                    <p>The following Tabs and Buttons are available to help you navigate through this process:</p>
+                    <table>
+                        <tr>
+                            <td style='width: 15%;'>
+                                <p><strong>Button</strong></p>
+                            </td>
+                            <td>
+                                <p><strong>Description</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan='2'>
+                                <p><strong>In the Portal</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/user-types.webp'
+                                    alt='user-types' style='min-width: 150px;'>
+                            </td>
+                            <td>
+                                <p>This is used to toggle between various personas within the user profile, such 
+                as Taxable Person, Tax Agent, Tax Agency, Legal Representative, etc</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/text-to-speech.webp'
+                                    alt='text-to-speech'>
+                            </td>
+                            <td>
+                                <p>This is used to enable the text to speech feature of the portal</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/toggle-eng-arabic.webp'
+                                    alt='toggle-english-arabic'>
+                            </td>
+                            <td>
+                                <p>This is used to toggle between the English and Arabic versions of the portal</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/screen-resolution.webp'
+                                    alt='screen-resolution'>
+                            </td>
+                            <td>
+                                <p>This is used to decrease, reset, and increase the screen resolution of the user 
+                interface of the portal</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/manage-account.webp'
+                                    alt='manage-account'>
+                            </td>
+                            <td>
+                                <p>This is used to manage the user profile details such as the Name, Registered 
+                Email Address, Registered Mobile Number, and Password</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/logout.webp'
+                                    alt='logout'>
+                            </td>
+                            <td>
+                                <p>This is used to log off from the portal</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan='2'>
+                                <p><strong>In the Business Process application</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/previous-step.webp'
+                                    alt='previous-step' style='min-width: 150px;'>
+                            </td>
+                            <td>
+                                <p>This is used to go to the Previous section of the Input Form</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/next-step.webp'
+                                    alt='next-step'>
+                            </td>
+                            <td>
+                                <p>This is used to go to the Next section of the Input Form</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/save-as-draft.webp'
+                                    alt='save-as-draft'>
+                            </td>
+                            <td>
+                                <p>This is used to save the application as a draft, so that it can be completed 
+                later</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/1-2.webp'
+                                    alt='1-2'>
+                            </td>
+                            <td>
+                                <p>This menu at the top gives an overview of the various sections within the 
+                application form. All the sections need to be completed in order to submit 
+                the application for review. The current section is highlighted in blue, and the 
+                completed sections are highlighted in green with a check</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>The Federal Tax Authority offers a range of comprehensive and distinguished electronic services in order to provide the 
+                opportunity for tax agents to benefit from these services in the best and simplest ways.</p>
+                </article>
+                
+                <article id="bookmarkSection2">
+                    <h3>Introduction</h3>
+                    <p>This training manual is prepared to help a Natural Person Representative Agent to navigate 
+                    through the Federal Tax Authority EmaraTax portal to accept the linking request from the Juridical 
+                    Person Tax Agent. The Natural Person Representative Agent needs to accept the request by 
+                    logging into their EmaraTax account. Once the request is accepted, the Natural Person 
+                    Representative Agent shall be linked to the Juridical Person Tax Agent.</p>
+                    
+                    <p>Once the Juridical Person submits the linking application, the application will be sent to The 
+                    Natural Person Representative Agent for acceptance and the status of the application will be ‘In 
+                    Review’.</p>
+                    
+                    <p>This manual will address the process for 'acceptance and approval flow'.</p>
+                </article>
+
+                
+                <article id="bookmarkSection3">
+                    <h3>Login to EmaraTax</h3>
+                    <img src='/https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/natural-person-representative-agent/02.png'
+                        alt='Login to EmaraTax' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p>
+                                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                        alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                </p>
+                            </td>
+                            <td>
+                                <p>You can login into the EmaraTax account using your login credentials or using UAE PASS. If you 
+                                have forgotten your password, you can use the 'Forgot password?' feature to reset your 
+                                password.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+                
+                <article id="bookmarkSection4">
+                    <h3>Taxable Person Dashboard</h3>
+                    <img src='/https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/natural-person-representative-agent/03.png'
+                        alt='Taxable Person Dashboard' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p><strong>Step</strong></p>
+                            </td>
+                            <td>
+                                <p><strong>Action</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>(1)</p>
+                            </td>
+                            <td>
+                                <p>Click on 'NATURAL PERSON REPRESENTATIVE AGENT'.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+                
+                <article id="bookmarkSection5">
+                    <h3>Natural Person Representative Agent</h3>
+                    <img src='/https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/natural-person-representative-agent/04.png'
+                        alt='Natural Person Representative Agent' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p><strong>Step</strong></p>
+                            </td>
+                            <td>
+                                <p><strong>Action</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>(1)</p>
+                            </td>
+                            <td>
+                                <p>Click ‘View All’ on the Juridical Person Agent Management tile.</p>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <article>
+                        <img src='/https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/natural-person-representative-agent/05.png'
+                            alt='Juridical Person Agent List' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p><strong>Step</strong></p>
+                                </td>
+                                <td>
+                                    <p><strong>Action</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>(1)</p>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <p>The Juridical Person Agent List presents a grid listing the linking and delinking requests 
+                                            from the Juridical Person Tax Agent for your review.</p>
+                                        </li>
+                                        <li>
+                                            <p>Click ‘View' on the required application to continue.</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+
+                    <article>
+                        <img src='/https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/natural-person-representative-agent/06.png'
+                            alt='Review Linking Details' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                            alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>Review the details displayed. You cannot make amends to the greyed-out fields in this section.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+                    
+                    
+                    <article>
+                        <img src='/https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/natural-person-representative-agent/07.png'
+                            alt='Amendment Option' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                            alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                    </p>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li><p>If any amendments are required, select 'Yes'.</p></li>
+                                        <li><p>Enter the details of the changes to be made in the 'Additional Comments (If any)' field.</p></li>
+                                        <li><p>Once you confirm, the application will be sent back to Juridical Person Tax Agent for 
+                                        amendment.</p></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+                    
+                    
+                    <article>
+                        <img src='/https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/natural-person-representative-agent/08.png'
+                            alt='No Amendments Required' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p><strong>Step</strong></p>
+                                </td>
+                                <td>
+                                    <p><strong>Action</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>(1)</p>
+                                </td>
+                                <td>
+                                    <p>Click 'No' in case amendments are not required.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+
+                    <article>
+                        <img src='/https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/natural-person-representative-agent/09.png'
+                            alt='Confirm Approval' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p><strong>Step</strong></p>
+                                </td>
+                                <td>
+                                    <p><strong>Action</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>(1)</p>
+                                </td>
+                                <td>
+                                    <p>Click 'Confirm' to approve.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+
+                    
+
+<article>
+    <img src='/https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxagent/natural-person-representative-agent/10.png'
+        alt='Application Status Confirmation' id='img-width'>
+    <table class='i-color'>
+        <tr>
+            <td>
+                <p>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                        alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                </p>
+            </td>
+            <td>
+                <p>You will be able to see the application status message with application number. Click 'OK' to 
+                complete the process.</p>
+            </td>
+        </tr>
+    </table>
+</article>
+
+
+
+                </article>
+                
+                <article id="bookmarkSection6">
+                    <h3>Correspondence</h3>
+                    <p>Natural Person Representative Agent receives the following correspondences:</p>
+                    <ul>
+                        <li><p>Application submission acknowledgment.</p></li>
+                        <li><p>Additional information notification (only if the FTA requires more information to assist with 
+                        their review of the application).</p></li>
+                        <li><p>Application approval or rejection notification.</p></li>
+                        <li><p>Application auto cancellation notification (in case Juridical Person Tax Agent does not take 
+                        any action on linking request).</p></li>
+                    </ul>
+                </article>
+                
+            </section>
+        </main>
+    </body>
+</body>
+</html>

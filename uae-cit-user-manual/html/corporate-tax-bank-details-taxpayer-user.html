@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxpayer User Manual </title>
+
+    <link rel="stylesheet" href="https://gtlcdnstorage.blob.core.windows.net/guide/stylesheets/guide.css">
+
+    <style>
+        .i-color {
+            background-color: bisque;
+        }
+
+        #img-width {
+            max-width: 1400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scope">
+        <header>
+            <h3>Taxpayer User Manual </h3>
+            <h3>Edit Corporate Tax Bank Details</h3>
+            <h3>Date: January 30, 2024 Version 2.1.0.0</h3>
+        </header>
+
+        <main>
+            <section>
+
+                <div class="index">
+                    <h3>Contents</h3>
+                    <p>1. <a href="#bookmarkSection1">Navigating through EmaraTax</a></p>
+                    <p>2. <a href="#bookmarkSection2">Introduction</a></p>
+                    <p>3. <a href="#bookmarkSection3">Login to EmaraTax</a></p>
+                    <p>4. <a href="#bookmarkSection4">Taxable Person Tile</a></p>
+                    <p>5. <a href="#bookmarkSection5">Edit Bank Details</a></p>
+                    <p>6. <a href="#bookmarkSection6">Instructions and Guidelines</a></p>
+                    <p>7. <a href="#bookmarkSection7">Bank Details Section</a></p>
+                    <p>8. <a href="#bookmarkSection8">Review and Declaration</a></p>
+                    <p>9. <a href="#bookmarkSection9">Post Application Submission</a></p>
+                    <p>10. <a href="#bookmarkSection10">Application History – Approved</a></p>
+                    <p>11. <a href="#bookmarkSection11">Correspondences</a></p>
+
+                </div>
+
+                <article id="bookmarkSection1">
+                    <h3>Navigating through EmaraTax</h3>
+                    <p>The following Tabs and Buttons are available to help you navigate through this process</p>
+                    <table>
+                        <tr>
+                            <td style='width: 15%;'>
+                                <p><strong>Button</strong></p>
+                            </td>
+                            <td>
+                                <p><strong>Description</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan='2'>
+                                <p><strong>In the Portal</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/user-types.webp'
+                                    alt='user-types' style='min-width: 150px;'>
+                            </td>
+                            <td>
+                                <p>This is used to toggle between various personas within the user profile, such as
+                                    Taxable Person, Tax Agent, Tax Agency, Legal Representative, etc</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/text-to-speech.webp'
+                                    alt='text-to-speech'>
+                            </td>
+                            <td>
+                                <p>This is used to enable the text to speech feature of the portal</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/toggle-eng-arabic.webp'
+                                    alt='toggle-english-arabic'>
+                            </td>
+                            <td>
+                                <p>This is used to toggle between the English and Arabic versions of the portal</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/screen-resolution.webp'
+                                    alt='screen-resolution'>
+                            </td>
+                            <td>
+                                <p>This is used to decrease, reset, and increase the screen resolution of the user
+                                    interface of the portal</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/manage-account.webp'
+                                    alt='manage-account'>
+                            </td>
+                            <td>
+                                <p>This is used to manage the user profile details such as the Name, Registered Email
+                                    Address, Registered Mobile Number, and Password</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/logout.webp'
+                                    alt='logout'>
+                            </td>
+                            <td>
+                                <p>This is used to log off from the portal</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan='2'>
+                                <p><strong>In the Business Process application</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/previous-step.webp'
+                                    alt='previous-step' style='min-width: 150px;'>
+                            </td>
+                            <td>
+                                <p>This is used to go to the Previous section of the Input Form</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/next-step.webp'
+                                    alt='next-step'>
+                            </td>
+                            <td>
+                                <p>This is used to go to the Next section of the Input Form</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/save-as-draft.webp'
+                                    alt='save-as-draft'>
+                            </td>
+                            <td>
+                                <p>This is used to save the application as a draft, so that it can be completed later
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/1-2.webp'
+                                    alt='1-2'>
+                            </td>
+                            <td>
+                                <p>This menu at the top gives an overview of the various sections within the application
+                                    form. All the sections need to be completed in order to submit the application for
+                                    review. The current section is highlighted in blue, and the completed sections are
+                                    highlighted in green with a check</p>
+                            </td>
+                        </tr>
+                    </table>
+                    <p>The Federal Tax Authority offers a range of comprehensive and distinguished electronic services
+                        in order to provide the opportunity for taxpayers to benefit from these services in the best and
+                        simplest ways.</p>
+
+                </article>
+
+
+                <article id="bookmarkSection2">
+                    <h3>Introduction</h3>
+                    <p>This manual is prepared to help a Corporate Tax registered Taxpayer to navigate through the
+                        Federal Tax Authority EmaraTax portal and edit their Corporate Tax bank details. The Taxpayer
+                        can
+                        edit the bank account details and the changes will reflect immediately in their Corporate Tax
+                        Registration post submission of the edited application. An approval from the FTA is not
+                        required.</p>
+                </article>
+
+                <article id="bookmarkSection3">
+                    <h3>Login to EmaraTax</h3>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/edit-corporate-tax-bank-details/01.png'
+                        alt='Login to EmaraTax' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p>
+                                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                        alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                </p>
+                            </td>
+                            <td>
+                                <p>You can login into the EmaraTax account using your login credentials or using UAE
+                                    Pass. If you do
+                                    not have an EmaraTax account, you can sign-up for an account by clicking the 'Sign
+                                    Up' button. If
+                                    you have forgotten your password, you can use the 'Forgot password?' feature to
+                                    reset your
+                                    password.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+
+
+                <article id="bookmarkSection4">
+                    <h3>Taxable Person Tile</h3>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/edit-corporate-tax-bank-details/02.png'
+                        alt='Taxable Person Tile' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+
+                        <tr>
+                            <td>
+                                <p><strong>Step</strong></p>
+                            </td>
+                            <td>
+                                <p><strong>Action</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>(1)</p>
+                            </td>
+                            <td>
+                                <p>Select the Taxable Person from the list and click 'View' to open the dashboard.</p>
+                            </td>
+                        </tr>
+                        </tr>
+                    </table>
+                </article>
+
+                <article id="bookmarkSection5">
+                    <h3>Edit Bank Details</h3>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/edit-corporate-tax-bank-details/03.png'
+                        alt='Edit Bank Details' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p><strong>Step</strong></p>
+                            </td>
+                            <td>
+                                <p><strong>Action</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>(1)</p>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <p>In order to edit the Bank Details of your Corporate Tax Registration
+                                            application, click '...' against the registered Corporate Tax application.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>Select 'Edit Bank Details' to start editing the Bank Details of your
+                                            Corporate Tax Registration application.</p>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </article>
+
+                <article id="bookmarkSection6">
+                    <h3>Instructions and Guidelines</h3>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/edit-corporate-tax-bank-details/04.png'
+                        alt='Instructions and Guidelines' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p>
+                                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                        alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                </p>
+                            </td>
+                            <td>
+                                <p>The 'instructions and guidelines' page is designed to help you understand certain
+                                    important
+                                    requirements relating to Corporate Tax Registration - Edit Bank Details in the UAE.
+                                    It also
+                                    provides guidance on what information you should have in hand when you are
+                                    completing the
+                                    Edit Bank Details application.</p>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/edit-corporate-tax-bank-details/05.png'
+                        alt='Instructions and Guidelines' id='img-width'>
+
+
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p><strong>Step</strong></p>
+                            </td>
+                            <td>
+                                <p><strong>Action</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>(1)</p>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <p>Read the instructions and guidelines for Edit Bank Details and mark the
+                                            checkbox to confirm.</p>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/edit-corporate-tax-bank-details/06.png'
+                        alt='Instructions and Guidelines' id='img-width'>
+
+
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p><strong>Step</strong></p>
+                            </td>
+                            <td>
+                                <p><strong>Action</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>(1)</p>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <p>Click 'Start' to initiate the Edit Bank Details for existing Corporate Tax
+                                            Registration application.</p>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+
+                </article>
+
+                <article id="bookmarkSection7">
+                    <h3>Bank Details Section</h3>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/edit-corporate-tax-bank-details/06.png'
+                        alt='Bank Details Section' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p>
+                                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                        alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                </p>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <p>The Edit Bank Details application has been divided into two short sections,
+                                            each section
+                                            being represented in the progress bar. The current section will get
+                                            highlighted in blue
+                                            color on the progress bar. As you move to the next steps, the completed
+                                            sections will get
+                                            highlighted in green color.</p>
+                                    </li>
+                                    <li>
+                                        <p>In order to move from one section to the next, all mandatory fields of the
+                                            current section
+                                            must be entered. The fields which are optional are marked as optional next
+                                            to the field
+                                            name.</p>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <article>
+                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/edit-corporate-tax-bank-details/07.png'
+                            alt='Bank Details Section' id='img-width'>
+
+
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p><strong>Step</strong></p>
+                                </td>
+                                <td>
+                                    <p><strong>Action</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>(1)</p>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <p>Select 'Enable Editing', to edit the bank details. Upon selection, the
+                                                fields
+                                                in the section
+                                                will become editable. </p>
+                                        </li>
+
+                                        <li>
+                                            <p>If you do not want to edit the section and have selected 'Enable
+                                                Editing',
+                                                select 'Disable
+                                                Editing' so that the fields become non editable</p>
+                                        </li>
+                                        <li>
+                                            <p>You can add bank details if it was not provided during the Corporate Tax
+                                                registration.</p>
+                                        </li>
+                                        <li>
+                                            <p>You may edit and update your bank details. </p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+
+                    <article>
+                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/edit-corporate-tax-bank-details/08.png'
+                            alt='Save or Cancel Application' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                            alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                    </p>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <p>You may click on ‘Save as Draft’ to save your application and return to
+                                                continue working
+                                                on your application later.</p>
+                                        </li>
+                                        <li>
+                                            <p>You may click on 'Cancel' to cancel the application.</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+
+
+                    <article>
+                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/edit-corporate-tax-bank-details/09.png'
+                            alt='Bank Account Accuracy' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                            alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                    </p>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <p>You are requested to ensure that your account details are accurate.</p>
+                                        </li>
+                                        <li>
+                                            <p>If you are in the process of opening a bank account, you must provide
+                                                copies of any
+                                                relevant correspondence received from your bank.</p>
+                                        </li>
+                                        <li>
+                                            <p>If your account is held with a bank established in the UAE or a foreign
+                                                bank account, the
+                                                account name must match the legal name of the entity you are registering
+                                                with the FTA.</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </article>
+                    <article>
+                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/edit-corporate-tax-bank-details/10.png'
+                            alt='Enter Bank Details and Upload Documents' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                            alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                    </p>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <p>Enter Bank Details.</p>
+                                        </li>
+                                        <li>
+                                            <p>Upload supporting documents.</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+
+
+                    <article>
+                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/edit-corporate-tax-bank-details/11.png'
+                            alt='Next Step After Bank Details' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p><strong>Step</strong></p>
+                                </td>
+                                <td>
+                                    <p><strong>Action</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>(1)</p>
+                                </td>
+                                <td>
+                                    <p>After completing all mandatory fields, click the ‘Next Step’ button to save and
+                                        proceed to the next section.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+
+
+
+
+
+                </article>
+
+                <article id="bookmarkSection8">
+                    <h3>Review and Declaration</h3>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/edit-corporate-tax-bank-details/11.png'
+                        alt='Review and Declaration' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p>
+                                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                        alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                </p>
+                            </td>
+                            <td>
+                                <p>This section highlights the old information entered by you across the application.
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                    <article>
+                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/edit-corporate-tax-bank-details/12.png'
+                            alt='Review Updated Information' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                            alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                    </p>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <p>This section highlights the newly updated information entered by you
+                                                across the application.</p>
+                                        </li>
+                                        <li>
+                                            <p>You are required to review and submit the application.</p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+
+                    <article>
+                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/edit-corporate-tax-bank-details/13.png'
+                            alt='Declaration Confirmation' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p><strong>Step</strong></p>
+                                </td>
+                                <td>
+                                    <p><strong>Action</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>(1)</p>
+                                </td>
+                                <td>
+                                    <p>After carefully reviewing all of the information entered on the application, mark
+                                        the checkbox to declare the correctness of the information provided in the
+                                        application.</p>
+                                </td>
+                            </tr>
+
+                    </article>
+
+                    <article>
+                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/edit-corporate-tax-bank-details/14.png'
+                            alt='Submit Edit Bank Details Application' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p><strong>Step</strong></p>
+                                </td>
+                                <td>
+                                    <p><strong>Action</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>(1)</p>
+                                </td>
+                                <td>
+                                    <p>Click ‘Submit’ to submit the Corporate Tax Registration - Edit Bank Details
+                                        application.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+
+
+                    <article>
+                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/edit-corporate-tax-bank-details/15.png'
+                            alt='Confirm Submission' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p><strong>Step</strong></p>
+                                </td>
+                                <td>
+                                    <p><strong>Action</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>(1)</p>
+                                </td>
+                                <td>
+                                    <p>Click ‘Yes’ to confirm.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+
+
+
+
+
+                </article>
+
+
+                <article id="bookmarkSection9">
+                    <h3>Post Application Submission</h3>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/edit-corporate-tax-bank-details/16.png'
+                        alt='Post Application Submission' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p>
+                                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                        alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                </p>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <p>After your application is submitted successfully, a Reference Number is
+                                            generated for your application. Note this reference number for future
+                                            purposes.</p>
+                                    </li>
+                                    <li>
+                                        <p>The Edit applications are approved on submission and do not require the FTA
+                                            approval.</p>
+                                    </li>
+                                    <li>
+                                        <p>The changes submitted will reflect in your Corporate Tax profile.</p>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <article>
+                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/edit-corporate-tax-bank-details/18.png'
+                            alt='Acknowledgement Options' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p><strong>Step</strong></p>
+                                </td>
+                                <td>
+                                    <p><strong>Action</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>(1)</p>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <p>Click 'Download' to download a pdf copy of the acknowledgement screen.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>Click 'Back to Dashboard' to navigate back to Taxable Person dashboard.
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+
+                </article>
+
+                <article id="bookmarkSection10">
+                    <h3>Application History – Approved – Approved</h3>
+                    <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/edit-corporate-tax-bank-details/19.png'
+                        alt='Application History Approved' id='img-width'>
+                    <table class='i-color'>
+                        <tr>
+                            <td>
+                                <p><strong>Step</strong></p>
+                            </td>
+                            <td>
+                                <p><strong>Action</strong></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>(1)</p>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <p>In order to view the application status, click ‘...’ against the registered
+                                            Corporate Tax application.</p>
+                                    </li>
+                                    <li>
+                                        <p>Select ‘View Application History’ to view the application status of Corporate
+                                            Tax Registration - Edit Bank Details application.</p>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <article>
+                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/taxpayer/edit-corporate-tax-bank-details/20.png'
+                            alt='Check Edit Bank Details Status' id='img-width'>
+                        <table class='i-color'>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <img src='https://gtlcdnstorage.blob.core.windows.net/guide/uae/cit/user-manual/common/i-icon.png'
+                                            alt='' style='min-width: 40px; width: 40px; height: auto; display: block;'>
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>You can check the status of the Corporate Tax Registration - Edit Bank Details
+                                        application here.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </article>
+
+                </article>
+
+                <article id="bookmarkSection11">
+                    <h3>Correspondences</h3>
+                    <p>Taxpayer receives the following correspondence:</p>
+                    <ul>
+                        <li>
+                            <p>Application submission acknowledgment</p>
+                        </li>
+                    </ul>
+                </article>
+
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

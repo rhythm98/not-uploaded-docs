@@ -8,52 +8,67 @@
     <link rel="stylesheet" href="../index.css" />
     <style>
         * {
-            margin: 0;
-            padding: 0;
+          margin: 0;
+          padding: 0;
         }
-
+    
         body {
-            box-sizing: border-box;
+          box-sizing: border-box;
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          padding: 20px;
         }
-
+    
+        .container {
+          max-width: 800px;
+          margin: 0 auto;
+          background: #fff;
+          padding: 20px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+        }
+    
+        h1 {
+          text-align: center;
+          margin-bottom: 20px;
+          color: #333;
+        }
+    
+        ul {
+          list-style-type: none;
+        }
+    
+        li {
+          margin: 10px 0;
+        }
+    
+        .center {
+          display: block;
+          text-align: center;
+        }
+    
         a:link,
         a:visited {
-            color: #1098ad;
-            text-decoration: none;
+          color: #1098ad;
+          text-decoration: none;
+          display: block;
+          padding: 10px;
+          border: 1px solid #1098ad;
+          border-radius: 4px;
+          text-align: center;
+          transition: background-color 0.3s, color 0.3s;
         }
-
+    
         a:hover {
-            color: orangered;
-            text-decoration: none;
+          background-color: #1098ad;
+          color: #fff;
         }
-
-        a:link {
-            color: #036b7a;
-            text-decoration: none;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            /* Creates 3 equal columns */
-            gap: 10px;
-            /* Adds spacing between grid items */
-        }
-
-        .grid-container a {
-            display: block;
-            padding: 10px;
-            background-color: #f4f4f4;
-            text-decoration: none;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
-
+    
         .home-link {
-            text-align: center;
-            margin-top: 20px;
+          text-align: center;
+          margin-bottom: 20px;
         }
-    </style>
+      </style>
 </head>
 
 <body>
@@ -71,6 +86,10 @@
       grid-tmeplate-rows: repeat(1, 1fr);
   ">
         <div class="grid-container">
+            <div class="container">
+                <h1>Index of VAT Law Decisions</h1>
+                <h2 class="center">Dileep (25 documents)</h2>
+
             <a href="./html/uae-vat-cd-9-12-o-of-2020.html" class="article_01">UAE VAT CD 9-12-O of 2020</a>
             <a href="./html/uae-vat-cd-52-of-2017.html" class="article_01">UAE VAT CD 52 of 2017</a>
             <a href="./html/uae-vat-cd-56-of-2017.html" class="article_01">UAE VAT CD 56 of 2017</a>
